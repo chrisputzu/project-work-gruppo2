@@ -129,7 +129,7 @@ class DocumentProcessor:
             # Processa i batch rimanenti e combinali
             for i, batch in enumerate(batches[1:], 2):
                 if progress_callback:
-                    progress_callback(f"Processando batch {i}/{len(batches)} ({len(batch)} chunks)...")
+                    progress_callback(f"Caricamento...")
                 
                 # Attesa tra batch per evitare rate limits
                 time.sleep(self.config.BATCH_DELAY)
