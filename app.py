@@ -79,14 +79,14 @@ class BandiRAGApp:
         if logo_path.exists():
             st.sidebar.image(str(logo_path), width=200)
         
-        st.sidebar.title("🏛️ LombardIA Bandi")
+        st.sidebar.title("LombardIA Bandi")
         
         # Menu di navigazione
         page = st.sidebar.selectbox(
             "Seleziona una funzione:",
             [
                 "📁 Caricamento Documenti",
-                "💬 LombardIA Bandi (Chat)", 
+                "💬 LombardIA Bandi Chat", 
                 "📊 Tabella di Sintesi",
                 "📄 Documento di Sintesi"
             ]
@@ -95,7 +95,6 @@ class BandiRAGApp:
         # Statistiche semplificate
         if st.session_state.processed_files:
             st.sidebar.markdown("---")
-            st.sidebar.markdown("### 📈 Info")
             st.sidebar.metric("Documenti caricati", len(st.session_state.processed_files))
             
             # Mostra info conversione se disponibile
@@ -111,7 +110,7 @@ class BandiRAGApp:
                 st.sidebar.metric("Sessioni chat", len(sessions))
                 
                 # Menu chat
-                st.sidebar.markdown("### 💬 Le tue chat")
+                st.sidebar.markdown("###Le tue chat")
                 
                 # Pulsante per nuova chat
                 if st.sidebar.button("➕ Nuova Chat", key="new_chat_btn"):
@@ -167,7 +166,7 @@ class BandiRAGApp:
         pdf_files = list(data_path.glob("*.pdf"))
         
         if not pdf_files:
-            st.warning(f"⚠️ Nessun file PDF trovato nella cartella {self.config.DATA_DIR}")
+            st.warning(f"⚠️ Nessun file PDF trovato nella cartella")
             return []
         
         # Filtra i file già processati
@@ -197,7 +196,7 @@ class BandiRAGApp:
         st.title("📁 Caricamento Documenti Bandi")
         
         st.markdown("""
-        Carica i documenti PDF dei bandi pubblici.
+        Carica i documenti PDF dei bandi pubblici. 
         """)
         
         
@@ -209,12 +208,13 @@ class BandiRAGApp:
         with col1:
             available_files = self.process_data_folder()
             if available_files:
-                st.info(f"📁 Trovati {len(available_files)} nuovi file PDF nella cartella")
+                
                 # Mostra lista file
                 with st.expander("📋 File da processare"):
                     for file in available_files:
                         file_stats = get_file_stats(str(file))
                         st.write(f"📄 {file.name} - {file_stats.get('size_formatted', 'N/A')}")
+                st.info(f"📁 Trovati {len(available_files)} nuovi file PDF nella cartella")
             else:
                 st.info(f"📁 Nessun nuovo file PDF da processare nella cartella '{self.config.DATA_DIR}'")
         
@@ -247,7 +247,7 @@ class BandiRAGApp:
                     st.error(f"❌ {file.name} - File non valido")
             
             if valid_count > 0:
-                st.info(f"📊 Totale: {valid_count} file validi ({format_file_size(total_size)})")
+                st.info(f"{valid_count} file caricati ({format_file_size(total_size)})")
             
             if st.button("🚀 Processa Documenti", type="primary", disabled=valid_count == 0):
                 self.process_uploaded_files(uploaded_files)
@@ -491,13 +491,8 @@ class BandiRAGApp:
     def render_chatbot_page(self):
         """Pagina del chatbot per domande sui bandi"""
         # Header con logo
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            logo_path = Path("logo/logo_lombardIA.png")
-            if logo_path.exists():
-                st.image(str(logo_path), width=120)
-        with col2:
-            st.title("💬 LombardIA Bandi")
+        
+        st.title("💬 LombardIA Bandi Chat")
         
         if not st.session_state.vector_store_ready:
             st.warning("⚠️ Carica prima alcuni documenti nella sezione 'Caricamento Documenti'")
@@ -520,69 +515,11 @@ class BandiRAGApp:
             return
         
         # Info sessione
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            st.caption(f"💭 Chat iniziata il {datetime.fromisoformat(session.created_at).strftime('%d/%m/%Y alle %H:%M')}")
-        with col2:
-            conversion_method = session.metadata.get('conversion_method', 'unknown')
-            if conversion_method == 'markdown':
-                st.caption("🔄 Modalità Markdown")
-            else:
-                st.caption("📄 Modalità Standard")
+        st.caption(f"Chat iniziata il {datetime.fromisoformat(session.created_at).strftime('%d/%m/%Y alle %H:%M')}")
         
-        # Modalità di conversazione
-        st.markdown("### 🎯 Modalità di Conversazione")
-        col1, col2, col3 = st.columns(3)
         
-        with col1:
-            if st.button("💬 Domanda Generale", key="mode_general"):
-                st.session_state.chat_mode = "general"
-                st.rerun()
         
-        with col2:
-            if st.button("🔍 Ricerca Idea Progettuale", key="mode_project"):
-                st.session_state.chat_mode = "project_search"
-                st.rerun()
-        
-        with col3:
-            if st.button("📊 Analisi Comparativa", key="mode_analysis"):
-                st.session_state.chat_mode = "analysis"
-                st.rerun()
-        
-        if 'chat_mode' not in st.session_state:
-            st.session_state.chat_mode = "general"
-        
-        mode_labels = {
-            "general": "💬 Modalità Generale",
-            "project_search": "🔍 Ricerca Idea Progettuale", 
-            "analysis": "📊 Analisi Comparativa"
-        }
-        
-        st.info(f"**Modalità attiva**: {mode_labels.get(st.session_state.chat_mode, 'Generale')}")
-        
-        # Esempi di domande
-        with st.expander("💡 Esempi di domande"):
-            if st.session_state.chat_mode == "general":
-                st.markdown("""
-                **Domande Generali:**
-                - Quali sono le scadenze dei bandi disponibili?
-                - Qual è il budget massimo per i progetti?
-                - Quali sono i requisiti per partecipare?
-                """)
-            elif st.session_state.chat_mode == "project_search":
-                st.markdown("""
-                **Ricerca per Idea Progettuale:**
-                - "Voglio sviluppare un'app per il turismo sostenibile"
-                - "Idea: produzione di packaging ecosostenibile"
-                - "Progetto di digitalizzazione per PMI"
-                """)
-            else:
-                st.markdown("""
-                **Analisi Comparativa:**
-                - Confronta i bandi per startup tecnologiche
-                - Quale bando ha il maggior budget?
-                """)
-        
+
         # Suggerimenti intelligenti (se supportati)
         if hasattr(self.rag_system, 'get_markdown_search_suggestions') and st.session_state.documents:
             if st.expander("🔍 Suggerimenti di ricerca"):
@@ -615,9 +552,7 @@ class BandiRAGApp:
             "analysis": "Chiedi un'analisi o confronto..."
         }
         
-        
-        
-        if prompt := st.chat_input(placeholder_text.get(st.session_state.chat_mode, "Scrivi qui...")):
+        if prompt := st.chat_input("Scrivi qui la tua domanda o idea progettuale..."):
             session.add_message("user", prompt)
             self.chat_manager.save_session(session)
             
@@ -634,71 +569,36 @@ class BandiRAGApp:
                                     f"{msg['role'].upper()}: {msg['content']}"
                                     for msg in session.messages
                                 ])
-                                # Usa setup appropriato basato sulla conversione
-                                if (hasattr(self.rag_system, 'setup_qa_chain_enhanced') and 
-                                    st.session_state.use_markdown_conversion):
-                                    self.rag_system.setup_qa_chain_enhanced(
-                                        self.vector_store, 
-                                        session.session_id,
-                                        initial_chat_history=chat_history
-                                    )
-                                else:
-                                    self.rag_system.setup_qa_chain(
-                                        self.vector_store, 
-                                        session.session_id,
-                                        initial_chat_history=chat_history
-                                    )
+                                self.rag_system.setup_qa_chain(
+                                    self.vector_store, 
+                                    session.session_id,
+                                    initial_chat_history=chat_history
+                                )
                             else:
                                 st.error("❌ Vector store non disponibile.")
                                 return
-                        
-                        enhanced_prompt = self._enhance_prompt_by_mode(prompt, st.session_state.chat_mode)
-                        
-                        if st.session_state.chat_mode == "project_search":
-                            result = self._handle_project_search(enhanced_prompt)
-                        else:
-                            result = self.rag_system.query(enhanced_prompt, session.session_id)
-                        
+
+                        result = self.rag_system.query(prompt, session.session_id)
+
                         st.markdown(result["answer"])
-                        
+
                         if result["sources"]:
                             with st.expander("📚 Fonti"):
                                 for source in result["sources"]:
                                     st.markdown(f"**{source['source']}** (Pagina {source['page']})")
                                     st.markdown(f"_{source['content_preview']}_")
-                        
+
                         session.add_message("assistant", result["answer"], result["sources"])
                         self.chat_manager.save_session(session)
                         st.rerun()
-                        
+
                     except Exception as e:
                         error_msg = f"❌ Errore nell'elaborazione: {str(e)}"
                         st.error(error_msg)
                         session.add_message("assistant", error_msg)
                         self.chat_manager.save_session(session)
         
-        # Controlli chat
-        st.markdown("---")
-        col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
         
-        with col1:
-            st.metric("Messaggi totali", len(session.messages))
-        
-        with col2:
-            user_messages = sum(1 for m in session.messages if m["role"] == "user")
-            st.metric("Domande", user_messages)
-        
-        with col3:
-            assistant_messages = sum(1 for m in session.messages if m["role"] == "assistant")
-            st.metric("Risposte", assistant_messages)
-        
-        with col4:
-            if st.button("🧹 Pulisci Chat"):
-                self.rag_system.clear_memory(session.session_id)
-                session.messages = []
-                self.chat_manager.save_session(session)
-                st.success("✅ Chat pulita!")
-                st.rerun()
     
     def _enhance_prompt_by_mode(self, prompt: str, mode: str) -> str:
         """Arricchisce il prompt in base alla modalità selezionata"""
@@ -979,7 +879,7 @@ class BandiRAGApp:
                     else:
                         content = str(response)
                     
-                    content_str = str(content)
+                    content_str = str(content);
                     
                     st.markdown("### 📄 Documento di Sintesi")
                     st.markdown(content_str)
@@ -1011,7 +911,7 @@ class BandiRAGApp:
         
         if selected_page == "📁 Caricamento Documenti":
             self.render_file_upload_page()
-        elif selected_page == "💬 LombardIA Bandi (Chat)":
+        elif selected_page == "💬 LombardIA Bandi Chat":
             self.render_chatbot_page()
         elif selected_page == "📊 Tabella di Sintesi":
             self.render_summary_table_page()

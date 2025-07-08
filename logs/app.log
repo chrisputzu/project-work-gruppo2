@@ -7436,3 +7436,885 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-07-08 18:39:48,278 - src.chat_manager - INFO - Caricata sessione 20250708_182602
 2025-07-08 18:39:48,281 - src.chat_manager - INFO - Caricata sessione 20250708_182945
 2025-07-08 18:39:48,305 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:03:33,343 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:03:33,343 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:03:33,343 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:03:33,349 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:03:33,349 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:03:33,349 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:03:33,351 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:03:33,744 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:03:33,760 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:03:33,814 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:03:33,833 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:03:33,849 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:03:33,865 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:03:33,880 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:03:33,897 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:03:33,912 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:03:33,922 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:03:33,938 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:03:33,953 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:03:33,965 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:03:33,981 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:03:33,995 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:03:34,004 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:03:34,014 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:03:34,031 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:03:34,046 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:03:34,058 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:03:34,072 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:03:34,085 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:03:34,098 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:03:34,113 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:03:34,126 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:03:34,142 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:03:44,286 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:03:44,286 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:03:44,286 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:03:44,286 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:03:44,286 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:03:44,286 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:03:44,286 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:03:44,313 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:03:44,337 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:03:44,360 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:03:44,361 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:03:44,362 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:03:44,363 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:03:44,365 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:03:44,367 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:03:44,368 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:03:44,369 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:03:44,370 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:03:44,371 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:03:44,371 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:03:44,371 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:03:44,373 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:03:44,373 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:03:44,375 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:03:44,375 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:03:44,376 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:03:44,377 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:03:44,377 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:03:44,378 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:03:44,379 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:03:44,380 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:03:44,381 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:03:44,382 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:03:46,371 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:03:46,372 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:03:46,373 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:03:46,373 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:03:46,373 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:03:46,373 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:03:46,373 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:03:46,403 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:03:46,425 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:03:46,447 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:03:46,448 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:03:46,450 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:03:46,452 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:03:46,454 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:03:46,454 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:03:46,455 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:03:46,456 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:03:46,456 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:03:46,457 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:03:46,457 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:03:46,459 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:03:46,459 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:03:46,460 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:03:46,460 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:03:46,460 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:03:46,460 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:03:46,460 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:03:46,464 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:03:46,464 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:03:46,465 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:03:46,466 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:03:46,468 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:03:46,470 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:03:46,524 - src.utils - INFO - File salvato: uploads\20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:03:46,530 - src.utils - INFO - File salvato: uploads\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:03:46,581 - __main__ - INFO - Progress: Convertendo 1/2: 20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:03:46,581 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:03:48,147 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 46399 caratteri
+2025-07-08 21:03:48,156 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_210346_2019 - DGR 2531_2019.md
+2025-07-08 21:03:48,156 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:03:48,156 - src.document_processor - INFO - Creati 61 chunks Markdown da 1 documenti
+2025-07-08 21:03:48,156 - src.document_processor - INFO - File 1/2 convertito: 61 chunks da 20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:03:48,156 - __main__ - INFO - Progress: Convertendo 2/2: 20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:03:48,156 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:03:51,152 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 76972 caratteri
+2025-07-08 21:03:51,159 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.md
+2025-07-08 21:03:51,159 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:03:51,163 - src.document_processor - INFO - Creati 115 chunks Markdown da 1 documenti
+2025-07-08 21:03:51,164 - src.document_processor - INFO - File 2/2 convertito: 115 chunks da 20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:03:51,164 - src.document_processor - INFO - Totale chunks Markdown generati: 176 da 2 file
+2025-07-08 21:03:51,168 - src.document_processor - INFO - Processamento batch di 176 chunks Markdown (batch size: 50)
+2025-07-08 21:03:51,168 - src.document_processor - INFO - Creati 4 batch da processare
+2025-07-08 21:03:51,171 - __main__ - INFO - Progress: Creando embeddings dal contenuto Markdown...
+2025-07-08 21:03:51,172 - src.document_processor - INFO - Tentativo 1/3 per batch 1/4
+2025-07-08 21:03:52,644 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:03:53,347 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-07-08 21:03:53,347 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-08 21:03:53,347 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-07-08 21:03:53,847 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-08 21:03:53,865 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-08 21:03:53,874 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:03:55,887 - src.document_processor - INFO - Tentativo 1/3 per batch 2/4
+2025-07-08 21:03:56,769 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:03:57,252 - src.document_processor - INFO - Combinato batch 2/4
+2025-07-08 21:03:57,260 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:03:59,266 - src.document_processor - INFO - Tentativo 1/3 per batch 3/4
+2025-07-08 21:04:00,131 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:04:00,613 - src.document_processor - INFO - Combinato batch 3/4
+2025-07-08 21:04:00,620 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:04:02,635 - src.document_processor - INFO - Tentativo 1/3 per batch 4/4
+2025-07-08 21:04:03,330 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:04:03,486 - src.document_processor - INFO - Combinato batch 4/4
+2025-07-08 21:04:03,497 - src.document_processor - INFO - Vector store finale creato con 176 chunks Markdown totali
+2025-07-08 21:04:03,506 - src.document_processor - INFO - Metadati Markdown salvati: vector_store\metadata_c6e45278cd5b3467fff747578b28e862_markdown.json
+2025-07-08 21:04:03,506 - src.document_processor - INFO - Vector store Markdown salvato nella cache: vector_store\vectorstore_c6e45278cd5b3467fff747578b28e862_markdown
+2025-07-08 21:04:03,512 - src.chat_manager - INFO - Salvata sessione 20250708_210403
+2025-07-08 21:04:03,512 - src.chat_manager - INFO - Creata nuova sessione: 20250708_210403
+2025-07-08 21:04:03,514 - src.rag_system - INFO - Catena QA con supporto Markdown configurata per sessione 20250708_210403
+2025-07-08 21:04:03,515 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:04:05,209 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 46399 caratteri
+2025-07-08 21:04:05,211 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_210346_2019 - DGR 2531_2019.md
+2025-07-08 21:04:05,211 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_210346_2019 - DGR 2531_2019.pdf
+2025-07-08 21:04:05,211 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:04:08,686 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 76972 caratteri
+2025-07-08 21:04:08,687 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.md
+2025-07-08 21:04:08,688 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_210346_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:04:08,917 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:04:08,917 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:04:08,918 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:04:08,918 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:04:08,919 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:04:08,920 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:04:08,920 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:04:08,943 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:04:08,974 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:04:09,010 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:04:09,026 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:04:09,044 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:04:09,053 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:04:09,068 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:04:09,079 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:04:09,107 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:04:09,122 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:04:09,136 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:04:09,144 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:04:09,159 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:04:09,163 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:04:09,183 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:04:09,197 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:04:09,214 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:04:09,229 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:04:09,246 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:04:09,263 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:04:09,282 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:04:09,304 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:04:09,316 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:04:09,332 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:04:09,343 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:04:09,360 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:04:09,374 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:07:09,115 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:07:09,118 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:07:09,118 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:07:09,118 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:07:09,119 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:07:09,119 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:07:09,119 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:07:09,137 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:07:09,156 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:07:09,176 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:07:09,183 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:07:09,183 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:07:09,184 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:07:09,185 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:07:09,187 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:07:09,189 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:07:09,190 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:07:09,191 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:07:09,192 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:07:09,193 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:07:09,194 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:07:09,196 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:07:09,196 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:07:09,197 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:07:09,198 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:07:09,198 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:07:09,199 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:07:09,199 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:07:13,277 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:07:13,277 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:07:13,279 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:07:13,279 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:07:13,280 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:07:13,280 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:07:13,280 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:07:13,299 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:07:13,313 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:07:13,349 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:07:13,350 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:07:13,351 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:07:13,351 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:07:13,351 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:07:13,355 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:07:13,355 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:07:13,356 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:07:13,357 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:07:13,357 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:07:13,359 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:07:13,361 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:07:13,363 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:07:13,364 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:07:13,365 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:07:13,366 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:07:13,367 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:07:13,368 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:07:13,368 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:07:13,369 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:07:13,369 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:07:13,370 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:07:13,370 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:07:13,370 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:07:13,370 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:11:08,189 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:11:08,189 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:11:08,189 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:11:08,203 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:11:08,203 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:11:08,204 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:11:08,204 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:08,222 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:08,241 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:11:08,261 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:11:08,262 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:11:08,262 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:11:08,263 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:11:08,264 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:11:08,265 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:11:08,266 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:11:08,267 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:11:08,267 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:11:08,268 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:11:08,269 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:11:08,271 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:11:08,273 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:11:08,280 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:11:08,281 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:11:08,282 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:11:08,283 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:11:08,283 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:11:16,439 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:11:16,451 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:11:16,452 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:11:16,453 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:11:16,454 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:11:16,454 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:11:16,455 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:16,488 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:16,515 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:11:16,543 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:11:16,544 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:11:16,544 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:11:16,544 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:11:16,544 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:11:16,551 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:11:16,554 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:11:16,555 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:11:16,556 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:11:16,557 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:11:16,557 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:11:16,558 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:11:16,559 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:11:16,560 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:11:16,561 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:11:16,563 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:11:16,563 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:11:16,564 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:11:16,566 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:11:16,568 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:11:16,570 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:11:16,571 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:11:16,572 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:11:16,574 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:11:16,575 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:11:19,276 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:11:19,277 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:11:19,278 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:11:19,278 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:11:19,278 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:11:19,279 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:11:19,279 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:19,301 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:19,320 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:11:19,346 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:11:19,348 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:11:19,349 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:11:19,349 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:11:19,349 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:11:19,349 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:11:19,353 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:11:19,353 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:11:19,354 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:11:19,355 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:11:19,356 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:11:19,357 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:11:19,360 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:11:19,361 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:11:19,362 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:11:19,362 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:11:19,364 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:11:19,365 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:11:19,366 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:11:19,367 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:11:19,368 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:11:19,368 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:11:19,369 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:11:19,370 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:11:19,370 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:11:19,458 - src.utils - INFO - File salvato: uploads\20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:19,462 - src.utils - INFO - File salvato: uploads\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:19,473 - __main__ - INFO - Progress: Convertendo 1/2: 20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:19,474 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:21,403 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 46399 caratteri
+2025-07-08 21:11:21,404 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_211119_2019 - DGR 2531_2019.md
+2025-07-08 21:11:21,404 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:21,407 - src.document_processor - INFO - Creati 61 chunks Markdown da 1 documenti
+2025-07-08 21:11:21,407 - src.document_processor - INFO - File 1/2 convertito: 61 chunks da 20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:21,407 - __main__ - INFO - Progress: Convertendo 2/2: 20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:21,407 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:25,297 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 76972 caratteri
+2025-07-08 21:11:25,298 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.md
+2025-07-08 21:11:25,299 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:25,303 - src.document_processor - INFO - Creati 115 chunks Markdown da 1 documenti
+2025-07-08 21:11:25,303 - src.document_processor - INFO - File 2/2 convertito: 115 chunks da 20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:25,303 - src.document_processor - INFO - Totale chunks Markdown generati: 176 da 2 file
+2025-07-08 21:11:25,308 - src.document_processor - INFO - Processamento batch di 176 chunks Markdown (batch size: 50)
+2025-07-08 21:11:25,309 - src.document_processor - INFO - Creati 4 batch da processare
+2025-07-08 21:11:25,310 - __main__ - INFO - Progress: Creando embeddings dal contenuto Markdown...
+2025-07-08 21:11:25,310 - src.document_processor - INFO - Tentativo 1/3 per batch 1/4
+2025-07-08 21:11:26,720 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:11:27,331 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:11:29,339 - src.document_processor - INFO - Tentativo 1/3 per batch 2/4
+2025-07-08 21:11:30,260 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:11:30,761 - src.document_processor - INFO - Combinato batch 2/4
+2025-07-08 21:11:30,762 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:11:32,764 - src.document_processor - INFO - Tentativo 1/3 per batch 3/4
+2025-07-08 21:11:33,633 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:11:34,135 - src.document_processor - INFO - Combinato batch 3/4
+2025-07-08 21:11:34,136 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:11:36,150 - src.document_processor - INFO - Tentativo 1/3 per batch 4/4
+2025-07-08 21:11:36,881 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:11:37,067 - src.document_processor - INFO - Combinato batch 4/4
+2025-07-08 21:11:37,067 - src.document_processor - INFO - Vector store finale creato con 176 chunks Markdown totali
+2025-07-08 21:11:37,067 - src.document_processor - INFO - Metadati Markdown salvati: vector_store\metadata_95d557ba557a325176e0a9cd329b50df_markdown.json
+2025-07-08 21:11:37,067 - src.document_processor - INFO - Vector store Markdown salvato nella cache: vector_store\vectorstore_95d557ba557a325176e0a9cd329b50df_markdown
+2025-07-08 21:11:37,084 - src.chat_manager - INFO - Salvata sessione 20250708_211137
+2025-07-08 21:11:37,084 - src.chat_manager - INFO - Creata nuova sessione: 20250708_211137
+2025-07-08 21:11:37,084 - src.rag_system - INFO - Catena QA con supporto Markdown configurata per sessione 20250708_211137
+2025-07-08 21:11:37,084 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:39,096 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 46399 caratteri
+2025-07-08 21:11:39,096 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_211119_2019 - DGR 2531_2019.md
+2025-07-08 21:11:39,096 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_211119_2019 - DGR 2531_2019.pdf
+2025-07-08 21:11:39,096 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:43,228 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 76972 caratteri
+2025-07-08 21:11:43,231 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.md
+2025-07-08 21:11:43,231 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_211119_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:11:43,500 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:11:43,500 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:11:43,500 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:11:43,500 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:11:43,515 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:11:43,515 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:11:43,515 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:43,546 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:43,578 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:11:43,608 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:11:43,608 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:11:43,608 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:11:43,608 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:11:43,608 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:11:43,616 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:11:43,617 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:11:43,619 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:11:43,622 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:11:43,623 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:11:43,624 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:11:43,625 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:11:43,626 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:11:43,628 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:11:43,628 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:11:43,628 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:11:43,628 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:11:43,628 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:11:43,634 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:11:43,635 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:11:43,637 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:11:43,638 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:11:43,639 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:11:43,641 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:11:43,642 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:11:43,663 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:11:57,014 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:11:57,014 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:11:57,014 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:11:57,014 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:11:57,014 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:11:57,014 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:11:57,014 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:57,048 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:11:57,077 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:11:57,105 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:11:57,106 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:11:57,108 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:11:57,109 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:11:57,111 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:11:57,112 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:11:57,113 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:11:57,113 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:11:57,113 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:11:57,115 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:11:57,116 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:11:57,117 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:11:57,118 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:11:57,119 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:11:57,120 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:11:57,121 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:11:57,122 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:11:57,122 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:11:57,123 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:11:57,125 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:11:57,126 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:11:57,128 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:11:57,130 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:11:57,131 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:11:57,131 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:11:57,131 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:12:24,019 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:12:24,019 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:12:24,019 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:12:24,019 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:12:24,019 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:12:24,019 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:12:24,019 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:12:24,435 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:12:24,470 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:12:24,494 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:12:24,501 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:12:24,501 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:12:24,501 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:12:24,501 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:12:24,501 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:12:24,508 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:12:24,509 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:12:24,510 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:12:24,512 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:12:24,512 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:12:24,513 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:12:24,514 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:12:24,515 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:12:24,515 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:12:24,516 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:12:24,518 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:12:24,518 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:12:24,518 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:12:24,520 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:12:24,521 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:12:24,522 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:12:24,523 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:12:24,523 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:12:24,525 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:12:24,526 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:21:19,301 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:21:19,301 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:21:19,303 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:21:19,303 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:21:19,304 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:21:19,304 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:21:19,304 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:21:19,679 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:21:19,701 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:21:19,737 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:21:19,760 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:21:19,767 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:21:19,792 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:21:19,813 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:21:19,824 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:21:19,840 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:21:19,854 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:21:19,864 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:21:19,866 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:21:19,881 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:21:19,898 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:21:19,910 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:21:19,915 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:21:19,933 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:21:19,943 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:21:19,948 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:21:19,967 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:21:19,983 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:21:19,998 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:21:20,017 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:21:20,024 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:21:20,043 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:21:20,057 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:21:20,065 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:21:20,084 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:21:28,515 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:21:28,515 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:21:28,519 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:21:28,519 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:21:28,519 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:21:28,519 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:21:28,519 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:21:28,548 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:21:28,569 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:21:28,591 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:21:28,591 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:21:28,595 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:21:28,595 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:21:28,596 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:21:28,599 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:21:28,602 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:21:28,603 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:21:28,604 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:21:28,604 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:21:28,606 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:21:28,606 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:21:28,606 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:21:28,607 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:21:28,607 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:21:28,607 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:21:28,607 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:21:28,607 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:21:28,607 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:21:28,612 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:21:28,612 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:21:28,614 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:21:28,615 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:21:28,616 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:21:28,618 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:21:28,619 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:22:46,365 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:22:46,366 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:22:46,367 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:22:46,368 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:22:46,369 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:22:46,369 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:22:46,370 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:22:46,391 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:22:46,408 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:22:46,431 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:22:46,431 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:22:46,433 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:22:46,433 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:22:46,435 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:22:46,436 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:22:46,436 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:22:46,437 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:22:46,438 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:22:46,440 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:22:46,441 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:22:46,442 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:22:46,442 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:22:46,442 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:22:46,443 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:22:46,444 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:22:46,444 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:22:46,445 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:22:46,445 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:22:46,447 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:22:46,447 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:22:46,447 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:22:46,447 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:22:46,450 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:22:46,450 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:22:46,452 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:24:52,130 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:24:52,131 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:24:52,132 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:24:52,132 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:24:52,132 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:24:52,133 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:24:52,133 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:24:52,152 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:24:52,168 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:24:52,189 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:24:52,191 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:24:52,192 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:24:52,192 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:24:52,193 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:24:52,194 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:24:52,195 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:24:52,196 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:24:52,196 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:24:52,196 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:24:52,197 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:24:52,198 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:24:52,199 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:24:52,200 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:24:52,201 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:24:52,203 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:24:52,204 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:24:52,204 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:24:52,205 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:24:52,206 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:24:52,207 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:24:52,208 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:24:52,209 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:24:52,209 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:24:52,209 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:24:52,209 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:25:36,892 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:25:36,892 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:25:36,893 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:25:36,894 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:25:36,895 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:25:36,895 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:25:36,895 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:25:36,912 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:25:36,930 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:25:36,950 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:25:36,951 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:25:36,951 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:25:36,951 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:25:36,954 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:25:36,954 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:25:36,955 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:25:36,956 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:25:36,956 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:25:36,958 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:25:36,958 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:25:36,959 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:25:36,959 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:25:36,960 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:25:36,961 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:25:36,962 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:25:36,962 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:25:36,963 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:25:36,963 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:25:36,965 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:25:36,967 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:25:36,968 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:25:36,968 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:25:36,968 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:25:36,968 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:25:36,972 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:25:39,476 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:25:39,476 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:25:39,476 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:25:39,476 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:25:39,476 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:25:39,476 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:25:39,485 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:25:39,511 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:25:39,528 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:25:39,555 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:25:39,556 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:25:39,557 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:25:39,558 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:25:39,559 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:25:39,560 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:25:39,560 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:25:39,560 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:25:39,562 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:25:39,563 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:25:39,563 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:25:39,564 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:25:39,565 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:25:39,566 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:25:39,566 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:25:39,567 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:25:39,568 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:25:39,569 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:25:39,571 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:25:39,572 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:25:39,573 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:25:39,574 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:25:39,575 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:25:39,576 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:25:39,577 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:25:39,577 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:25:39,623 - src.utils - INFO - File salvato: uploads\20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:39,636 - src.utils - INFO - File salvato: uploads\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:25:39,677 - __main__ - INFO - Progress: Convertendo 1/2: 20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:39,677 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:41,186 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 46399 caratteri
+2025-07-08 21:25:41,186 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_212539_2019 - DGR 2531_2019.md
+2025-07-08 21:25:41,186 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:41,186 - src.document_processor - INFO - Creati 61 chunks Markdown da 1 documenti
+2025-07-08 21:25:41,186 - src.document_processor - INFO - File 1/2 convertito: 61 chunks da 20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:41,186 - __main__ - INFO - Progress: Convertendo 2/2: 20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:25:41,186 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:25:44,360 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 76972 caratteri
+2025-07-08 21:25:44,374 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.md
+2025-07-08 21:25:44,376 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:25:44,376 - src.document_processor - INFO - Creati 115 chunks Markdown da 1 documenti
+2025-07-08 21:25:44,376 - src.document_processor - INFO - File 2/2 convertito: 115 chunks da 20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:25:44,376 - src.document_processor - INFO - Totale chunks Markdown generati: 176 da 2 file
+2025-07-08 21:25:44,382 - src.document_processor - INFO - Processamento batch di 176 chunks Markdown (batch size: 50)
+2025-07-08 21:25:44,384 - src.document_processor - INFO - Creati 4 batch da processare
+2025-07-08 21:25:44,385 - __main__ - INFO - Progress: Creando gli embeddings...
+2025-07-08 21:25:44,386 - src.document_processor - INFO - Tentativo 1/3 per batch 1/4
+2025-07-08 21:25:45,863 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:25:46,549 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-07-08 21:25:46,549 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-08 21:25:46,549 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-07-08 21:25:46,980 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-08 21:25:46,980 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-08 21:25:46,993 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:25:49,000 - src.document_processor - INFO - Tentativo 1/3 per batch 2/4
+2025-07-08 21:25:49,801 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:25:50,308 - src.document_processor - INFO - Combinato batch 2/4
+2025-07-08 21:25:50,309 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:25:52,325 - src.document_processor - INFO - Tentativo 1/3 per batch 3/4
+2025-07-08 21:25:53,162 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:25:53,642 - src.document_processor - INFO - Combinato batch 3/4
+2025-07-08 21:25:53,642 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 21:25:55,661 - src.document_processor - INFO - Tentativo 1/3 per batch 4/4
+2025-07-08 21:25:56,300 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 21:25:56,448 - src.document_processor - INFO - Combinato batch 4/4
+2025-07-08 21:25:56,448 - src.document_processor - INFO - Vector store finale creato con 176 chunks Markdown totali
+2025-07-08 21:25:56,464 - src.document_processor - INFO - Metadati Markdown salvati: vector_store\metadata_72e4673337d30607cbc78d4caa65ae63_markdown.json
+2025-07-08 21:25:56,465 - src.document_processor - INFO - Vector store Markdown salvato nella cache: vector_store\vectorstore_72e4673337d30607cbc78d4caa65ae63_markdown
+2025-07-08 21:25:56,474 - src.chat_manager - INFO - Salvata sessione 20250708_212556
+2025-07-08 21:25:56,474 - src.chat_manager - INFO - Creata nuova sessione: 20250708_212556
+2025-07-08 21:25:56,475 - src.rag_system - INFO - Catena QA con supporto Markdown configurata per sessione 20250708_212556
+2025-07-08 21:25:56,476 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:57,849 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 46399 caratteri
+2025-07-08 21:25:57,864 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_212539_2019 - DGR 2531_2019.md
+2025-07-08 21:25:57,865 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_212539_2019 - DGR 2531_2019.pdf
+2025-07-08 21:25:57,865 - src.document_processor - INFO - Convertendo PDF in Markdown: uploads\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:26:01,209 - src.document_processor - INFO - Conversione completata. Lunghezza Markdown: 76972 caratteri
+2025-07-08 21:26:01,209 - src.document_processor - INFO - Markdown salvato: markdown_cache\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.md
+2025-07-08 21:26:01,209 - src.document_processor - INFO - PDF caricato come Markdown: uploads\20250708_212539_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 21:26:01,461 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:26:01,461 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:26:01,461 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:26:01,461 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:26:01,461 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:26:01,461 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:26:01,476 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:26:01,501 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:26:01,532 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:26:01,577 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:26:01,579 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:26:01,580 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:26:01,584 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:26:01,585 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:26:01,588 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:26:01,589 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:26:01,592 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:26:01,595 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:26:01,598 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:26:01,600 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:26:01,602 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:26:01,605 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:26:01,607 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:26:01,609 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:26:01,612 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:26:01,614 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:26:01,616 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:26:01,618 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:26:01,621 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:26:01,623 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:26:01,627 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:26:01,630 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:26:01,633 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:26:01,636 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:26:01,637 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:26:01,666 - src.chat_manager - INFO - Caricata sessione 20250708_212556
+2025-07-08 21:26:14,324 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:26:14,324 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:26:14,324 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:26:14,324 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:26:14,324 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:26:14,324 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:26:14,324 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:26:14,349 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:26:14,368 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:26:14,392 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:26:14,393 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:26:14,394 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:26:14,395 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:26:14,396 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:26:14,397 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:26:14,398 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:26:14,399 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:26:14,401 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:26:14,403 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:26:14,404 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:26:14,405 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:26:14,406 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:26:14,407 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:26:14,408 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:26:14,409 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:26:14,409 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:26:14,410 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:26:14,411 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:26:14,411 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:26:14,412 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:26:14,413 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:26:14,414 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:26:14,415 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:26:14,416 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:26:14,418 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:26:14,418 - src.chat_manager - INFO - Caricata sessione 20250708_212556
+2025-07-08 21:33:49,675 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 21:33:49,675 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 21:33:49,675 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 21:33:49,675 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 21:33:49,675 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 21:33:49,675 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 21:33:49,685 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:33:50,028 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 21:33:50,048 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 21:33:50,064 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 21:33:50,064 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 21:33:50,073 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 21:33:50,074 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 21:33:50,077 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 21:33:50,078 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 21:33:50,079 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 21:33:50,080 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 21:33:50,081 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 21:33:50,082 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 21:33:50,083 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 21:33:50,084 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 21:33:50,085 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 21:33:50,086 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 21:33:50,086 - src.chat_manager - INFO - Caricata sessione 20250708_163844
+2025-07-08 21:33:50,086 - src.chat_manager - INFO - Caricata sessione 20250708_164235
+2025-07-08 21:33:50,086 - src.chat_manager - INFO - Caricata sessione 20250708_173549
+2025-07-08 21:33:50,086 - src.chat_manager - INFO - Caricata sessione 20250708_174111
+2025-07-08 21:33:50,086 - src.chat_manager - INFO - Caricata sessione 20250708_180335
+2025-07-08 21:33:50,090 - src.chat_manager - INFO - Caricata sessione 20250708_181530
+2025-07-08 21:33:50,092 - src.chat_manager - INFO - Caricata sessione 20250708_181944
+2025-07-08 21:33:50,092 - src.chat_manager - INFO - Caricata sessione 20250708_182602
+2025-07-08 21:33:50,093 - src.chat_manager - INFO - Caricata sessione 20250708_182945
+2025-07-08 21:33:50,094 - src.chat_manager - INFO - Caricata sessione 20250708_183722
+2025-07-08 21:33:50,095 - src.chat_manager - INFO - Caricata sessione 20250708_210403
+2025-07-08 21:33:50,096 - src.chat_manager - INFO - Caricata sessione 20250708_211137
+2025-07-08 21:33:50,097 - src.chat_manager - INFO - Caricata sessione 20250708_212556

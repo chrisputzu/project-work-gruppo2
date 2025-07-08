@@ -278,7 +278,7 @@ class EnhancedDocumentProcessor:
             # Processa il primo batch per creare il vector store base
             first_batch = batches[0]
             if progress_callback:
-                progress_callback('Creando embeddings dal contenuto Markdown...')
+                progress_callback('Creando gli embeddings...')
             
             vector_store = self._process_batch_with_retry(first_batch, batch_num=1, total_batches=len(batches))
             
