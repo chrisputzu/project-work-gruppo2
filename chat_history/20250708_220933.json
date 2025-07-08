@@ -1,0 +1,14 @@
+{
+  "session_id": "20250708_220933",
+  "messages": [],
+  "created_at": "2025-07-08T22:09:33.295679",
+  "last_updated": "2025-07-08T22:09:33.295679",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 1,
+    "documents": [
+      "20250708_220927_2019 - DGR 2531_2019.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "files_hash": "c5958f543cb600307a2b40fae037409b_markdown",
+  "file_paths": [
+    "uploads\\20250708_225713_2019 - DGR 2531_2019.pdf",
+    "uploads\\20250708_225713_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf"
+  ],
+  "chunks_count": 176,
+  "created_at": 1752008250.3678396,
+  "conversion_method": "markdown",
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}

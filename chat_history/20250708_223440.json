@@ -1,0 +1,45 @@
+{
+  "session_id": "20250708_223440",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quali sono i requisiti per partecipare al bando?",
+      "timestamp": "2025-07-08T22:34:57.146091"
+    },
+    {
+      "role": "assistant",
+      "content": "❌ Errore nell'elaborazione del suggerimento: Sistema RAG non inizializzato. Chiamare setup_qa_chain prima.",
+      "timestamp": "2025-07-08T22:34:57.150090"
+    },
+    {
+      "role": "user",
+      "content": "Quali sono i requisiti per partecipare?",
+      "timestamp": "2025-07-08T22:35:06.208410"
+    },
+    {
+      "role": "assistant",
+      "content": "❌ Errore nell'elaborazione del suggerimento: Sistema RAG non inizializzato. Chiamare setup_qa_chain prima.",
+      "timestamp": "2025-07-08T22:35:06.214261"
+    },
+    {
+      "role": "user",
+      "content": "Qual è il budget massimo per progetto?",
+      "timestamp": "2025-07-08T22:35:09.124909"
+    },
+    {
+      "role": "assistant",
+      "content": "❌ Errore nell'elaborazione del suggerimento: Sistema RAG non inizializzato. Chiamare setup_qa_chain prima.",
+      "timestamp": "2025-07-08T22:35:09.130372"
+    }
+  ],
+  "created_at": "2025-07-08T22:34:40.571100",
+  "last_updated": "2025-07-08T22:35:09.130372",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 1,
+    "documents": [
+      "20250708_223430_2019 - DGR 2531_2019.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}

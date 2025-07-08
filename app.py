@@ -20,8 +20,8 @@ from src.utils import (
 
 # Configurazione della pagina
 st.set_page_config(
-    page_title="LombardIA Bandi - Sistema RAG",
-    page_icon="🏛️",
+    page_title="Bandi Assistant",
+    page_icon="logo/logo_lombardIA.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -55,6 +55,8 @@ class BandiRAGApp:
             st.session_state.vector_store = None
         if 'chat_session_id' not in st.session_state:
             st.session_state.chat_session_id = None
+        if 'suggested_query' not in st.session_state:
+            st.session_state.suggested_query = None
         
         # Aggiungi opzioni per la conversione Markdown
         if 'use_markdown_conversion' not in st.session_state:
@@ -74,21 +76,31 @@ class BandiRAGApp:
     
     def render_sidebar(self):
         """Renderizza la sidebar con le opzioni di navigazione"""
-        # Logo in sidebar
+        # Logo in sidebar centrato usando le colonne di Streamlit
         logo_path = Path("logo/logo_lombardIA.png")
         if logo_path.exists():
-            st.sidebar.image(str(logo_path), width=200)
-        
-        st.sidebar.title("LombardIA Bandi")
-        
+            col1, col2 = st.sidebar.columns([1, 3])
+            with col1:
+                st.image(str(logo_path), width=50)
+            with col2:
+                st.markdown(
+                    """
+                    <div style='display: flex; align-items: flex-end; height: 50px;'>
+                        <span style='font-size: 1.3em; font-weight: bold; margin-left: 0.2em; margin-bottom: 0;'>Bandi Assistant</span>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+
+            
         # Menu di navigazione
         page = st.sidebar.selectbox(
             "Seleziona una funzione:",
             [
-                "📁 Caricamento Documenti",
-                "💬 LombardIA Bandi Chat", 
-                "📊 Tabella di Sintesi",
-                "📄 Documento di Sintesi"
+                "📁 Gestione Documenti",
+                "💬 Chat con AI", 
+                "📊 Tabella Riassuntiva",
+                "📄 Report di Sintesi"
             ]
         )
         
@@ -107,10 +119,10 @@ class BandiRAGApp:
             # Gestione chat
             sessions = self.chat_manager.get_session_list()
             if sessions:
-                st.sidebar.metric("Sessioni chat", len(sessions))
+                st.sidebar.markdown("---")
                 
-                # Menu chat
-                st.sidebar.markdown("###Le tue chat")
+            
+                
                 
                 # Pulsante per nuova chat
                 if st.sidebar.button("➕ Nuova Chat", key="new_chat_btn"):
@@ -123,6 +135,9 @@ class BandiRAGApp:
                     session_id = self.chat_manager.create_session(metadata)
                     st.session_state.chat_session_id = session_id
                     st.rerun()
+
+                # Menu chat
+                st.sidebar.markdown("### Cronologia chat")
                 
                 # Lista chat esistenti
                 for session in sessions[:5]:  # Mostra solo le prime 5
@@ -193,16 +208,16 @@ class BandiRAGApp:
     
     def render_file_upload_page(self):
         """Pagina per il caricamento dei documenti con opzioni Markdown"""
-        st.title("📁 Caricamento Documenti Bandi")
+        st.title("📁 Gestione Documenti")
         
         st.markdown("""
-        Carica i documenti PDF dei bandi pubblici. 
+        Carica i documenti PDF dei bandi pubblici della Regione Lombardia. 
         """)
         
         
         
         # Sezione per processare la cartella data
-        st.markdown("### 🗂️ Processa Cartella Data")
+        st.markdown("### 📄 Elabora Documenti")
         col1, col2 = st.columns([3, 1])
         
         with col1:
@@ -234,13 +249,13 @@ class BandiRAGApp:
         )
         
         if uploaded_files:
-            st.markdown("### 📋 File selezionati:")
+            
             total_size = 0
             valid_count = 0
             
             for file in uploaded_files:
                 if validate_pdf_file(file):
-                    st.success(f"✅ {file.name} - {format_file_size(file.size)}")
+                    
                     total_size += file.size
                     valid_count += 1
                 else:
@@ -358,11 +373,8 @@ class BandiRAGApp:
                 session_id = self.chat_manager.create_session(metadata)
                 st.session_state.chat_session_id = session_id
             
-            # Usa setup migliorato se disponibile
-            if hasattr(self.rag_system, 'setup_qa_chain_enhanced') and st.session_state.use_markdown_conversion:
-                self.rag_system.setup_qa_chain_enhanced(self.vector_store, st.session_state.chat_session_id)
-            else:
-                self.rag_system.setup_qa_chain(self.vector_store, st.session_state.chat_session_id)
+            # Usa sempre setup_qa_chain invece di setup_qa_chain_enhanced
+            self.rag_system.setup_qa_chain(self.vector_store, st.session_state.chat_session_id)
             
             # Salva lo stato
             st.session_state.processed_files.extend(file_paths)
@@ -447,11 +459,8 @@ class BandiRAGApp:
                 session_id = self.chat_manager.create_session(metadata)
                 st.session_state.chat_session_id = session_id
             
-            # Usa setup migliorato se disponibile
-            if hasattr(self.rag_system, 'setup_qa_chain_enhanced') and st.session_state.use_markdown_conversion:
-                self.rag_system.setup_qa_chain_enhanced(self.vector_store, st.session_state.chat_session_id)
-            else:
-                self.rag_system.setup_qa_chain(self.vector_store, st.session_state.chat_session_id)
+            # Usa sempre setup_qa_chain invece di setup_qa_chain_enhanced
+            self.rag_system.setup_qa_chain(self.vector_store, st.session_state.chat_session_id)
             
             # Salva lo stato
             st.session_state.processed_files.extend(file_paths)
@@ -492,7 +501,7 @@ class BandiRAGApp:
         """Pagina del chatbot per domande sui bandi"""
         # Header con logo
         
-        st.title("💬 LombardIA Bandi Chat")
+        st.title("💬 Chat con AI")
         
         if not st.session_state.vector_store_ready:
             st.warning("⚠️ Carica prima alcuni documenti nella sezione 'Caricamento Documenti'")
@@ -514,6 +523,55 @@ class BandiRAGApp:
             st.error("❌ Errore nel caricamento della sessione")
             return
         
+        # Controlla se c'è un suggerimento da processare
+        if 'suggested_query' in st.session_state and st.session_state.suggested_query:
+            suggestion = st.session_state.suggested_query
+            # Aggiungi il messaggio alla chat
+            session.add_message("user", suggestion)
+            self.chat_manager.save_session(session)
+            
+            # Mostra il messaggio dell'utente
+            with st.chat_message("user"):
+                st.markdown(suggestion)
+            
+            # Elabora la risposta per il suggerimento
+            with st.chat_message("assistant"):
+                with st.spinner(f"Elaborando risposta per '{suggestion}'..."):
+                    try:
+                        if not hasattr(self, 'vector_store') or self.vector_store is None:
+                            if st.session_state.vector_store is not None:
+                                self.vector_store = st.session_state.vector_store
+                                # Inizializza correttamente il RAG system prima di fare query
+                                chat_history = "\n".join([
+                                    f"{msg['role'].upper()}: {msg['content']}"
+                                    for msg in session.messages
+                                ])
+                                self.rag_system.setup_qa_chain(
+                                    self.vector_store, 
+                                    session.session_id,
+                                    initial_chat_history=chat_history
+                                )
+                            else:
+                                st.error("❌ Vector store non disponibile.")
+                                return
+                                
+                        result = self.rag_system.query(suggestion, session.session_id)
+                        
+                        # Aggiungi la risposta alla chat
+                        session.add_message("assistant", result["answer"], result["sources"])
+                        self.chat_manager.save_session(session)
+                        
+                        # Pulisci il suggerimento dopo averlo processato
+                        st.session_state.suggested_query = None
+                        st.rerun()
+                    except Exception as e:
+                        error_msg = f"❌ Errore nell'elaborazione del suggerimento: {str(e)}"
+                        st.error(error_msg)
+                        session.add_message("assistant", error_msg)
+                        self.chat_manager.save_session(session)
+                        st.session_state.suggested_query = None
+                        st.rerun()
+        
         # Info sessione
         st.caption(f"Chat iniziata il {datetime.fromisoformat(session.created_at).strftime('%d/%m/%Y alle %H:%M')}")
         
@@ -521,17 +579,26 @@ class BandiRAGApp:
         
 
         # Suggerimenti intelligenti (se supportati)
-        if hasattr(self.rag_system, 'get_markdown_search_suggestions') and st.session_state.documents:
-            if st.expander("🔍 Suggerimenti di ricerca"):
-                try:
-                    suggestions = self.rag_system.get_markdown_search_suggestions("", st.session_state.documents)
-                    for suggestion in suggestions:
-                        if st.button(suggestion, key=f"suggestion_{hash(suggestion)}"):
-                            st.session_state.suggested_query = suggestion
-                            st.rerun()
-                except Exception as e:
-                    st.write("Suggerimenti non disponibili")
-        
+        if st.expander("🔍 Suggerimenti di ricerca"):
+            # Esempi di suggerimenti sempre disponibili
+            example_suggestions = [
+                "Quali sono i requisiti per partecipare al bando?",
+                "Qual è la scadenza per presentare la domanda?",
+                "Quali sono i settori finanziabili?",
+                "Qual è il budget massimo per progetto?",
+                "Chi sono i beneficiari ammissibili?"
+            ]
+            
+            st.markdown("#### Esempi di domande:")
+            col1, col2 = st.columns(2)
+            for i, suggestion in enumerate(example_suggestions):
+                with col1 if i % 2 == 0 else col2:
+                    if st.button(suggestion, key=f"example_{hash(suggestion)}"):
+                        st.session_state.suggested_query = suggestion
+                        st.rerun()
+            
+            # Spazio vuoto intenzionale per mantenere solo i suggerimenti esempio
+            
         # Chat container
         chat_container = st.container()
         with chat_container:
@@ -542,7 +609,7 @@ class BandiRAGApp:
                     if "sources" in message:
                         with st.expander("📚 Fonti"):
                             for source in message["sources"]:
-                                st.markdown(f"**{source['source']}** (Pagina {source['page']})")
+                                st.markdown(f"**{source['source']}**")
                                 st.markdown(f"_{source['content_preview']}_")
         
         # Input personalizzato
@@ -687,7 +754,7 @@ class BandiRAGApp:
     
     def render_summary_table_page(self):
         """Pagina per la tabella di sintesi"""
-        st.title("📊 Tabella di Sintesi Bandi")
+        st.title("📊 Tabella Riassuntiva")
         
         if not st.session_state.documents:
             st.warning("⚠️ Carica prima alcuni documenti nella sezione 'Caricamento Documenti'")
@@ -796,7 +863,7 @@ class BandiRAGApp:
     
     def render_synthesis_document_page(self):
         """Pagina per il documento di sintesi (BONUS)"""
-        st.title("📄 Documento di Sintesi")
+        st.title("📄 Report di Sintesi")
         
         if not st.session_state.documents:
             st.warning("⚠️ Carica prima alcuni documenti nella sezione 'Caricamento Documenti'")
@@ -909,13 +976,13 @@ class BandiRAGApp:
         
         selected_page = self.render_sidebar()
         
-        if selected_page == "📁 Caricamento Documenti":
+        if selected_page == "📁 Gestione Documenti":
             self.render_file_upload_page()
-        elif selected_page == "💬 LombardIA Bandi Chat":
+        elif selected_page == "💬 Chat con AI":
             self.render_chatbot_page()
-        elif selected_page == "📊 Tabella di Sintesi":
+        elif selected_page == "📊 Tabella Riassuntiva":
             self.render_summary_table_page()
-        elif selected_page == "📄 Documento di Sintesi":
+        elif selected_page == "📄 Report di Sintesi":
             self.render_synthesis_document_page()
 
 if __name__ == "__main__":

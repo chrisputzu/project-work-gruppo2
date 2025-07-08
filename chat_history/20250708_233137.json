@@ -1,0 +1,45 @@
+{
+  "session_id": "20250708_233137",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao amico",
+      "timestamp": "2025-07-08T23:31:53.586433"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao amico! 😊",
+      "timestamp": "2025-07-08T23:31:55.046917"
+    },
+    {
+      "role": "user",
+      "content": "come stai?",
+      "timestamp": "2025-07-08T23:32:04.415400"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao! 😊",
+      "timestamp": "2025-07-08T23:32:06.001958"
+    },
+    {
+      "role": "user",
+      "content": "voglio salvare le balene",
+      "timestamp": "2025-07-08T23:32:26.481246"
+    },
+    {
+      "role": "assistant",
+      "content": "\"L'informazione richiesta non è presente nei documenti caricati. Per favore, chiedi qualcosa relativo ai bandi disponibili.\" 😊",
+      "timestamp": "2025-07-08T23:32:28.283721"
+    }
+  ],
+  "created_at": "2025-07-08T23:31:37.069263",
+  "last_updated": "2025-07-08T23:32:28.283721",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 1,
+    "documents": [
+      "20250708_233130_2019 - DGR 2531_2019.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}

@@ -13,6 +13,7 @@ from src.document_processor import EnhancedDocumentProcessor
 from src.chat_manager import ChatManager
 import logging
 from unstructured.partition.pdf import partition_pdf
+import streamlit as st  # Import necessario per utilizzare Streamlit
 
 logger = logging.getLogger(__name__)
 
@@ -86,7 +87,9 @@ class RAGSystem:
                 
                 DOMANDA ATTUALE: {question}
                 
-                Rispondi in modo amichevole e professionale, senza cercare informazioni nei bandi poiché la domanda è di carattere generale.
+                Se la domanda non riguarda i bandi caricati, rispondi semplicemente:
+                L'informazione richiesta non è presente nei documenti caricati. Per favore, chiedi qualcosa relativo ai bandi disponibili.
+                Rispondi in modo breve, chiaro e gentile. Se è solo un saluto o una conversazione frivola, rispondi cordialmente.
                 """
                 
                 response = self.llm.invoke(chat_prompt)
@@ -114,20 +117,6 @@ class RAGSystem:
         
         Messaggio utente: {question}
         
-        Esempi di domande sui bandi:
-        - Quali sono i requisiti per partecipare?
-        - Qual è la scadenza del bando?
-        - Quanto è il budget disponibile?
-        - Chi sono i beneficiari?
-        - Come si presenta la domanda?
-        
-        Esempi di chat generale:
-        - Ciao, come stai?
-        - Mi chiamo Mario
-        - Grazie dell'aiuto
-        - Non ho capito
-        - Puoi ripetere?
-        
         Rispondi SOLO con "True" se la domanda è sui bandi, "False" se è chat generale.
         """
         
@@ -142,7 +131,7 @@ class RAGSystem:
     
     # Aggiungi questo metodo alla classe RAGSystem nel file rag_system.py
 
-    def setup_qa_chain_enhanced(self, vector_store, session_id: str, initial_chat_history: str = ""):
+    def setup_qa_chain(self, vector_store, session_id: str, initial_chat_history: str = ""):
         """Configura la catena QA con supporto migliorato per contenuto Markdown"""
         
         qa_template_markdown = """
@@ -151,6 +140,10 @@ class RAGSystem:
         
         IMPORTANTE: I documenti sono stati convertiti da PDF a Markdown per una migliore leggibilità.
         Utilizza questa strutturazione per fornire risposte più precise e ben formattate.
+
+        Se l'informazione richiesta NON è presente nei documenti caricati, rispondi chiaramente:
+        "L'informazione richiesta non è presente nei documenti caricati. Fai una domanda pertinente alla documentazione."
+        NON inventare o allargare la risposta.
         
         CRONOLOGIA DELLA CONVERSAZIONE:
         {chat_history}
@@ -181,6 +174,9 @@ class RAGSystem:
         - Liste puntate per elenchi
         8. Se trovi tabelle o liste strutturate nei documenti Markdown, mantieni la formattazione
         9. NON cercare le informazioni sul web, usa solo i documenti forniti
+        10. Se l'informazione richiesta NON è presente nei documenti caricati, rispondi chiaramente:
+        "L'informazione richiesta non è presente nei documenti caricati. Fai una domanda pertinente alla documentazione."
+        NON inventare o allargare la risposta.
         
         RISPOSTA (usa formattazione Markdown quando utile):
         """
@@ -537,14 +533,9 @@ class RAGSystem:
             "Quali documenti sono richiesti?",
             "Qual è la percentuale di cofinanziamento?"
         ]
-        
-        # Filtra suggerimenti generici basati sulla query
-        if len(suggestions) < 5:
-            for suggestion in generic_suggestions:
-                if len(suggestions) >= 5:
-                    break
-                if not any(word in suggestion.lower() for word in query_lower.split()) or len(query_lower) < 3:
-                    suggestions.append(suggestion)
+
+        # Aggiungi suggerimenti generici alla lista dei suggerimenti
+        suggestions.extend(generic_suggestions)
         
         return suggestions[:5]
 
@@ -819,7 +810,7 @@ class RAGSystem:
             Estrai dal documento Markdown seguendo questa struttura:
 
             Ente erogatore: [cerca in header o sezioni ente]
-            Titolo dell'avviso: [titolo principale # o nome ufficiale]
+            Titolo dell'avviso: [titolo principale # o il nome ufficiale]
             Descrizione aggiuntiva: [obiettivi, finalità]
             Beneficiari: [sezioni beneficiari, destinatari]
             Apertura: [data apertura - gg/mm/aaaa]
@@ -935,169 +926,3 @@ class RAGSystem:
             'source': file_name,
             'url': 'Da verificare'
         }
-
-    def extract_markdown_structure(self, documents: List[Document]) -> Dict[str, Any]:
-        """Estrae la struttura dai documenti Markdown per analisi migliore"""
-        structure_info = {
-            "total_documents": len(documents),
-            "markdown_documents": 0,
-            "has_tables": False,
-            "has_headers": False,
-            "has_lists": False,
-            "sections": [],
-            "conversion_methods": set()
-        }
-        
-        for doc in documents:
-            content = doc.page_content
-            metadata = doc.metadata
-            
-            # Conta documenti Markdown
-            if metadata.get('content_type') == 'markdown':
-                structure_info["markdown_documents"] += 1
-            
-            # Rileva conversioni
-            conv_method = metadata.get('conversion_method', 'unknown')
-            structure_info["conversion_methods"].add(conv_method)
-            
-            # Analizza contenuto Markdown
-            if content:
-                # Headers
-                if any(line.startswith('#') for line in content.split('\n')):
-                    structure_info["has_headers"] = True
-                    
-                    # Estrai titoli principali
-                    for line in content.split('\n'):
-                        if line.startswith('# ') and len(line) > 2:
-                            title = line[2:].strip()
-                            if title and title not in structure_info["sections"]:
-                                structure_info["sections"].append(title)
-                
-                # Liste
-                if any(line.strip().startswith(('-', '*', '+')) for line in content.split('\n')):
-                    structure_info["has_lists"] = True
-                
-                # Tabelle (format Markdown)
-                if '|' in content and any('---' in line for line in content.split('\n')):
-                    structure_info["has_tables"] = True
-        
-        structure_info["conversion_methods"] = list(structure_info["conversion_methods"])
-        return structure_info
-
-    def debug_markdown_processing(self, documents: List[Document]) -> str:
-        """Genera un report di debug per il processamento Markdown"""
-        
-        report = "# 🔍 Report Debug Processamento Markdown\n\n"
-        
-        # Analisi generale
-        analysis = self.analyze_markdown_content_quality(documents)
-        
-        report += f"## 📊 Statistiche Generali\n\n"
-        report += f"- **Documenti totali**: {analysis['total_documents']}\n"
-        report += f"- **Convertiti in Markdown**: {analysis['markdown_converted']}\n"
-        report += f"- **Lunghezza media**: {analysis['average_length']:.0f} caratteri\n\n"
-        
-        # Metodi di conversione
-        report += f"## 🔄 Metodi di Conversione\n\n"
-        for method, count in analysis['conversion_methods'].items():
-            report += f"- **{method}**: {count} documenti\n"
-        
-        # Qualità struttura
-        report += f"\n## 🏗️ Qualità Struttura\n\n"
-        for feature, data in analysis['structure_quality'].items():
-            report += f"- **{feature.replace('_', ' ').title()}**: {data['count']} documenti ({data['percentage']:.1f}%)\n"
-        
-        # Problemi potenziali
-        if analysis['potential_issues']:
-            report += f"\n## ⚠️ Problemi Potenziali\n\n"
-            for issue in analysis['potential_issues'][:5]:  # Primi 5 problemi
-                report += f"- {issue}\n"
-        
-        # Esempi di contenuto
-        report += f"\n## 📝 Esempi di Contenuto\n\n"
-        markdown_docs = [doc for doc in documents if doc.metadata.get('content_type') == 'markdown']
-        
-        if markdown_docs:
-            sample_doc = markdown_docs[0]
-            preview = sample_doc.page_content[:500]
-            report += f"**File**: {sample_doc.metadata.get('source', 'Unknown')}\n\n"
-            report += f"```markdown\n{preview}...\n```\n\n"
-        
-        return report
-
-    def analyze_markdown_content_quality(self, documents: List[Document]) -> Dict[str, Any]:
-        """Analizza la qualità della conversione Markdown"""
-        analysis = {
-            "total_documents": len(documents),
-            "markdown_converted": 0,
-            "average_length": 0,
-            "structure_quality": {
-                "has_headers": 0,
-                "has_tables": 0,
-                "has_lists": 0,
-                "well_structured": 0
-            },
-            "conversion_methods": {},
-            "potential_issues": []
-        }
-        
-        total_length = 0
-        
-        for doc in documents:
-            content = doc.page_content
-            metadata = doc.metadata
-            
-            total_length += len(content)
-            
-            # Conta documenti convertiti in Markdown
-            if metadata.get('content_type') == 'markdown':
-                analysis["markdown_converted"] += 1
-            
-            # Analizza metodo di conversione
-            conv_method = metadata.get('conversion_method', 'unknown')
-            analysis["conversion_methods"][conv_method] = analysis["conversion_methods"].get(conv_method, 0) + 1
-            
-            # Analizza struttura
-            if content:
-                lines = content.split('\n')
-                
-                # Headers
-                if any(line.strip().startswith('#') for line in lines):
-                    analysis["structure_quality"]["has_headers"] += 1
-                
-                # Tabelle Markdown
-                if any('|' in line and '---' in content for line in lines):
-                    analysis["structure_quality"]["has_tables"] += 1
-                
-                # Liste
-                if any(line.strip().startswith(('-', '*', '+', '1.')) for line in lines):
-                    analysis["structure_quality"]["has_lists"] += 1
-                
-                # Documento ben strutturato (ha headers + liste o tabelle)
-                has_structure = (
-                    any(line.strip().startswith('#') for line in lines) and
-                    (any(line.strip().startswith(('-', '*', '+')) for line in lines) or
-                    any('|' in line for line in lines))
-                )
-                if has_structure:
-                    analysis["structure_quality"]["well_structured"] += 1
-            
-            # Identifica potenziali problemi
-            if len(content) < 100:
-                analysis["potential_issues"].append(f"Documento troppo corto: {metadata.get('source', 'unknown')}")
-            
-            if content.count('\n') < 5:
-                analysis["potential_issues"].append(f"Poca strutturazione: {metadata.get('source', 'unknown')}")
-        
-        # Calcola medie
-        if len(documents) > 0:
-            analysis["average_length"] = total_length / len(documents)
-        
-        # Calcola percentuali
-        for key in analysis["structure_quality"]:
-            analysis["structure_quality"][key] = {
-                "count": analysis["structure_quality"][key],
-                "percentage": (analysis["structure_quality"][key] / len(documents)) * 100 if len(documents) > 0 else 0
-            }
-        
-        return analysis

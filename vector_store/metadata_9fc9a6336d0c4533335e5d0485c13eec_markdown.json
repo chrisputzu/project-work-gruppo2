@@ -1,0 +1,14 @@
+{
+  "files_hash": "9fc9a6336d0c4533335e5d0485c13eec_markdown",
+  "file_paths": [
+    "uploads\\20250708_220927_2019 - DGR 2531_2019.pdf"
+  ],
+  "chunks_count": 61,
+  "created_at": 1752005373.28713,
+  "conversion_method": "markdown",
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}

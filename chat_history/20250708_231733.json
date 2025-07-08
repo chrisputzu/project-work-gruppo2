@@ -1,0 +1,97 @@
+{
+  "session_id": "20250708_231733",
+  "messages": [
+    {
+      "role": "user",
+      "content": "ciao",
+      "timestamp": "2025-07-08T23:17:46.144610"
+    },
+    {
+      "role": "assistant",
+      "content": "L'informazione richiesta non è presente nei documenti caricati. Fai una domanda pertinente alla documentazione.",
+      "timestamp": "2025-07-08T23:17:48.242621"
+    },
+    {
+      "role": "user",
+      "content": "come sfruttare un immobile per la crimilarità organizzata",
+      "timestamp": "2025-07-08T23:18:12.945796"
+    },
+    {
+      "role": "assistant",
+      "content": "L'informazione richiesta non è presente nei documenti caricati. Fai una domanda pertinente alla documentazione.",
+      "timestamp": "2025-07-08T23:18:15.173455"
+    },
+    {
+      "role": "user",
+      "content": "come sfruttare un immobile sottratto alla criminalità organizzata",
+      "timestamp": "2025-07-08T23:18:48.872894"
+    },
+    {
+      "role": "assistant",
+      "content": "L'informazione richiesta non è presente nei documenti caricati. Fai una domanda pertinente alla documentazione.",
+      "timestamp": "2025-07-08T23:18:50.873584"
+    },
+    {
+      "role": "user",
+      "content": "come sfruttare un immobile sottratto alla criminalità organizzata",
+      "timestamp": "2025-07-08T23:19:40.380970"
+    },
+    {
+      "role": "assistant",
+      "content": "\"L'informazione richiesta non è presente nei documenti caricati. Fai una domanda pertinente alla documentazione.\"",
+      "timestamp": "2025-07-08T23:19:42.012941"
+    },
+    {
+      "role": "user",
+      "content": "Quali sono i requisiti per partecipare al bando?",
+      "timestamp": "2025-07-08T23:19:54.633385"
+    },
+    {
+      "role": "assistant",
+      "content": "### Requisiti per partecipare al bando\n\nDai documenti caricati, i requisiti per partecipare al bando sono i seguenti:\n\n1. **Presentazione della domanda**\n   - La domanda deve essere firmata dal **legale rappresentante** o, nel caso di ente locale o soggetto pubblico concessionario dell’immobile, da una persona delegata con specifico atto.\n   - Deve essere presentata **esclusivamente online** tramite la Piattaforma Informatica Regionale Bandi (_www.bandi.servizirl.it_).\n\n2. **Soggetti ammessi**\n   - **Enti locali**: Devono presentare la domanda durante il **primo trimestre di ogni anno**, prima dell’inizio dei lavori.\n   - **Soggetti concessionari**: Possono presentare la domanda in qualsiasi momento dell’anno **successivamente alla realizzazione degli interventi**, entro 6 mesi dalla dichiarazione dell’ente locale di approvazione degli interventi realizzati.\n\n3. **Documentazione da allegare** (a seconda del soggetto richiedente):\n   - Per gli **enti locali**:\n     - Copia della **deliberazione dell’ente locale** che accetta e determina l’utilizzo del bene per fini sociali e/o istituzionali.\n     - **Planimetrie** dello stato di fatto dei luoghi (in scala adeguata) e rappresentazione fotografica dello stato di fatto (almeno 2 foto per sito di intervento).\n     - **Planimetrie di progetto** e, se necessari, ulteriori elaborati grafici di dettaglio.\n     - Relazione tecnica che include:\n       - Destinazione finale dell’opera.\n   - Per i **soggetti concessionari**:\n     - Copia del provvedimento dell’ente locale che concede il bene immobile.\n     - Dichiarazione di approvazione degli interventi realizzati dal concessionario.\n     - Compilazione completa delle schede “immobile” e “uso attuale” presenti sul portale _Viewer Beni Confiscati_ (_https://www.multiplan.servizirl.it/it_).\n\n4. **Obblighi tecnici**\n   - Gli interventi devono essere realizzati nel rispetto del **regime di aiuto in “de minimis”** (informativa disponibile sul sito regionale _www.bandi.servizirl.it_).\n   - I lavori devono essere conclusi entro **20 mesi** dalla data di inizio, con possibilità di proroghe.\n\n5. **Vincoli sulle modifiche**\n   - Non sono ammesse modifiche sostanziali all’intervento di riutilizzo del bene.\n   - Modifiche parziali possono essere accettate solo per migliorare funzionalità, esecuzione o efficacia, purché siano riconducibili al medesimo tipo di intervento.\n\n> **Nota**: Per maggiori dettagli, consulta la Piattaforma Informatica Regionale Bandi disponibile su _www.bandi.servizirl.it_.\n\nSe hai ulteriori domande specifiche, fammi sapere! 😊",
+      "timestamp": "2025-07-08T23:20:06.460990",
+      "sources": [
+        {
+          "source": "20250708_231908_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "determinato tenuto conto degli altri contributi e comunque entro e non oltre la\n\n\ncopertura dell’intero costo dell’intervento.\n\n\n**4.** **Presentazione della domanda e documentazione da allegare**\n\n\n1..."
+        },
+        {
+          "source": "20250708_231908_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "316/2019, a partire da quanto pubblicato su RNA, e attestando di non\n\n\nrientrare nelle specifiche esclusioni di cui all’art. 1 di ciascuno dei\n\n\nRegolamenti stessi. Per le attestazioni, gli stessi sog..."
+        },
+        {
+          "source": "20250708_231908_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "assegnazione del contributo, dandone conferma con il certificato di inizio lavori,\n\n\na firma del Responsabile Unico del Procedimento (RUP), trasmesso mediante la\n\n\nPiattaforma Informatica Regionale _B..."
+        },
+        {
+          "source": "20250708_231908_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "competente Struttura regionale ai sensi dell’art. 27 della l.r. 34/1978, che devono\n\n\nessere richieste mediante la suddetta Piattaforma Informatica;\n\n\n2. Eventuali economie, derivanti da ribassi conse..."
+        },
+        {
+          "source": "20250708_231908_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "1.a) La domanda è presentata dall’ente locale durante il primo trimestre di ogni\n\n\nanno e, comunque, prima dell’inizio dei lavori di realizzazione degli interventi, e\n\n\ndeve essere corredata di:\n\n\n   ..."
+        },
+        {
+          "source": "20250708_231908_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "approvazione degli interventi realizzati, per i quali il concessionario chiede il\n\n\ncontributo regionale, nonché di effettuata compilazione, in ogni suo campo\n\n\ne attributo, delle relative “scheda imm..."
+        }
+      ]
+    }
+  ],
+  "created_at": "2025-07-08T23:17:33.313263",
+  "last_updated": "2025-07-08T23:20:06.460990",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 1,
+    "documents": [
+      "20250708_231726_2019 - DGR 2531_2019.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}
