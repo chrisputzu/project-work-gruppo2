@@ -179,14 +179,7 @@ class BandiRAGApp:
     
     def render_file_upload_page(self):
         """Pagina per il caricamento dei documenti"""
-        # Header con logo
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            logo_path = Path("logo/logo_lombardIA.png")
-            if logo_path.exists():
-                st.image(str(logo_path), width=120)
-        with col2:
-            st.title("📁 Caricamento Documenti Bandi")
+        st.title("📁 Caricamento Documenti Bandi")
         
         st.markdown("""
         Carica i documenti PDF dei bandi pubblici.

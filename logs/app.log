@@ -3583,3 +3583,24 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-07-08 16:15:35,390 - src.chat_manager - INFO - Caricata sessione 20250708_153005
 2025-07-08 16:15:35,391 - src.chat_manager - INFO - Caricata sessione 20250708_161203
 2025-07-08 16:15:55,431 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 16:24:39,648 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:24:39,650 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:24:39,651 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:24:39,651 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:24:39,651 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:24:39,652 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:24:39,652 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:24:40,108 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:24:40,133 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:24:40,168 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:24:40,169 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:24:40,172 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:24:40,174 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:24:40,176 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:24:40,177 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:24:40,178 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:24:40,180 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:24:40,184 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:24:40,198 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:24:40,200 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:24:40,203 - src.chat_manager - INFO - Caricata sessione 20250708_161203
