@@ -1,0 +1,44 @@
+# ===============================================
+# CONFIGURAZIONE VARIABILI D'AMBIENTE
+# ===============================================
+# 
+# Copia questo file in ".env" e inserisci le tue chiavi API
+# 
+# IMPORTANTE: Non committare mai il file .env nel repository!
+# 
+# ===============================================
+
+# OpenAI Configuration (OPZIONE PRINCIPALE - CONSIGLIATA)
+# ========================================================
+# Ottieni la tua chiave API da: https://platform.openai.com/api-keys
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Azure OpenAI Configuration (OPZIONE ALTERNATIVA)
+# =================================================
+# Per utenti enterprise con deployment Azure OpenAI
+AZURE_ENDPOINT=your_azure_endpoint_here
+AZURE_API_KEY=your_azure_api_key_here
+AZURE_ENDPOINT_EMB=your_azure_embedding_endpoint_here
+AZURE_API_KEY_EMB=your_azure_embedding_api_key_here
+
+# ===============================================
+# ISTRUZIONI:
+# ===============================================
+# 
+# 1. Rinomina questo file in ".env"
+# 2. Inserisci le tue chiavi API reali
+# 3. Scegli UNA delle due opzioni:
+#    - OpenAI (più semplice)
+#    - Azure OpenAI (per utenti enterprise)
+# 4. Rimuovi le righe non necessarie
+# 
+# ===============================================
+
+# Esempio configurazione OpenAI:
+# OPENAI_API_KEY=sk-proj-abc123def456ghi789...
+
+# Esempio configurazione Azure OpenAI:
+# AZURE_ENDPOINT=https://your-resource.openai.azure.com/
+# AZURE_API_KEY=abc123def456ghi789...
+# AZURE_ENDPOINT_EMB=https://your-embedding-resource.openai.azure.com/
+# AZURE_API_KEY_EMB=xyz789abc123def456... 

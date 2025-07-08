@@ -1,0 +1,89 @@
+{
+  "session_id": "20250708_093523",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quali sono le scadenze dei bandi disponibili?",
+      "timestamp": "2025-07-08T09:35:42.659944"
+    },
+    {
+      "role": "assistant",
+      "content": "Al momento, il bando di cui si parla nella cronologia della conversazione non ha una scadenza definita ma rimane aperto **fino ad esaurimento della dotazione finanziaria**, che è pari a **€ 38.817.000,00**. Le domande possono essere presentate dai **Confidi** a partire dalle **ore 11:00 del 3 novembre 2022** tramite la piattaforma informatica **Bandi online** disponibile all’indirizzo: [www.bandi.servizirl.it](http://www.bandi.servizirl.it).\n\nTi consiglio di verificare l’attuale disponibilità della dotazione finanziaria accedendo alla piattaforma o contattando i Confidi, in quanto la chiusura del bando dipende esclusivamente dalla disponibilità residua dei fondi. Se hai bisogno di ulteriori dettagli o assistenza per procedere, fammi sapere! 😊",
+      "timestamp": "2025-07-08T09:35:49.577073",
+      "sources": [
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 20,
+          "content_preview": "21 \n \nD.9 Definizioni e glossario \na)  “Bando”: il presente Bando con i relativi allegati; \nb)  “Aiuto”: la Garanzia e il contributo a fondo perdut o concessi alternativamente \nnell’ambito del Quadro ..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 18,
+          "content_preview": "e contributo) per conto dei soggetti Beneficiari dalle ore 11:00 del \n3 novembre 2022 \nDATA DI CHIUSURA  Fino ad esaurimento della dotazione finanziaria \nCOME PARTECIPARE  \nI Beneficiari richiedono il..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 8,
+          "content_preview": "al paragrafo A.2 richiedendo il finanziamento e presentando il Modulo di adesione al \nBando di cui all’Appendice 2. Il Modulo può essere sottoscritto  con firma digitale o \nelettronica o autografa (in..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 3,
+          "content_preview": "non soddisfare le condizioni previste dal diritto nazionale per l’apertura nei \npropri confronti di una tale procedura su richiesta  dei suoi creditori (Reg \n(UE) N. 1407/2013 art. 4 comma 6). \n \nI re..."
+        },
+        {
+          "source": "20250708_093309_2019 - DGR 2531_2019.pdf",
+          "page": 17,
+          "content_preview": "a firma del Responsabile Unico del Procedimento (RU P), trasmesso mediante la \nPiattaforma Informatica Regionale Bandi  online , disponibile all’indirizzo: \nwww.bandi.servizirl.it, fatte salve eventua..."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "quali bandi ci sono a disposizione?",
+      "timestamp": "2025-07-08T09:37:00.333221"
+    },
+    {
+      "role": "assistant",
+      "content": "Attualmente, il bando disponibile è il **\"Fondo Confidiamo nella Ripresa - Energia\"**, una misura dedicata a sostenere la liquidità delle **PMI lombarde** che sono state penalizzate dalla crisi energetica conseguente al conflitto tra Russia e Ucraina.\n\n### Informazioni principali:\n- **Dotazione finanziaria complessiva:** € 38.817.000,00.\n- **Obiettivo:** Fornire supporto alle imprese attraverso **garanzie** sui finanziamenti e **contributi a fondo perduto**.\n- **Beneficiari:** PMI lombarde che:\n  - Siano iscritte al Registro delle Imprese.\n  - Abbiano almeno una sede legale o operativa attiva in Lombardia (risultante da visura camerale).\n  - Siano attive alla data di presentazione della domanda.\n- **Modalità di partecipazione:** \n  - Le imprese devono richiedere i finanziamenti ai **Confidi**, che si occupano di caricare le domande di agevolazione (garanzia e contributo) sul sistema informatico **Bandi Online**.\n  - La data di protocollazione elettronica sul sistema Bandi Online determina la presentazione ufficiale della domanda.\n\n### Tempistiche:\n- **Apertura:** Le domande sono state attivabili dal **3 novembre 2022**.\n- **Chiusura:** Fino ad **esaurimento della dotazione finanziaria**.\n\n### Procedura di selezione:\nLa selezione prevede:\n1. **Verifica di ammissibilità formale**.\n2. **Istruttoria economico-finanziaria**, effettuata dai Confidi che concedono il finanziamento.\n\n### Per maggiori informazioni:\n- **Numero verde:** 800.131.151\n- **Email:** bandi@regione.lombardia.it\n- **Sito web:** [www.bandi.servizirl.it](http://www.bandi.servizirl.it)\n\nSe hai domande specifiche o vuoi sapere come procedere con la domanda, fammi sapere: posso aiutarti passo dopo passo! 😊",
+      "timestamp": "2025-07-08T09:37:08.079043",
+      "sources": [
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 20,
+          "content_preview": "21 \n \nD.9 Definizioni e glossario \na)  “Bando”: il presente Bando con i relativi allegati; \nb)  “Aiuto”: la Garanzia e il contributo a fondo perdut o concessi alternativamente \nnell’ambito del Quadro ..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 2,
+          "content_preview": "- essere iscritte  al Registro delle Imprese e avere  almeno una sede legale o \noperativa attiva in Lombardia (come risultante da visura camerale) alla data di \npresentazione della domanda di finanzia..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 18,
+          "content_preview": "e contributo) per conto dei soggetti Beneficiari dalle ore 11:00 del \n3 novembre 2022 \nDATA DI CHIUSURA  Fino ad esaurimento della dotazione finanziaria \nCOME PARTECIPARE  \nI Beneficiari richiedono il..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 3,
+          "content_preview": "non soddisfare le condizioni previste dal diritto nazionale per l’apertura nei \npropri confronti di una tale procedura su richiesta  dei suoi creditori (Reg \n(UE) N. 1407/2013 art. 4 comma 6). \n \nI re..."
+        },
+        {
+          "source": "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+          "page": 17,
+          "content_preview": "18 \n \nD.7 Pubblicazione, informazioni e contatti \nIl presente Bando è pubblicato sul Bollettino Uffic iale di Regione Lombardia e sul sito \nweb www.bandi.regione.lombardia.it . \n \nPer informazioni sul..."
+        }
+      ]
+    }
+  ],
+  "created_at": "2025-07-08T09:35:23.583945",
+  "last_updated": "2025-07-08T09:37:08.079043",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 2,
+    "documents": [
+      "20250708_093309_2019 - DGR 2531_2019.pdf",
+      "20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf"
+    ]
+  }
+}

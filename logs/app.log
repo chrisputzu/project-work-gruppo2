@@ -1,0 +1,603 @@
+2025-07-08 09:27:38,555 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:27:38,556 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:27:38,557 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:27:38,557 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:27:38,558 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:27:38,559 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:27:38,559 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:27:43,854 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:27:44,648 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:33:00,392 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:33:00,392 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:33:00,394 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:33:00,395 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:33:00,396 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:33:00,397 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:33:00,398 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:33:01,683 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:33:02,783 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:33:06,407 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:33:06,409 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:33:06,410 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:33:06,410 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:33:06,411 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:33:06,413 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:33:06,413 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:33:07,276 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:33:08,157 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:33:09,026 - src.utils - INFO - File salvato: uploads\20250708_093309_2019 - DGR 2531_2019.pdf
+2025-07-08 09:33:09,030 - src.utils - INFO - File salvato: uploads\20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 09:33:11,474 - src.document_processor - INFO - Caricato PDF: uploads\20250708_093309_2019 - DGR 2531_2019.pdf (21 pagine)
+2025-07-08 09:33:11,478 - src.document_processor - INFO - Creati 62 chunks da 21 documenti
+2025-07-08 09:33:13,275 - src.document_processor - INFO - Caricato PDF: uploads\20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (27 pagine)
+2025-07-08 09:33:13,280 - src.document_processor - INFO - Creati 103 chunks da 27 documenti
+2025-07-08 09:33:15,639 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:33:17,614 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-07-08 09:33:17,615 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-08 09:33:17,616 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-07-08 09:33:17,993 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-08 09:33:18,060 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-08 09:33:18,077 - src.document_processor - INFO - Creato vector store con 165 chunks
+2025-07-08 09:33:18,081 - src.chat_manager - INFO - Salvata sessione 20250708_093318
+2025-07-08 09:33:18,082 - src.chat_manager - INFO - Creata nuova sessione: 20250708_093318
+2025-07-08 09:33:18,082 - __main__ - INFO - Creata nuova sessione per il processamento: 20250708_093318
+2025-07-08 09:33:18,084 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_093318
+2025-07-08 09:33:19,039 - src.document_processor - INFO - Caricato PDF: uploads\20250708_093309_2019 - DGR 2531_2019.pdf (21 pagine)
+2025-07-08 09:33:20,736 - src.document_processor - INFO - Caricato PDF: uploads\20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (27 pagine)
+2025-07-08 09:33:53,926 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:33:53,927 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:33:53,928 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:33:53,931 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:33:53,933 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:33:53,933 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:33:53,935 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:33:55,138 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:33:56,280 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:33:57,261 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:33:57,282 - __main__ - INFO - Sessione corrente: 20250708_093318, Messaggi: 0
+2025-07-08 09:33:57,296 - __main__ - INFO - Totale messaggi nella sessione 20250708_093318: 0
+2025-07-08 09:34:03,770 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:34:03,772 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:34:03,772 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:34:03,773 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:34:03,773 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:34:03,774 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:34:03,774 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:04,689 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:05,562 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:34:06,440 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:34:06,449 - src.chat_manager - INFO - Salvata sessione 20250708_093406
+2025-07-08 09:34:06,450 - src.chat_manager - INFO - Creata nuova sessione: 20250708_093406
+2025-07-08 09:34:06,627 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:34:06,628 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:34:06,629 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:34:06,630 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:34:06,630 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:34:06,631 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:34:06,631 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:07,470 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:08,314 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:34:09,191 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:34:09,203 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:34:09,226 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 0
+2025-07-08 09:34:09,235 - __main__ - INFO - Totale messaggi nella sessione 20250708_093406: 0
+2025-07-08 09:34:26,746 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:34:26,750 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:34:26,752 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:34:26,753 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:34:26,754 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:34:26,754 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:34:26,756 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:27,825 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:28,701 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:34:29,610 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:34:29,611 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:34:29,630 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 0
+2025-07-08 09:34:29,638 - src.chat_manager - INFO - Salvata sessione 20250708_093406
+2025-07-08 09:34:29,638 - __main__ - INFO - Aggiunto messaggio utente alla sessione 20250708_093406: ciao mi chiamo christian
+2025-07-08 09:34:29,643 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_093406
+2025-07-08 09:34:29,644 - src.rag_system - INFO - Caricata chat history iniziale: USER: ciao mi chiamo christian...
+2025-07-08 09:34:29,644 - __main__ - INFO - Memoria prima della query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:34:30,888 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:34:32,494 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:34:32,508 - src.chat_manager - INFO - Salvata sessione 20250708_093406
+2025-07-08 09:34:32,509 - __main__ - INFO - Aggiunta risposta assistente alla sessione 20250708_093406
+2025-07-08 09:34:32,509 - __main__ - INFO - Memoria dopo la query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:34:32,689 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:34:32,691 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:34:32,692 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:34:32,692 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:34:32,693 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:34:32,693 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:34:32,695 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:33,580 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:34,491 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:34:35,353 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:34:35,355 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:34:35,377 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 2
+2025-07-08 09:34:35,385 - __main__ - INFO - Totale messaggi nella sessione 20250708_093406: 2
+2025-07-08 09:34:43,433 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:34:43,435 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:34:43,436 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:34:43,437 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:34:43,437 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:34:43,437 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:34:43,439 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:44,581 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:45,639 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:34:46,541 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:34:46,542 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:34:46,566 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 2
+2025-07-08 09:34:46,583 - src.chat_manager - INFO - Salvata sessione 20250708_093406
+2025-07-08 09:34:46,584 - __main__ - INFO - Aggiunto messaggio utente alla sessione 20250708_093406: come mi chiamo?
+2025-07-08 09:34:46,594 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_093406
+2025-07-08 09:34:46,607 - __main__ - INFO - Memoria prima della query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:34:47,756 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:34:49,055 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:34:49,065 - src.chat_manager - INFO - Salvata sessione 20250708_093406
+2025-07-08 09:34:49,066 - __main__ - INFO - Aggiunta risposta assistente alla sessione 20250708_093406
+2025-07-08 09:34:49,067 - __main__ - INFO - Memoria dopo la query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:34:49,248 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:34:49,249 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:34:49,251 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:34:49,251 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:34:49,252 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:34:49,253 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:34:49,253 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:50,078 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:34:50,964 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:34:51,821 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:34:51,823 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:34:51,842 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 4
+2025-07-08 09:34:51,854 - __main__ - INFO - Totale messaggi nella sessione 20250708_093406: 4
+2025-07-08 09:35:09,166 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:35:09,167 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:35:09,167 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:35:09,169 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:35:09,170 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:35:09,171 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:35:09,171 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:10,341 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:11,504 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:35:12,431 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:35:12,433 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:35:12,458 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 4
+2025-07-08 09:35:12,474 - __main__ - INFO - Totale messaggi nella sessione 20250708_093406: 4
+2025-07-08 09:35:12,481 - src.chat_manager - INFO - Salvata sessione 20250708_093406
+2025-07-08 09:35:12,487 - __main__ - INFO - Memoria e messaggi puliti per sessione 20250708_093406
+2025-07-08 09:35:12,663 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:35:12,664 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:35:12,665 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:35:12,665 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:35:12,666 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:35:12,667 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:35:12,667 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:13,575 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:14,463 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:35:15,323 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:35:15,325 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:35:15,356 - __main__ - INFO - Sessione corrente: 20250708_093406, Messaggi: 0
+2025-07-08 09:35:15,364 - __main__ - INFO - Totale messaggi nella sessione 20250708_093406: 0
+2025-07-08 09:35:20,477 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:35:20,482 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:35:20,483 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:35:20,484 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:35:20,486 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:35:20,486 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:35:20,487 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:21,670 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:22,695 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:35:23,572 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:35:23,574 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:35:23,584 - src.chat_manager - INFO - Salvata sessione 20250708_093523
+2025-07-08 09:35:23,585 - src.chat_manager - INFO - Creata nuova sessione: 20250708_093523
+2025-07-08 09:35:23,756 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:35:23,757 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:35:23,758 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:35:23,759 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:35:23,759 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:35:23,760 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:35:23,760 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:24,583 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:25,400 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:35:26,230 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:35:26,231 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:35:26,241 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:35:26,260 - __main__ - INFO - Sessione corrente: 20250708_093523, Messaggi: 0
+2025-07-08 09:35:26,264 - __main__ - INFO - Totale messaggi nella sessione 20250708_093523: 0
+2025-07-08 09:35:39,816 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:35:39,819 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:35:39,820 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:35:39,822 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:35:39,823 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:35:39,824 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:35:39,826 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:40,930 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:41,835 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:35:42,624 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:35:42,626 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:35:42,627 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:35:42,655 - __main__ - INFO - Sessione corrente: 20250708_093523, Messaggi: 0
+2025-07-08 09:35:42,666 - src.chat_manager - INFO - Salvata sessione 20250708_093523
+2025-07-08 09:35:42,669 - __main__ - INFO - Aggiunto messaggio utente alla sessione 20250708_093523: Quali sono le scadenze dei bandi disponibili?
+2025-07-08 09:35:42,675 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_093523
+2025-07-08 09:35:42,676 - src.rag_system - INFO - Caricata chat history iniziale: USER: Quali sono le scadenze dei bandi disponibili?...
+2025-07-08 09:35:42,677 - __main__ - INFO - Memoria prima della query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:35:43,827 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:35:44,850 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:35:45,520 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:35:49,559 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:35:49,579 - src.chat_manager - INFO - Salvata sessione 20250708_093523
+2025-07-08 09:35:49,580 - __main__ - INFO - Aggiunta risposta assistente alla sessione 20250708_093523
+2025-07-08 09:35:49,580 - __main__ - INFO - Memoria dopo la query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:35:49,772 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:35:49,774 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:35:49,775 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:35:49,775 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:35:49,776 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:35:49,776 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:35:49,777 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:50,641 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:35:51,443 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:35:52,306 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:35:52,307 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:35:52,308 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:35:52,357 - __main__ - INFO - Sessione corrente: 20250708_093523, Messaggi: 2
+2025-07-08 09:35:52,374 - __main__ - INFO - Totale messaggi nella sessione 20250708_093523: 2
+2025-07-08 09:36:56,954 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:36:56,956 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:36:56,957 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:36:56,957 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:36:56,960 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:36:56,962 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:36:56,963 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:36:58,217 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:36:59,329 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:37:00,265 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:37:00,280 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:37:00,301 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:37:00,322 - __main__ - INFO - Sessione corrente: 20250708_093523, Messaggi: 2
+2025-07-08 09:37:00,336 - src.chat_manager - INFO - Salvata sessione 20250708_093523
+2025-07-08 09:37:00,337 - __main__ - INFO - Aggiunto messaggio utente alla sessione 20250708_093523: quali bandi ci sono a disposizione?
+2025-07-08 09:37:00,340 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_093523
+2025-07-08 09:37:00,342 - src.rag_system - INFO - Caricata chat history iniziale: USER: Quali sono le scadenze dei bandi disponibili?
+ASSISTANT: Al momento, il bando di cui si parla ...
+2025-07-08 09:37:00,343 - __main__ - INFO - Memoria prima della query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:37:01,436 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:37:02,302 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:37:03,044 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:37:08,057 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:37:08,081 - src.chat_manager - INFO - Salvata sessione 20250708_093523
+2025-07-08 09:37:08,082 - __main__ - INFO - Aggiunta risposta assistente alla sessione 20250708_093523
+2025-07-08 09:37:08,083 - __main__ - INFO - Memoria dopo la query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:37:08,279 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:37:08,281 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:37:08,283 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:37:08,284 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:37:08,284 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:37:08,285 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:37:08,285 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:09,136 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:09,998 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:37:10,827 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:37:10,829 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:37:10,830 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:37:10,869 - __main__ - INFO - Sessione corrente: 20250708_093523, Messaggi: 4
+2025-07-08 09:37:10,891 - __main__ - INFO - Totale messaggi nella sessione 20250708_093523: 4
+2025-07-08 09:37:47,239 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:37:47,240 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:37:47,241 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:37:47,242 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:37:47,243 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:37:47,244 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:37:47,245 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:48,464 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:49,591 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:37:50,509 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:37:50,511 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:37:50,513 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:37:50,521 - src.chat_manager - INFO - Salvata sessione 20250708_093750
+2025-07-08 09:37:50,522 - src.chat_manager - INFO - Creata nuova sessione: 20250708_093750
+2025-07-08 09:37:50,687 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:37:50,687 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:37:50,688 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:37:50,689 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:37:50,689 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:37:50,690 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:37:50,690 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:51,543 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:52,402 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:37:53,264 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:37:53,266 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:37:53,269 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:37:53,285 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:37:53,328 - __main__ - INFO - Sessione corrente: 20250708_093750, Messaggi: 0
+2025-07-08 09:37:53,334 - __main__ - INFO - Totale messaggi nella sessione 20250708_093750: 0
+2025-07-08 09:37:57,325 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:37:57,328 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:37:57,333 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:37:57,335 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:37:57,336 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:37:57,336 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:37:57,338 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:58,255 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:37:59,127 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:37:59,990 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:37:59,991 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:37:59,994 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:37:59,998 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:38:00,056 - __main__ - INFO - Sessione corrente: 20250708_093750, Messaggi: 0
+2025-07-08 09:38:00,064 - src.chat_manager - INFO - Salvata sessione 20250708_093750
+2025-07-08 09:38:00,065 - __main__ - INFO - Aggiunto messaggio utente alla sessione 20250708_093750: ciao
+2025-07-08 09:38:00,074 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_093750
+2025-07-08 09:38:00,076 - src.rag_system - INFO - Caricata chat history iniziale: USER: ciao...
+2025-07-08 09:38:00,077 - __main__ - INFO - Memoria prima della query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:38:01,214 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:38:02,524 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:38:02,535 - src.chat_manager - INFO - Salvata sessione 20250708_093750
+2025-07-08 09:38:02,535 - __main__ - INFO - Aggiunta risposta assistente alla sessione 20250708_093750
+2025-07-08 09:38:02,535 - __main__ - INFO - Memoria dopo la query: {'message_count': 0, 'last_interaction': [], 'has_memory': False}
+2025-07-08 09:38:02,738 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:38:02,740 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:38:02,741 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:38:02,742 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:38:02,743 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:38:02,743 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:38:02,744 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:03,601 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:04,565 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:38:05,436 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:38:05,438 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:38:05,439 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:38:05,440 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:38:05,465 - __main__ - INFO - Sessione corrente: 20250708_093750, Messaggi: 2
+2025-07-08 09:38:05,475 - __main__ - INFO - Totale messaggi nella sessione 20250708_093750: 2
+2025-07-08 09:38:13,551 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:38:13,552 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:38:13,553 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:38:13,553 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:38:13,553 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:38:13,555 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:38:13,555 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:14,423 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:15,317 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:38:16,168 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:38:16,170 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:38:16,171 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:38:16,172 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:38:16,239 - __main__ - INFO - Sessione corrente: 20250708_093750, Messaggi: 2
+2025-07-08 09:38:16,248 - __main__ - INFO - Totale messaggi nella sessione 20250708_093750: 2
+2025-07-08 09:38:17,721 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:38:17,722 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:38:17,723 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:38:17,724 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:38:17,726 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:38:17,726 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:38:17,727 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:18,640 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:19,521 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:38:20,452 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:38:20,454 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:38:20,456 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:38:20,458 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:38:20,491 - __main__ - INFO - Sessione corrente: 20250708_093750, Messaggi: 2
+2025-07-08 09:38:20,499 - __main__ - INFO - Totale messaggi nella sessione 20250708_093750: 2
+2025-07-08 09:38:27,265 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:38:27,267 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:38:27,268 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:38:27,269 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:38:27,269 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:38:27,270 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:38:27,271 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:28,399 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:29,288 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:38:30,190 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:38:30,192 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:38:30,193 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:38:30,196 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:38:30,385 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:38:30,386 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:38:30,388 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:38:30,388 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:38:30,389 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:38:30,391 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:38:30,391 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:31,304 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:32,197 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:38:33,005 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:38:33,006 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:38:33,007 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:38:33,009 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:38:33,035 - __main__ - INFO - Sessione corrente: 20250708_093523, Messaggi: 4
+2025-07-08 09:38:33,056 - __main__ - INFO - Totale messaggi nella sessione 20250708_093523: 4
+2025-07-08 09:38:44,005 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:38:44,007 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:38:44,009 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:38:44,011 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:38:44,013 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:38:44,014 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:38:44,015 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:45,231 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:38:46,194 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:38:47,076 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:38:47,078 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:38:47,080 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:38:47,081 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:39:31,351 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:39:31,355 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:39:31,357 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:39:31,360 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:39:31,361 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:39:31,362 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:39:31,365 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:39:31,461 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:39:31,463 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:39:31,464 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:39:31,465 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:39:31,465 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:39:31,466 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:39:31,466 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:39:32,437 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:39:32,505 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:39:33,491 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:39:33,491 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:39:34,568 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:39:34,570 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:39:34,572 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:39:34,573 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:39:34,575 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:39:34,578 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:39:34,584 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:39:34,590 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:39:35,464 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:39:46,563 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:39:59,799 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:40:10,894 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:40:26,098 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:40:37,898 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:40:50,720 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:41:08,381 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:41:22,907 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:41:34,198 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:41:44,654 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:42:41,169 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:42:41,171 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:42:41,172 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:42:41,172 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:42:41,174 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:42:41,175 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:42:41,175 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:42:42,369 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:42:43,566 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:42:44,521 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:42:44,522 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:42:44,523 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:42:44,525 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:42:47,174 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:42:47,175 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:42:47,176 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:42:47,177 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:42:47,178 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:42:47,179 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:42:47,179 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:42:48,206 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:42:49,086 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:42:49,897 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:42:49,899 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:42:49,900 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:42:49,902 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:42:52,109 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:42:56,792 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:42:58,260 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:00,778 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:02,263 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:04,212 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:06,297 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:08,785 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:11,036 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:11,973 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:14,029 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:17,009 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:18,808 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:21,541 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:23,186 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:24,918 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:27,125 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:28,720 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:31,486 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:33,460 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:37,378 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:39,684 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:40,830 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:42,266 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:43,333 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:44,342 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:46,016 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:48,296 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:50,423 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:51,885 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:53,786 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:55,744 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:57,207 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:58,734 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:43:59,976 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:01,640 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:03,171 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:04,765 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:11,059 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:12,738 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:14,040 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:15,380 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:17,064 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:18,510 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:19,834 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:21,673 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:23,189 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:44:24,757 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:45:46,184 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:45:46,185 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:45:46,186 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:45:46,195 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:45:46,199 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:45:46,200 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:45:46,200 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:45:47,728 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:45:48,962 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:45:49,810 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:45:49,812 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:45:49,814 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:45:49,816 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:46:01,721 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:46:01,722 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:46:01,724 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:46:01,725 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:46:01,725 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:46:01,725 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:46:01,726 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:46:02,714 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:46:03,756 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:46:04,569 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:46:04,571 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:46:04,572 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:46:04,573 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:46:21,790 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 09:47:18,487 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:47:18,489 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:47:18,490 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:47:18,491 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:47:18,491 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:47:18,493 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:47:18,495 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:47:19,438 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:47:20,314 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:47:21,127 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:47:21,129 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:47:21,130 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:47:21,131 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:47:21,302 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:47:21,303 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:47:21,305 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:47:21,305 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:47:21,305 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:47:21,307 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:47:21,307 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:47:22,131 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:47:22,971 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:47:23,831 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:47:23,833 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:47:23,836 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:47:23,840 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 09:47:27,887 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 09:47:27,888 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 09:47:27,889 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 09:47:27,889 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 09:47:27,890 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 09:47:27,891 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 09:47:27,891 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:47:28,789 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 09:47:29,672 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 09:47:30,523 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 09:47:30,524 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 09:47:30,525 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 09:47:30,527 - src.chat_manager - INFO - Caricata sessione 20250708_093750

@@ -1,0 +1,67 @@
+Chat Session: 20250708_093523
+Created: 2025-07-08T09:35:23.583945
+Last Updated: 2025-07-08T09:37:08.079043
+
+[USER] 2025-07-08T09:35:42.659944
+Quali sono le scadenze dei bandi disponibili?
+
+--------------------------------------------------
+
+[ASSISTANT] 2025-07-08T09:35:49.577073
+Al momento, il bando di cui si parla nella cronologia della conversazione non ha una scadenza definita ma rimane aperto **fino ad esaurimento della dotazione finanziaria**, che è pari a **€ 38.817.000,00**. Le domande possono essere presentate dai **Confidi** a partire dalle **ore 11:00 del 3 novembre 2022** tramite la piattaforma informatica **Bandi online** disponibile all’indirizzo: [www.bandi.servizirl.it](http://www.bandi.servizirl.it).
+
+Ti consiglio di verificare l’attuale disponibilità della dotazione finanziaria accedendo alla piattaforma o contattando i Confidi, in quanto la chiusura del bando dipende esclusivamente dalla disponibilità residua dei fondi. Se hai bisogno di ulteriori dettagli o assistenza per procedere, fammi sapere! 😊
+
+Sources:
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 20)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 18)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 8)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 3)
+- 20250708_093309_2019 - DGR 2531_2019.pdf (Page 17)
+
+--------------------------------------------------
+
+[USER] 2025-07-08T09:37:00.333221
+quali bandi ci sono a disposizione?
+
+--------------------------------------------------
+
+[ASSISTANT] 2025-07-08T09:37:08.079043
+Attualmente, il bando disponibile è il **"Fondo Confidiamo nella Ripresa - Energia"**, una misura dedicata a sostenere la liquidità delle **PMI lombarde** che sono state penalizzate dalla crisi energetica conseguente al conflitto tra Russia e Ucraina.
+
+### Informazioni principali:
+- **Dotazione finanziaria complessiva:** € 38.817.000,00.
+- **Obiettivo:** Fornire supporto alle imprese attraverso **garanzie** sui finanziamenti e **contributi a fondo perduto**.
+- **Beneficiari:** PMI lombarde che:
+  - Siano iscritte al Registro delle Imprese.
+  - Abbiano almeno una sede legale o operativa attiva in Lombardia (risultante da visura camerale).
+  - Siano attive alla data di presentazione della domanda.
+- **Modalità di partecipazione:** 
+  - Le imprese devono richiedere i finanziamenti ai **Confidi**, che si occupano di caricare le domande di agevolazione (garanzia e contributo) sul sistema informatico **Bandi Online**.
+  - La data di protocollazione elettronica sul sistema Bandi Online determina la presentazione ufficiale della domanda.
+
+### Tempistiche:
+- **Apertura:** Le domande sono state attivabili dal **3 novembre 2022**.
+- **Chiusura:** Fino ad **esaurimento della dotazione finanziaria**.
+
+### Procedura di selezione:
+La selezione prevede:
+1. **Verifica di ammissibilità formale**.
+2. **Istruttoria economico-finanziaria**, effettuata dai Confidi che concedono il finanziamento.
+
+### Per maggiori informazioni:
+- **Numero verde:** 800.131.151
+- **Email:** bandi@regione.lombardia.it
+- **Sito web:** [www.bandi.servizirl.it](http://www.bandi.servizirl.it)
+
+Se hai domande specifiche o vuoi sapere come procedere con la domanda, fammi sapere: posso aiutarti passo dopo passo! 😊
+
+Sources:
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 20)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 2)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 18)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 3)
+- 20250708_093309_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (Page 17)
+
+--------------------------------------------------
+
