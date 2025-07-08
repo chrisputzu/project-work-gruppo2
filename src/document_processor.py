@@ -111,7 +111,7 @@ class DocumentProcessor:
             if len(chunks) <= self.config.BATCH_SIZE:
                 return self.create_vector_store(chunks)
             
-            logger.info(f"Processamento batch di {len(chunks)} chunks (batch size: {self.config.BATCH_SIZE})")
+            # logger.info(f"Processamento batch di {len(chunks)} chunks (batch size: {self.config.BATCH_SIZE})")
             
             # Dividi i chunks in batch
             batches = [chunks[i:i + self.config.BATCH_SIZE] 
@@ -426,4 +426,4 @@ class DocumentProcessor:
             }
             doc_info.append(info)
         
-        return doc_info 
+        return doc_info

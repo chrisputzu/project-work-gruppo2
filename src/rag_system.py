@@ -12,6 +12,7 @@ from src.config import Config
 from src.document_processor import DocumentProcessor
 from src.chat_manager import ChatManager
 import logging
+from unstructured.partition.pdf import partition_pdf
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +25,9 @@ class RAGSystem:
         self.llm = self._get_llm()
         self.qa_chain = None
         self.chat_histories: Dict[str, ChatMessageHistory] = {}
-        self.memories: Dict[str, ConversationBufferMemory] = {} # Aggiunto per gestire la memoria per sessione
+        self.memories: Dict[str, ConversationBufferMemory] = {}
+
+    
     
     def _get_llm(self):
         """Ottiene il modello LLM appropriato"""
@@ -41,7 +44,6 @@ class RAGSystem:
     def setup_qa_chain(self, vector_store, session_id: str, initial_chat_history: str = ""):
         """Configura la catena QA con memoria"""
         
-        # Template per le domande sui bandi
         qa_template = """
         Sei un assistente amichevole ed esperto nell'analisi di bandi pubblici e finanziamenti.
         Il tuo compito è aiutare l'utente a trovare e comprendere i bandi più adatti alle sue esigenze.
@@ -69,18 +71,15 @@ class RAGSystem:
         RISPOSTA:
         """
         
-        # Crea una nuova memoria per la sessione
         memory = ConversationBufferMemory(
             memory_key="chat_history",
             return_messages=True,
             output_key="answer"
         )
         
-        # Se c'è una chat history iniziale, la aggiungiamo alla memoria
         if initial_chat_history:
             memory.chat_memory.add_ai_message(initial_chat_history)
         
-        # Crea la catena QA
         self.qa_chain = ConversationalRetrievalChain.from_llm(
             llm=self.llm,
             retriever=vector_store.as_retriever(
@@ -98,26 +97,11 @@ class RAGSystem:
             verbose=True
         )
         
-        # Salva la memoria
         self.memories[session_id] = memory
-        
         logger.info(f"Catena QA configurata con successo per sessione {session_id}")
-        if initial_chat_history:
-            logger.info(f"Caricata chat history iniziale: {initial_chat_history[:100]}...")
-    
-    def _convert_chat_manager_messages(self, messages: List[Dict[str, Any]]) -> List[Union[HumanMessage, AIMessage]]:
-        """Converte i messaggi dal formato del chat manager al formato di LangChain"""
-        langchain_messages = []
-        for msg in messages:
-            if msg["role"] == "user":
-                langchain_messages.append(HumanMessage(content=msg["content"]))
-            elif msg["role"] == "assistant":
-                langchain_messages.append(AIMessage(content=msg["content"]))
-        return langchain_messages
     
     def _analyze_user_intent(self, question: str) -> bool:
         """Analizza l'intento dell'utente per capire se sta chiedendo informazioni sui bandi"""
-        # Prompt per l'analisi dell'intento
         intent_prompt = """
         Analizza il seguente messaggio e determina se l'utente sta chiedendo informazioni specifiche sui bandi/documenti o sta solo chattando.
         
@@ -141,22 +125,11 @@ class RAGSystem:
         """
         
         try:
-            # Chiedi al modello di analizzare l'intento
-            response = self.llm.invoke(
-                intent_prompt.format(question=question)
-            )
-            
-            # Estrai la risposta
-            if hasattr(response, 'content'):
-                result = str(response.content[0]).strip().lower()
-            else:
-                result = str(response).strip().lower()
-            
+            response = self.llm.invoke(intent_prompt.format(question=question))
+            result = str(response.content if hasattr(response, 'content') else response).strip().lower()
             return result == "true"
-            
         except Exception as e:
             logger.error(f"Errore nell'analisi dell'intento: {str(e)}")
-            # In caso di errore, assumiamo che sia una domanda sui bandi
             return True
     
     def query(self, question: str, session_id: str) -> Dict[str, Any]:
@@ -165,10 +138,7 @@ class RAGSystem:
             raise ValueError("Sistema RAG non inizializzato. Chiamare setup_qa_chain prima.")
         
         try:
-            # Ottieni la memoria per questa sessione
             memory = self.memories[session_id]
-            
-            # Formatta la chat history come testo
             chat_vars = memory.load_memory_variables({})
             messages = chat_vars.get("chat_history", [])
             formatted_history = ""
@@ -179,18 +149,14 @@ class RAGSystem:
                 elif isinstance(msg, AIMessage):
                     formatted_history += f"ASSISTANT: {msg.content}\n"
             
-            # Analizza l'intento dell'utente
             is_bandi_question = self._analyze_user_intent(question)
             
-            # Se è una domanda sui bandi, usa il retriever
             if is_bandi_question:
-                # Esegui la query con il retriever
                 result = self.qa_chain.invoke({
                     "question": question,
                     "chat_history": formatted_history
                 })
                 
-                # Estrai informazioni sui documenti fonte
                 source_docs = result.get("source_documents", [])
                 sources = []
                 
@@ -202,7 +168,6 @@ class RAGSystem:
                     }
                     sources.append(source_info)
             else:
-                # Se è chat generale, usa solo il modello senza retriever
                 chat_prompt = f"""
                 Sei un assistente amichevole ed esperto nell'analisi di bandi pubblici e finanziamenti.
                 
@@ -238,22 +203,6 @@ class RAGSystem:
             logger.info(f"Pulizia memoria per sessione {session_id}")
             self.chat_histories[session_id].clear()
     
-    def save_memory(self, session_id: str) -> Dict[str, Any]:
-        """Salva lo stato della memoria per una sessione"""
-        if session_id in self.chat_histories:
-            return {"messages": self.chat_histories[session_id].messages}
-        return {"messages": []}
-    
-    def load_memory(self, session_id: str, memory_data: Dict[str, Any]):
-        """Carica lo stato della memoria per una sessione"""
-        if session_id not in self.chat_histories:
-            self.chat_histories[session_id] = ChatMessageHistory()
-        
-        if "messages" in memory_data:
-            for msg in memory_data["messages"]:
-                if isinstance(msg, (HumanMessage, AIMessage)):
-                    self.chat_histories[session_id].add_message(msg)
-    
     def get_memory_summary(self, session_id: str) -> Dict[str, Any]:
         """Ottiene un riepilogo della memoria della sessione"""
         if session_id in self.chat_histories:
@@ -269,89 +218,17 @@ class RAGSystem:
             "has_memory": False
         }
     
-    def extract_structured_info(self, documents: List[Document]) -> List[Dict[str, Any]]:
-        """Estrae informazioni strutturate dai bandi"""
-        
-        extraction_prompt = """
-        Analizza il seguente testo di un bando e estrai le seguenti informazioni strutturate:
-        
-        Testo del bando:
-        {text}
-        
-        Estrai e formatta le seguenti informazioni (se disponibili):
-        1. Nome del bando
-        2. Ente erogatore
-        3. Scadenza per la presentazione
-        4. Budget totale disponibile
-        5. Importo massimo finanziabile per progetto
-        6. Settori/ambiti di applicazione
-        7. Requisiti principali
-        8. Tipologia di beneficiari
-        9. Percentuale di cofinanziamento
-        10. Link o riferimenti al bando completo
-        
-        Risposta in formato JSON:
-        """
-        
-        extracted_info = []
-        
-        for doc in documents:
-            try:
-                # Limita il testo per evitare token eccessivi
-                text_chunk = doc.page_content[:3000]
-                
-                prompt = extraction_prompt.format(text=text_chunk)
-                response = self.llm.invoke(prompt)
-                
-                # Aggiungi metadati del documento
-                info = {
-                    "source": doc.metadata.get("source", "Unknown"),
-                    "page": doc.metadata.get("page", 0),
-                    "extracted_data": response.content,
-                    "file_path": doc.metadata.get("file_path", "")
-                }
-                
-                extracted_info.append(info)
-                
-            except Exception as e:
-                logger.error(f"Errore nell'estrazione per documento {doc.metadata.get('source', 'Unknown')}: {str(e)}")
-                continue
-        
-        return extracted_info
-    
     def search_by_project_idea(self, project_idea: str, vector_store) -> List[Dict[str, Any]]:
         """Cerca bandi compatibili con un'idea progettuale"""
-        
-        search_prompt = f"""
-        Idea progettuale: {project_idea}
-        
-        Basandoti sui documenti disponibili, trova i bandi che potrebbero finanziare questa idea progettuale.
-        
-        Considera:
-        1. Settori di applicazione compatibili
-        2. Tipologia di attività finanziabili
-        3. Requisiti che potrebbero essere soddisfatti
-        4. Budget disponibile
-        
-        Per ogni bando rilevante, fornisci:
-        - Nome del bando
-        - Motivo della compatibilità
-        - Requisiti principali
-        - Scadenza (se disponibile)
-        - Budget (se disponibile)
-        """
-        
         try:
-            # Usa il retriever per trovare documenti rilevanti
             retriever = vector_store.as_retriever(
                 search_type="similarity",
                 search_kwargs={"k": 10}
             )
             
             relevant_docs = retriever.get_relevant_documents(project_idea)
-            
-            # Analizza i documenti trovati
             results = []
+            
             for doc in relevant_docs:
                 analysis_prompt = f"""
                 Idea progettuale: {project_idea}
@@ -381,7 +258,28 @@ class RAGSystem:
             raise
     
     def generate_summary_table(self, documents: List[Document]) -> List[Dict[str, Any]]:
-        """Genera una tabella di sintesi dei bandi"""
+        """Genera una tabella di sintesi dei bandi, includendo le tabelle estratte dai PDF tramite unstructured.io"""
+        from unstructured.partition.pdf import partition_pdf
+    
+        def extract_tables_from_pdf(file_path):
+            """Estrae le tabelle da un PDF usando unstructured.io e restituisce una stringa markdown."""
+            try:
+                elements = partition_pdf(filename=file_path, strategy="hi_res")
+                tables = [el for el in elements if el.category == "Table"]
+                table_texts = []
+                for table in tables:
+                    # Preferisci HTML se disponibile, altrimenti testo semplice
+                    if hasattr(table, "text_as_html"):
+                        table_texts.append(table.text_as_html)
+                    else:
+                        table_texts.append(str(table))
+                if table_texts:
+                    return "\n\nTABELLE ESTRATTE DAL DOCUMENTO:\n" + "\n\n".join(table_texts)
+                return ""
+            except Exception as e:
+                logger.error(f"Errore nell'estrazione delle tabelle da {file_path}: {str(e)}")
+                return ""
+    
         try:
             # Raggruppa i documenti per nome file
             docs_by_file = {}
@@ -390,25 +288,26 @@ class RAGSystem:
                 if file_name not in docs_by_file:
                     docs_by_file[file_name] = []
                 docs_by_file[file_name].append(doc)
-            
+    
             summary_data = []
-            
+    
             # Prompt per l'estrazione delle informazioni
             extract_prompt = '''
             Sei un esperto analista di bandi pubblici. Il tuo compito è estrarre informazioni precise dal seguente bando.
             DEVI TROVARE LE INFORMAZIONI RICHIESTE. Se non sono esplicitamente presenti, cerca di dedurle dal contesto.
-            
+    
             REGOLE IMPORTANTI:
             1. NON rispondere MAI con "N/A" a meno che sia ASSOLUTAMENTE IMPOSSIBILE trovare o dedurre l'informazione
             2. Cerca le informazioni in tutto il testo, non fermarti alla prima pagina
             3. Se trovi più valori possibili, scegli il più recente o il più rilevante
             4. Usa il nome del file come riferimento se non trovi un titolo esplicito
             5. Cerca di dedurre lo stato del bando dalle date o dal contesto
-            
+    
             Testo del bando:
             {text}
-            
-            ESTRAI LE SEGUENTI INFORMAZIONI:
+    
+            ESTRAI LE SEGUENTI INFORMAZIONI E RESTITUISCILE NEL SEGUENTE FORMATO, LA RISPOSTA DOVRA' 
+            CONTENERE SOLO I CAMPI RICHIESTI SENZA TESTO AGGIUNTIVO:
             Nome Bando: [OBBLIGATORIO - usa il titolo ufficiale o il nome del file se non lo trovi]
             Ente Erogatore: [OBBLIGATORIO - cerca riferimenti a Regione, Ministero, o altri enti]
             Scadenza: [cerca date di scadenza, termini di presentazione - formato: gg/mm/aaaa]
@@ -419,55 +318,53 @@ class RAGSystem:
             Cofinanziamento %: [cerca percentuale di cofinanziamento richiesto]
             Stato: [deduci se Aperto/Chiuso dalle date o dal contesto]
             Note: [inserisci informazioni importanti non coperte sopra]
-
+    
             RICORDA: Il tuo obiettivo è fornire una sintesi UTILE. Evita "N/A" il più possibile.
             Rispondi SOLO nel formato richiesto, senza spiegazioni o testo aggiuntivo.
             '''
-            
+    
             for file_name, file_docs in docs_by_file.items():
                 try:
+                    # Estrai tabelle se PDF
+                    table_text = ""
+                    if file_name.lower().endswith(".pdf"):
+                        file_path = file_docs[0].metadata.get("file_path", file_name)
+                        table_text = extract_tables_from_pdf(file_path)
+    
                     # Combina il testo di tutte le pagine
-                    full_text = "\\n".join([doc.page_content for doc in file_docs])
-                    
+                    full_text = "\n".join([doc.page_content for doc in file_docs])
+                    if table_text:
+                        full_text += "\n\n" + table_text
+    
                     # Estrai le informazioni
                     response = self.llm.invoke(
-                        extract_prompt.format(text=full_text[:15000])  # Aumentato il limite per avere più contesto
+                        extract_prompt.format(text=full_text[:40000])  # Limite per contesto
                     )
-                    
+    
                     # Estrai le informazioni dalla risposta
                     info = {}
                     try:
                         response_text = str(response.content if hasattr(response, 'content') else response)
-                        
-                        # Parsing della risposta
-                        for line in response_text.split('\\n'):
+                        for line in response_text.split('\n'):
                             if not isinstance(line, str):
                                 continue
-                                
                             line = str(line).strip()
                             if not line or ':' not in line:
                                 continue
-                                
                             parts = line.split(':', 1)
                             if len(parts) != 2:
                                 continue
-                                
                             field = str(parts[0]).strip()
                             value = str(parts[1]).strip()
-                            
-                            # Rimuovi le parentesi quadre se presenti
                             if value.startswith('[') and value.endswith(']'):
                                 value = value[1:-1].strip()
-                            
-                            # Pulizia e validazione dei valori
                             if value and value.lower() != 'n/a':
                                 info[field] = value
                             else:
-                                # Se il campo è obbligatorio e non abbiamo un valore, usa il nome del file
                                 if field == 'Nome Bando':
                                     info[field] = os.path.splitext(os.path.basename(file_name))[0]
                                 elif field == 'Ente Erogatore':
-                                    info[field] = 'Regione Lombardia'  # Default per i bandi regionali
+                                    info[field] = 'Regione Lombardia'
                                 elif field == 'Beneficiari':
                                     info[field] = 'Da verificare nel bando'
                                 else:
@@ -475,14 +372,12 @@ class RAGSystem:
                     except Exception as e:
                         logger.error(f"Errore nel parsing della risposta: {str(e)}")
                         info = {}
-                    
-                    # Verifica che tutti i campi necessari siano presenti
+    
                     required_fields = [
                         'Nome Bando', 'Ente Erogatore', 'Scadenza', 'Budget Totale',
                         'Importo Max per Progetto', 'Settori', 'Beneficiari',
                         'Cofinanziamento %', 'Stato', 'Note'
                     ]
-                    
                     for field in required_fields:
                         if field not in info:
                             if field == 'Nome Bando':
@@ -493,16 +388,14 @@ class RAGSystem:
                                 info[field] = 'Da verificare nel bando'
                             else:
                                 info[field] = 'N/A'
-                    
-                    # Aggiungi metadati dal documento
+    
                     info['source'] = file_name
                     info['url'] = file_docs[0].metadata.get('url', 'N/A')
-                    
+    
                     summary_data.append(info)
-                    
+    
                 except Exception as e:
                     logger.error(f"Errore nell'elaborazione del documento {file_name}: {str(e)}")
-                    # Aggiungi una riga con errore ma mantieni il nome del file come nome del bando
                     summary_data.append({
                         'Nome Bando': os.path.splitext(os.path.basename(file_name))[0],
                         'Ente Erogatore': 'Regione Lombardia',
@@ -517,9 +410,68 @@ class RAGSystem:
                         'source': file_name,
                         'url': 'N/A'
                     })
-            
+    
             return summary_data
-            
+    
         except Exception as e:
             logger.error(f"Errore nella generazione della tabella di sintesi: {str(e)}")
-            raise 
+            raise
+    
+    def _parse_extraction_response(self, response_text: str, file_name: str) -> Dict[str, str]:
+        """Parsing migliorato della risposta di estrazione"""
+        info = {}
+        
+        # Campi richiesti con valori di default
+        required_fields = {
+            'Nome Bando': os.path.splitext(os.path.basename(file_name))[0],
+            'Ente Erogatore': 'Da verificare',
+            'Scadenza': 'Da verificare',
+            'Budget Totale': 'Da verificare',
+            'Importo Max per Progetto': 'Da verificare',
+            'Settori': 'Da verificare',
+            'Beneficiari': 'Da verificare',
+            'Cofinanziamento %': 'Da verificare',
+            'Stato': 'Da verificare',
+            'Note': 'Da verificare'
+        }
+        
+        # Parsing delle righe
+        for line in response_text.split('\n'):
+            line = line.strip()
+            if ':' in line:
+                parts = line.split(':', 1)
+                if len(parts) == 2:
+                    field = parts[0].strip()
+                    value = parts[1].strip()
+                    
+                    # Rimuovi caratteri extra
+                    if value.startswith('[') and value.endswith(']'):
+                        value = value[1:-1].strip()
+                    
+                    # Applica il valore se non vuoto
+                    if field in required_fields and value and value.lower() not in ['n/a', 'non disponibile', 'nd']:
+                        info[field] = value
+        
+        # Applica valori di default per campi mancanti
+        for field, default_value in required_fields.items():
+            if field not in info:
+                info[field] = default_value
+        
+        return info
+    
+    def _create_fallback_entry(self, file_name: str, error_msg: str) -> Dict[str, str]:
+        """Crea una voce di fallback in caso di errore"""
+        return {
+            'Nome Bando': os.path.splitext(os.path.basename(file_name))[0],
+            'Ente Erogatore': 'Da verificare',
+            'Scadenza': 'Da verificare',
+            'Budget Totale': 'Da verificare',
+            'Importo Max per Progetto': 'Da verificare',
+            'Settori': 'Da verificare',
+            'Beneficiari': 'Da verificare',
+            'Cofinanziamento %': 'Da verificare',
+            'Stato': 'Da verificare',
+            'Note': f'Errore elaborazione: {error_msg[:100]}',
+            'source': file_name,
+            'url': 'Da verificare'
+        }

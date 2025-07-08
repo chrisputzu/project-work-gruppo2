@@ -1,0 +1,18 @@
+{
+  "files_hash": "66e3a81c68c08fec7613dfe1f26fed37",
+  "file_paths": [
+    "uploads\\20250708_144804_2019 - DGR 2531_2019.pdf",
+    "uploads\\20250708_144804_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+    "uploads\\20250708_144804_Allegato 1 Bando LS.pdf",
+    "uploads\\20250708_144804_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+    "uploads\\20250708_144804_Allegato A Bando_Tecnologie Strategiche_20250624.pdf",
+    "uploads\\20250708_144804_Allegato A decreto 4 ottobre n 14847 - Avviso Investimenti Linea Microimprese.pdf"
+  ],
+  "chunks_count": 843,
+  "created_at": 1751978951.54647,
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}
