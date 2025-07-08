@@ -25,6 +25,12 @@ class Config:
     MAX_TOKENS = 4000
     TEMPERATURE = 0.1
     
+    # Configurazione batch processing
+    BATCH_SIZE = 50  # Numero di chunks per batch
+    BATCH_DELAY = 2  # Secondi di attesa tra batch
+    MAX_RETRIES = 3  # Numero massimo di retry
+    RETRY_DELAY = 5  # Secondi di attesa iniziale per retry
+    
     # Percorsi
     DATA_DIR = "data"
     VECTOR_STORE_DIR = "vector_store"

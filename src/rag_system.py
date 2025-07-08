@@ -60,6 +60,11 @@ class RAGSystem:
         3. Fai riferimento a domande e risposte precedenti quando rilevante
         4. Mantieni un tono amichevole e professionale
         5. Usa le informazioni dai bandi solo se pertinenti alla domanda
+        6. Quando citi informazioni da un bando, includi SEMPRE:
+           - Il nome del bando
+           - Il link al bando (se disponibile nei metadati)
+           - La fonte specifica dell'informazione
+        7. Formatta i link usando la sintassi markdown: [Nome Bando](URL)
         
         RISPOSTA:
         """
@@ -143,7 +148,7 @@ class RAGSystem:
             
             # Estrai la risposta
             if hasattr(response, 'content'):
-                result = response.content.strip().lower()
+                result = str(response.content[0]).strip().lower()
             else:
                 result = str(response).strip().lower()
             
@@ -376,61 +381,145 @@ class RAGSystem:
             raise
     
     def generate_summary_table(self, documents: List[Document]) -> List[Dict[str, Any]]:
-        """Genera una tabella di sintesi per tutti i bandi"""
-        
-        summary_prompt = """
-        Analizza il seguente documento di bando e crea una riga di sintesi con le seguenti colonne:
-        
-        Documento:
-        {text}
-        
-        Estrai le seguenti informazioni (inserisci "N/A" se non disponibile):
-        1. Nome Bando
-        2. Ente Erogatore
-        3. Scadenza (formato: gg/mm/aaaa o "N/A")
-        4. Budget Totale (formato: € importo o "N/A")
-        5. Importo Max per Progetto (formato: € importo o "N/A")
-        6. Settori (breve descrizione)
-        7. Beneficiari (tipologia)
-        8. Cofinanziamento % (formato: xx% o "N/A")
-        9. Stato (Aperto/Chiuso/N/A)
-        10. Note (informazioni aggiuntive importanti)
-        
-        IMPORTANTE: Rispondi SOLO con il formato richiesto separato da "|", senza spiegazioni aggiuntive.
-        Formato risposta: Nome|Ente|Scadenza|Budget|ImportoMax|Settori|Beneficiari|Cofinanziamento|Stato|Note
-        """
-        
-        summary_data = []
-        
-        for doc in documents:
-            try:
-                text_chunk = doc.page_content[:2500]
-                prompt = summary_prompt.format(text=text_chunk)
-                response = self.llm.invoke(prompt)
-                
-                # Parse della risposta
-                response_content = response.content if hasattr(response, 'content') else str(response)
-                if isinstance(response_content, str):
-                    parts = response_content.split("|")
-                    if len(parts) >= 10:
-                        row = {
-                            "Nome Bando": parts[0].strip(),
-                            "Ente Erogatore": parts[1].strip(),
-                            "Scadenza": parts[2].strip(),
-                            "Budget Totale": parts[3].strip(),
-                            "Importo Max per Progetto": parts[4].strip(),
-                            "Settori": parts[5].strip(),
-                            "Beneficiari": parts[6].strip(),
-                            "Cofinanziamento %": parts[7].strip(),
-                            "Stato": parts[8].strip(),
-                            "Note": parts[9].strip(),
-                            "Fonte": doc.metadata.get("source", "Unknown"),
-                            "Pagina": doc.metadata.get("page", 0)
-                        }
-                        summary_data.append(row)
-                
-            except Exception as e:
-                logger.error(f"Errore nella creazione della sintesi per {doc.metadata.get('source', 'Unknown')}: {str(e)}")
-                continue
-        
-        return summary_data 
+        """Genera una tabella di sintesi dei bandi"""
+        try:
+            # Raggruppa i documenti per nome file
+            docs_by_file = {}
+            for doc in documents:
+                file_name = doc.metadata.get('source', 'Unknown')
+                if file_name not in docs_by_file:
+                    docs_by_file[file_name] = []
+                docs_by_file[file_name].append(doc)
+            
+            summary_data = []
+            
+            # Prompt per l'estrazione delle informazioni
+            extract_prompt = '''
+            Sei un esperto analista di bandi pubblici. Il tuo compito è estrarre informazioni precise dal seguente bando.
+            DEVI TROVARE LE INFORMAZIONI RICHIESTE. Se non sono esplicitamente presenti, cerca di dedurle dal contesto.
+            
+            REGOLE IMPORTANTI:
+            1. NON rispondere MAI con "N/A" a meno che sia ASSOLUTAMENTE IMPOSSIBILE trovare o dedurre l'informazione
+            2. Cerca le informazioni in tutto il testo, non fermarti alla prima pagina
+            3. Se trovi più valori possibili, scegli il più recente o il più rilevante
+            4. Usa il nome del file come riferimento se non trovi un titolo esplicito
+            5. Cerca di dedurre lo stato del bando dalle date o dal contesto
+            
+            Testo del bando:
+            {text}
+            
+            ESTRAI LE SEGUENTI INFORMAZIONI:
+            Nome Bando: [OBBLIGATORIO - usa il titolo ufficiale o il nome del file se non lo trovi]
+            Ente Erogatore: [OBBLIGATORIO - cerca riferimenti a Regione, Ministero, o altri enti]
+            Scadenza: [cerca date di scadenza, termini di presentazione - formato: gg/mm/aaaa]
+            Budget Totale: [cerca riferimenti a dotazione finanziaria, risorse disponibili, budget]
+            Importo Max per Progetto: [cerca limiti di finanziamento, importo massimo concedibile]
+            Settori: [cerca settori di intervento, ambiti, aree tematiche]
+            Beneficiari: [OBBLIGATORIO - cerca soggetti ammissibili, destinatari, beneficiari]
+            Cofinanziamento %: [cerca percentuale di cofinanziamento richiesto]
+            Stato: [deduci se Aperto/Chiuso dalle date o dal contesto]
+            Note: [inserisci informazioni importanti non coperte sopra]
+
+            RICORDA: Il tuo obiettivo è fornire una sintesi UTILE. Evita "N/A" il più possibile.
+            Rispondi SOLO nel formato richiesto, senza spiegazioni o testo aggiuntivo.
+            '''
+            
+            for file_name, file_docs in docs_by_file.items():
+                try:
+                    # Combina il testo di tutte le pagine
+                    full_text = "\\n".join([doc.page_content for doc in file_docs])
+                    
+                    # Estrai le informazioni
+                    response = self.llm.invoke(
+                        extract_prompt.format(text=full_text[:15000])  # Aumentato il limite per avere più contesto
+                    )
+                    
+                    # Estrai le informazioni dalla risposta
+                    info = {}
+                    try:
+                        response_text = str(response.content if hasattr(response, 'content') else response)
+                        
+                        # Parsing della risposta
+                        for line in response_text.split('\\n'):
+                            if not isinstance(line, str):
+                                continue
+                                
+                            line = str(line).strip()
+                            if not line or ':' not in line:
+                                continue
+                                
+                            parts = line.split(':', 1)
+                            if len(parts) != 2:
+                                continue
+                                
+                            field = str(parts[0]).strip()
+                            value = str(parts[1]).strip()
+                            
+                            # Rimuovi le parentesi quadre se presenti
+                            if value.startswith('[') and value.endswith(']'):
+                                value = value[1:-1].strip()
+                            
+                            # Pulizia e validazione dei valori
+                            if value and value.lower() != 'n/a':
+                                info[field] = value
+                            else:
+                                # Se il campo è obbligatorio e non abbiamo un valore, usa il nome del file
+                                if field == 'Nome Bando':
+                                    info[field] = os.path.splitext(os.path.basename(file_name))[0]
+                                elif field == 'Ente Erogatore':
+                                    info[field] = 'Regione Lombardia'  # Default per i bandi regionali
+                                elif field == 'Beneficiari':
+                                    info[field] = 'Da verificare nel bando'
+                                else:
+                                    info[field] = 'N/A'
+                    except Exception as e:
+                        logger.error(f"Errore nel parsing della risposta: {str(e)}")
+                        info = {}
+                    
+                    # Verifica che tutti i campi necessari siano presenti
+                    required_fields = [
+                        'Nome Bando', 'Ente Erogatore', 'Scadenza', 'Budget Totale',
+                        'Importo Max per Progetto', 'Settori', 'Beneficiari',
+                        'Cofinanziamento %', 'Stato', 'Note'
+                    ]
+                    
+                    for field in required_fields:
+                        if field not in info:
+                            if field == 'Nome Bando':
+                                info[field] = os.path.splitext(os.path.basename(file_name))[0]
+                            elif field == 'Ente Erogatore':
+                                info[field] = 'Regione Lombardia'
+                            elif field == 'Beneficiari':
+                                info[field] = 'Da verificare nel bando'
+                            else:
+                                info[field] = 'N/A'
+                    
+                    # Aggiungi metadati dal documento
+                    info['source'] = file_name
+                    info['url'] = file_docs[0].metadata.get('url', 'N/A')
+                    
+                    summary_data.append(info)
+                    
+                except Exception as e:
+                    logger.error(f"Errore nell'elaborazione del documento {file_name}: {str(e)}")
+                    # Aggiungi una riga con errore ma mantieni il nome del file come nome del bando
+                    summary_data.append({
+                        'Nome Bando': os.path.splitext(os.path.basename(file_name))[0],
+                        'Ente Erogatore': 'Regione Lombardia',
+                        'Scadenza': 'N/A',
+                        'Budget Totale': 'N/A',
+                        'Importo Max per Progetto': 'N/A',
+                        'Settori': 'N/A',
+                        'Beneficiari': 'Da verificare nel bando',
+                        'Cofinanziamento %': 'N/A',
+                        'Stato': 'N/A',
+                        'Note': f'Errore nell\'elaborazione: {str(e)}',
+                        'source': file_name,
+                        'url': 'N/A'
+                    })
+            
+            return summary_data
+            
+        except Exception as e:
+            logger.error(f"Errore nella generazione della tabella di sintesi: {str(e)}")
+            raise 
