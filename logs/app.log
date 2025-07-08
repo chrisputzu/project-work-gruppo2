@@ -3708,3 +3708,240 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-07-08 16:33:17,342 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_163317
 2025-07-08 16:33:18,146 - src.document_processor - INFO - Caricato PDF: uploads\20250708_163303_2019 - DGR 2531_2019.pdf (21 pagine)
 2025-07-08 16:33:19,083 - src.document_processor - INFO - Caricato PDF: uploads\20250708_163303_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (27 pagine)
+2025-07-08 16:34:45,176 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:34:45,177 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:34:45,177 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:34:45,178 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:34:45,178 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:34:45,178 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:34:45,179 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:34:45,563 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:34:45,583 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:34:45,611 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:34:45,612 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:34:45,613 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:34:45,614 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:34:45,615 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:34:45,617 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:34:45,618 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:34:45,618 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:34:45,619 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:34:45,620 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:34:45,620 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:34:45,621 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:34:45,622 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:34:49,807 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:34:49,808 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:34:49,808 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:34:49,809 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:34:49,809 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:34:49,810 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:34:49,810 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:34:49,837 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:34:49,863 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:34:49,885 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:34:49,886 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:34:49,887 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:34:49,888 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:34:49,889 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:34:49,891 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:34:49,891 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:34:49,892 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:34:49,894 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:34:49,894 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:34:49,895 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:34:49,896 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:34:49,898 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:34:49,960 - __main__ - INFO - Progress: Caricando file 1/27: 2019 - DGR 2531_2019.pdf
+2025-07-08 16:34:50,526 - src.document_processor - INFO - Caricato PDF: data\2019 - DGR 2531_2019.pdf (21 pagine)
+2025-07-08 16:34:50,530 - src.document_processor - INFO - Creati 62 chunks da 21 documenti
+2025-07-08 16:34:50,530 - src.document_processor - INFO - File 1/27 processato: 62 chunks da 2019 - DGR 2531_2019.pdf
+2025-07-08 16:34:50,531 - __main__ - INFO - Progress: Caricando file 2/27: All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 16:34:51,531 - src.document_processor - INFO - Caricato PDF: data\All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (27 pagine)
+2025-07-08 16:34:51,535 - src.document_processor - INFO - Creati 103 chunks da 27 documenti
+2025-07-08 16:34:51,535 - src.document_processor - INFO - File 2/27 processato: 103 chunks da All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 16:34:51,536 - __main__ - INFO - Progress: Caricando file 3/27: Allegato 1 Bando LS.pdf
+2025-07-08 16:34:52,952 - src.document_processor - INFO - Caricato PDF: data\Allegato 1 Bando LS.pdf (32 pagine)
+2025-07-08 16:34:52,955 - src.document_processor - INFO - Creati 112 chunks da 32 documenti
+2025-07-08 16:34:52,955 - src.document_processor - INFO - File 3/27 processato: 112 chunks da Allegato 1 Bando LS.pdf
+2025-07-08 16:34:52,956 - __main__ - INFO - Progress: Caricando file 4/27: Allegato A - Bando SEED PA_senza_allegati_DEF.pdf
+2025-07-08 16:34:54,115 - src.document_processor - INFO - Caricato PDF: data\Allegato A - Bando SEED PA_senza_allegati_DEF.pdf (33 pagine)
+2025-07-08 16:34:54,118 - src.document_processor - INFO - Creati 122 chunks da 33 documenti
+2025-07-08 16:34:54,118 - src.document_processor - INFO - File 4/27 processato: 122 chunks da Allegato A - Bando SEED PA_senza_allegati_DEF.pdf
+2025-07-08 16:34:54,120 - __main__ - INFO - Progress: Caricando file 5/27: Allegato A Bando_Tecnologie Strategiche_20250624.pdf
+2025-07-08 16:34:57,100 - src.document_processor - INFO - Caricato PDF: data\Allegato A Bando_Tecnologie Strategiche_20250624.pdf (61 pagine)
+2025-07-08 16:34:57,106 - src.document_processor - INFO - Creati 262 chunks da 61 documenti
+2025-07-08 16:34:57,106 - src.document_processor - INFO - File 5/27 processato: 262 chunks da Allegato A Bando_Tecnologie Strategiche_20250624.pdf
+2025-07-08 16:34:57,107 - __main__ - INFO - Progress: Caricando file 6/27: Allegato A decreto 4 ottobre n 14847 - Avviso Investimenti Linea Microimprese.pdf
+2025-07-08 16:34:58,332 - src.document_processor - INFO - Caricato PDF: data\Allegato A decreto 4 ottobre n 14847 - Avviso Investimenti Linea Microimprese.pdf (41 pagine)
+2025-07-08 16:34:58,339 - src.document_processor - INFO - Creati 182 chunks da 41 documenti
+2025-07-08 16:34:58,339 - src.document_processor - INFO - File 6/27 processato: 182 chunks da Allegato A decreto 4 ottobre n 14847 - Avviso Investimenti Linea Microimprese.pdf
+2025-07-08 16:34:58,340 - __main__ - INFO - Progress: Caricando file 7/27: Allegato A senza allegati .pdf
+2025-07-08 16:35:00,098 - src.document_processor - INFO - Caricato PDF: data\Allegato A senza allegati .pdf (37 pagine)
+2025-07-08 16:35:00,102 - src.document_processor - INFO - Creati 166 chunks da 37 documenti
+2025-07-08 16:35:00,103 - src.document_processor - INFO - File 7/27 processato: 166 chunks da Allegato A senza allegati .pdf
+2025-07-08 16:35:00,104 - __main__ - INFO - Progress: Caricando file 8/27: Allegato A_AvvisoQuotaLombardia_def.pdf
+2025-07-08 16:35:01,847 - src.document_processor - INFO - Caricato PDF: data\Allegato A_AvvisoQuotaLombardia_def.pdf (34 pagine)
+2025-07-08 16:35:01,852 - src.document_processor - INFO - Creati 152 chunks da 34 documenti
+2025-07-08 16:35:01,852 - src.document_processor - INFO - File 8/27 processato: 152 chunks da Allegato A_AvvisoQuotaLombardia_def.pdf
+2025-07-08 16:35:01,852 - __main__ - INFO - Progress: Caricando file 9/27: Bando CER Fase 2.pdf
+2025-07-08 16:35:03,063 - src.document_processor - INFO - Caricato PDF: data\Bando CER Fase 2.pdf (34 pagine)
+2025-07-08 16:35:03,066 - src.document_processor - INFO - Creati 129 chunks da 34 documenti
+2025-07-08 16:35:03,066 - src.document_processor - INFO - File 9/27 processato: 129 chunks da Bando CER Fase 2.pdf
+2025-07-08 16:35:03,067 - __main__ - INFO - Progress: Caricando file 10/27: bando E4S Energy4Schools.pdf
+2025-07-08 16:35:06,684 - src.document_processor - INFO - Caricato PDF: data\bando E4S Energy4Schools.pdf (107 pagine)
+2025-07-08 16:35:06,692 - src.document_processor - INFO - Creati 317 chunks da 107 documenti
+2025-07-08 16:35:06,693 - src.document_processor - INFO - File 10/27 processato: 317 chunks da bando E4S Energy4Schools.pdf
+2025-07-08 16:35:45,380 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:35:45,382 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:35:45,382 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:35:45,382 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:35:45,384 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:35:45,384 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:35:45,384 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:35:45,809 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:35:45,829 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:35:45,858 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:35:45,860 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:35:45,860 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:35:45,861 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:35:45,863 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:35:45,864 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:35:45,866 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:35:45,867 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:35:45,869 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:35:45,870 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:35:45,870 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:35:45,871 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:35:45,871 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:35:54,352 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:35:54,354 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:35:54,354 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:35:54,355 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:35:54,355 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:35:54,356 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:35:54,356 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:35:54,389 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:35:54,415 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:35:54,440 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:35:54,441 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:35:54,442 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:35:54,443 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:35:54,446 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:35:54,447 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:35:54,449 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:35:54,449 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:35:54,450 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:35:54,452 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:35:54,453 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:35:54,453 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:35:54,454 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:36:03,028 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:36:03,029 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:36:03,029 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:36:03,029 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:36:03,030 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:36:03,031 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:36:03,031 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:36:03,051 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:36:03,073 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:36:03,094 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:36:03,096 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:36:03,099 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:36:03,100 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:36:03,101 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:36:03,102 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:36:03,102 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:36:03,103 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:36:03,104 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:36:03,104 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:36:03,106 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:36:03,106 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:36:03,108 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:36:03,146 - src.utils - INFO - File salvato: uploads\20250708_163603_2019 - DGR 2531_2019.pdf
+2025-07-08 16:36:03,150 - src.utils - INFO - File salvato: uploads\20250708_163603_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 16:36:03,159 - __main__ - INFO - Progress: Caricando file 1/2: 20250708_163603_2019 - DGR 2531_2019.pdf
+2025-07-08 16:36:03,637 - src.document_processor - INFO - Caricato PDF: uploads\20250708_163603_2019 - DGR 2531_2019.pdf (21 pagine)
+2025-07-08 16:36:03,639 - src.document_processor - INFO - Creati 62 chunks da 21 documenti
+2025-07-08 16:36:03,640 - src.document_processor - INFO - File 1/2 processato: 62 chunks da 20250708_163603_2019 - DGR 2531_2019.pdf
+2025-07-08 16:36:03,641 - __main__ - INFO - Progress: Caricando file 2/2: 20250708_163603_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 16:36:04,664 - src.document_processor - INFO - Caricato PDF: uploads\20250708_163603_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (27 pagine)
+2025-07-08 16:36:04,668 - src.document_processor - INFO - Creati 103 chunks da 27 documenti
+2025-07-08 16:36:04,668 - src.document_processor - INFO - File 2/2 processato: 103 chunks da 20250708_163603_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf
+2025-07-08 16:36:04,668 - src.document_processor - INFO - Totale chunks generati: 165 da 2 file
+2025-07-08 16:36:04,672 - src.document_processor - INFO - Creati 4 batch da processare
+2025-07-08 16:36:04,674 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 16:36:04,675 - src.document_processor - INFO - Tentativo 1/3 per batch 1/4
+2025-07-08 16:36:06,193 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 16:36:06,793 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-07-08 16:36:06,793 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-08 16:36:06,793 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-07-08 16:36:06,813 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-08 16:36:06,820 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-08 16:36:06,827 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 16:36:08,828 - src.document_processor - INFO - Tentativo 1/3 per batch 2/4
+2025-07-08 16:36:09,651 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 16:36:10,129 - src.document_processor - INFO - Combinato batch 2/4
+2025-07-08 16:36:10,130 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 16:36:12,145 - src.document_processor - INFO - Tentativo 1/3 per batch 3/4
+2025-07-08 16:36:13,097 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 16:36:13,576 - src.document_processor - INFO - Combinato batch 3/4
+2025-07-08 16:36:13,577 - __main__ - INFO - Progress: Caricamento...
+2025-07-08 16:36:15,583 - src.document_processor - INFO - Tentativo 1/3 per batch 4/4
+2025-07-08 16:36:16,219 - httpx - INFO - HTTP Request: POST https://pr-giorno6-embeddings-resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-08 16:36:16,316 - src.document_processor - INFO - Combinato batch 4/4
+2025-07-08 16:36:16,316 - src.document_processor - INFO - Vector store finale creato con 165 chunks totali
+2025-07-08 16:36:16,327 - src.document_processor - INFO - Metadati salvati: vector_store\metadata_f422514dba5c81aab5ba3e464abcdd2c.json
+2025-07-08 16:36:16,327 - src.document_processor - INFO - Vector store salvato nella cache: vector_store\vectorstore_f422514dba5c81aab5ba3e464abcdd2c
+2025-07-08 16:36:16,333 - src.chat_manager - INFO - Salvata sessione 20250708_163616
+2025-07-08 16:36:16,333 - src.chat_manager - INFO - Creata nuova sessione: 20250708_163616
+2025-07-08 16:36:16,335 - src.rag_system - INFO - Catena QA configurata con successo per sessione 20250708_163616
+2025-07-08 16:36:17,241 - src.document_processor - INFO - Caricato PDF: uploads\20250708_163603_2019 - DGR 2531_2019.pdf (21 pagine)
+2025-07-08 16:36:18,153 - src.document_processor - INFO - Caricato PDF: uploads\20250708_163603_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf (27 pagine)
+2025-07-08 16:38:18,698 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:38:18,699 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:38:18,700 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:38:18,700 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:38:18,700 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:38:18,701 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:38:18,701 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:38:19,119 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:38:19,140 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:38:19,168 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:38:19,170 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:38:19,170 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:38:19,171 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:38:19,172 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:38:19,173 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:38:19,174 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:38:19,175 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:38:19,176 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:38:19,177 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:38:19,177 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:38:19,179 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:38:19,180 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:38:19,181 - src.chat_manager - INFO - Caricata sessione 20250708_163616
+2025-07-08 16:38:27,573 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-08 16:38:27,575 - src.utils - INFO - Directory data creata/verificata
+2025-07-08 16:38:27,575 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-08 16:38:27,577 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-08 16:38:27,577 - src.utils - INFO - Directory exports creata/verificata
+2025-07-08 16:38:27,578 - src.utils - INFO - Directory logs creata/verificata
+2025-07-08 16:38:27,578 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:38:27,610 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-08 16:38:27,635 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-08 16:38:27,661 - src.chat_manager - INFO - Caricata sessione 20250708_093318
+2025-07-08 16:38:27,662 - src.chat_manager - INFO - Caricata sessione 20250708_093406
+2025-07-08 16:38:27,663 - src.chat_manager - INFO - Caricata sessione 20250708_093523
+2025-07-08 16:38:27,664 - src.chat_manager - INFO - Caricata sessione 20250708_093750
+2025-07-08 16:38:27,665 - src.chat_manager - INFO - Caricata sessione 20250708_105642
+2025-07-08 16:38:27,666 - src.chat_manager - INFO - Caricata sessione 20250708_114654
+2025-07-08 16:38:27,667 - src.chat_manager - INFO - Caricata sessione 20250708_120532
+2025-07-08 16:38:27,668 - src.chat_manager - INFO - Caricata sessione 20250708_121529
+2025-07-08 16:38:27,669 - src.chat_manager - INFO - Caricata sessione 20250708_144531
+2025-07-08 16:38:27,670 - src.chat_manager - INFO - Caricata sessione 20250708_144911
+2025-07-08 16:38:27,671 - src.chat_manager - INFO - Caricata sessione 20250708_153005
+2025-07-08 16:38:27,671 - src.chat_manager - INFO - Caricata sessione 20250708_161203
+2025-07-08 16:38:27,673 - src.chat_manager - INFO - Caricata sessione 20250708_163317
+2025-07-08 16:38:27,673 - src.chat_manager - INFO - Caricata sessione 20250708_163616

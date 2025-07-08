@@ -142,7 +142,7 @@ class BandiRAGApp:
         st.rerun()
     
     def process_data_folder(self):
-        """Processa tutti i file PDF dalla cartella data"""
+        """Carica tutti i file PDF dalla cartella data"""
         data_path = Path(self.config.DATA_DIR)
         
         if not data_path.exists():
@@ -192,7 +192,7 @@ class BandiRAGApp:
         with col1:
             available_files = self.process_data_folder()
             if available_files:
-                st.info(f"📁 Trovati {len(available_files)} nuovi file PDF nella cartella '{self.config.DATA_DIR}'")
+                st.info(f"📁 Trovati {len(available_files)} nuovi file PDF nella cartella")
             else:
                 st.info(f"📁 Nessun nuovo file PDF da processare nella cartella '{self.config.DATA_DIR}'")
         
@@ -222,10 +222,7 @@ class BandiRAGApp:
             if st.button("🚀 Processa Documenti", type="primary"):
                 self.process_uploaded_files(uploaded_files)
         
-        # Mostra file già processati
-        if st.session_state.processed_files:
-            st.markdown("### 📚 Documenti già processati:")
-            st.text(f"📁 {len(st.session_state.processed_files)} documenti processati")
+       
     
     def process_uploaded_files(self, uploaded_files):
         """Processa i file caricati manualmente"""
