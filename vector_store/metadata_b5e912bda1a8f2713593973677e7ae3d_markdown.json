@@ -1,0 +1,15 @@
+{
+  "files_hash": "b5e912bda1a8f2713593973677e7ae3d_markdown",
+  "file_paths": [
+    "uploads\\20250708_182921_Allegato 1 Bando LS.pdf",
+    "uploads\\20250708_182921_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf"
+  ],
+  "chunks_count": 240,
+  "created_at": 1751992185.366956,
+  "conversion_method": "markdown",
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}

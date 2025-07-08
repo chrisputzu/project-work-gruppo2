@@ -1,0 +1,15 @@
+{
+  "files_hash": "e28dd96c2b65f30d228ed22bac7c5d1f_markdown",
+  "file_paths": [
+    "uploads\\20250708_183626_Allegato A Bando_Tecnologie Strategiche_20250624.pdf",
+    "uploads\\20250708_183626_Allegato A decreto 4 ottobre n 14847 - Avviso Investimenti Linea Microimprese.pdf"
+  ],
+  "chunks_count": 523,
+  "created_at": 1751992642.852002,
+  "conversion_method": "markdown",
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}

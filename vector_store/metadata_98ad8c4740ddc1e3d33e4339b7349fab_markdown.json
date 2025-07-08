@@ -1,0 +1,15 @@
+{
+  "files_hash": "98ad8c4740ddc1e3d33e4339b7349fab_markdown",
+  "file_paths": [
+    "uploads\\20250708_174034_Allegato A senza allegati .pdf",
+    "uploads\\20250708_174034_Allegato A_AvvisoQuotaLombardia_def.pdf"
+  ],
+  "chunks_count": 344,
+  "created_at": 1751989271.0497656,
+  "conversion_method": "markdown",
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}

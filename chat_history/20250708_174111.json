@@ -1,0 +1,15 @@
+{
+  "session_id": "20250708_174111",
+  "messages": [],
+  "created_at": "2025-07-08T17:41:11.058528",
+  "last_updated": "2025-07-08T17:41:11.058528",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 2,
+    "documents": [
+      "20250708_174034_Allegato A senza allegati .pdf",
+      "20250708_174034_Allegato A_AvvisoQuotaLombardia_def.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}

@@ -6,19 +6,22 @@ import hashlib
 import json
 from typing import List, Dict, Any
 from pathlib import Path
-from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
 from langchain_community.vectorstores import FAISS
 from langchain_openai import AzureOpenAIEmbeddings
 from pydantic import SecretStr
 
+# Importazioni per conversione PDF->Markdown
+import fitz  # PyMuPDF
+import pymupdf4llm
+
 from src.config import Config
 
 logger = logging.getLogger(__name__)
 
-class DocumentProcessor:
-    """Processore per documenti PDF dei bandi"""
+class EnhancedDocumentProcessor:
+    """Processore migliorato per documenti PDF con conversione in Markdown"""
     
     def __init__(self):
         self.config = Config()
@@ -53,45 +56,198 @@ class DocumentProcessor:
         else:
             raise ValueError("Configurazione embeddings non valida")
     
-    def load_pdf(self, file_path: str) -> List[Document]:
-        """Carica un file PDF e lo converte in documenti"""
+    def pdf_to_markdown(self, pdf_path: str) -> str:
+        """Converte un PDF in formato Markdown usando pymupdf4llm"""
         try:
-            loader = PyPDFLoader(file_path)
-            documents = loader.load()
+            logger.info(f"Convertendo PDF in Markdown: {pdf_path}")
             
-            # Aggiungi metadati
-            for doc in documents:
-                doc.metadata.update({
+            # Usa pymupdf4llm per conversione ottimizzata per LLM
+            markdown_text = pymupdf4llm.to_markdown(pdf_path)
+            
+            logger.info(f"Conversione completata. Lunghezza Markdown: {len(markdown_text)} caratteri")
+            return markdown_text
+            
+        except Exception as e:
+            logger.error(f"Errore nella conversione PDF->Markdown per {pdf_path}: {str(e)}")
+            # Fallback a estrazione testo semplice
+            return self._fallback_pdf_extraction(pdf_path)
+    
+    def _fallback_pdf_extraction(self, pdf_path: str) -> str:
+        """Estrazione di fallback usando PyMuPDF base"""
+        try:
+            logger.warning(f"Usando estrazione di fallback per {pdf_path}")
+            
+            doc = fitz.open(pdf_path)
+            text_content = []
+            
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                text = page.get_text()
+                
+                # Aggiungi separatore di pagina in markdown
+                text_content.append(f"\n---\n**Pagina {page_num + 1}**\n\n{text}")
+            
+            doc.close()
+            return "\n".join(text_content)
+            
+        except Exception as e:
+            logger.error(f"Errore anche nell'estrazione di fallback per {pdf_path}: {str(e)}")
+            raise
+    
+    def save_markdown(self, markdown_content: str, pdf_path: str) -> str:
+        """Salva il contenuto Markdown su file"""
+        try:
+            # Crea directory per i markdown
+            markdown_dir = Path("markdown_cache")
+            markdown_dir.mkdir(exist_ok=True)
+            
+            # Nome file markdown basato sul PDF
+            pdf_name = os.path.splitext(os.path.basename(pdf_path))[0]
+            markdown_path = markdown_dir / f"{pdf_name}.md"
+            
+            with open(markdown_path, 'w', encoding='utf-8') as f:
+                f.write(markdown_content)
+            
+            logger.info(f"Markdown salvato: {markdown_path}")
+            return str(markdown_path)
+            
+        except Exception as e:
+            logger.error(f"Errore nel salvataggio markdown: {str(e)}")
+            raise
+    
+    def load_pdf_as_markdown(self, file_path: str) -> List[Document]:
+        """Carica un PDF convertendolo prima in Markdown"""
+        try:
+            # Converti PDF in Markdown
+            markdown_content = self.pdf_to_markdown(file_path)
+            
+            # Salva il markdown (opzionale, per debug/cache)
+            markdown_path = self.save_markdown(markdown_content, file_path)
+            
+            # Crea documento LangChain dal markdown
+            document = Document(
+                page_content=markdown_content,
+                metadata={
                     'source': os.path.basename(file_path),
                     'file_path': file_path,
-                    'file_type': 'pdf'
-                })
+                    'file_type': 'pdf',
+                    'markdown_path': markdown_path,
+                    'conversion_method': 'pymupdf4llm',
+                    'total_length': len(markdown_content)
+                }
+            )
             
-            logger.info(f"Caricato PDF: {file_path} ({len(documents)} pagine)")
-            return documents
+            logger.info(f"PDF caricato come Markdown: {file_path}")
+            return [document]
             
         except Exception as e:
             logger.error(f"Errore nel caricamento del PDF {file_path}: {str(e)}")
             raise
     
-    def process_documents(self, documents: List[Document]) -> List[Document]:
-        """Processa i documenti dividendoli in chunks"""
+    def load_pdf_as_markdown_pages(self, file_path: str) -> List[Document]:
+        """Carica un PDF convertendolo in Markdown mantenendo la separazione per pagine"""
         try:
-            chunks = self.text_splitter.split_documents(documents)
-            logger.info(f"Creati {len(chunks)} chunks da {len(documents)} documenti")
+            logger.info(f"Caricando PDF per pagine come Markdown: {file_path}")
+            
+            # Apri il PDF
+            doc = fitz.open(file_path)
+            documents = []
+            
+            for page_num in range(len(doc)):
+                # Estrai una pagina alla volta
+                page = doc.load_page(page_num)
+                
+                # Converti la singola pagina in markdown usando pymupdf4llm
+                try:
+                    # Crea un PDF temporaneo con solo questa pagina
+                    temp_doc = fitz.open()
+                    temp_doc.insert_pdf(doc, from_page=page_num, to_page=page_num)
+                    
+                    temp_path = f"temp_page_{page_num}.pdf"
+                    temp_doc.save(temp_path)
+                    temp_doc.close()
+                    
+                    # Converti la pagina in markdown
+                    page_markdown = pymupdf4llm.to_markdown(temp_path)
+                    
+                    # Rimuovi il file temporaneo
+                    os.remove(temp_path)
+                    
+                except Exception as e:
+                    logger.warning(f"Errore conversione pagina {page_num}, uso fallback: {e}")
+                    # Fallback a testo semplice
+                    page_markdown = page.get_text()
+                
+                # Crea documento per la pagina
+                page_document = Document(
+                    page_content=page_markdown,
+                    metadata={
+                        'source': os.path.basename(file_path),
+                        'file_path': file_path,
+                        'file_type': 'pdf',
+                        'page': page_num + 1,
+                        'total_pages': len(doc),
+                        'conversion_method': 'pymupdf4llm_per_page',
+                        'page_length': len(page_markdown)
+                    }
+                )
+                
+                documents.append(page_document)
+            
+            doc.close()
+            
+            logger.info(f"PDF caricato: {file_path} ({len(documents)} pagine in Markdown)")
+            return documents
+            
+        except Exception as e:
+            logger.error(f"Errore nel caricamento del PDF per pagine {file_path}: {str(e)}")
+            raise
+    
+    def process_documents(self, documents: List[Document]) -> List[Document]:
+        """Processa i documenti Markdown dividendoli in chunks"""
+        try:
+            # Configura il text splitter per Markdown
+            markdown_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=self.config.CHUNK_SIZE,
+                chunk_overlap=self.config.CHUNK_OVERLAP,
+                separators=[
+                    "\n## ",  # Headers H2
+                    "\n### ", # Headers H3
+                    "\n#### ", # Headers H4
+                    "\n\n",   # Paragrafi
+                    "\n",     # Righe
+                    ". ",     # Frasi
+                    " ",      # Parole
+                    ""        # Caratteri
+                ]
+            )
+            
+            chunks = markdown_splitter.split_documents(documents)
+            
+            # Arricchisci i metadati dei chunks
+            for i, chunk in enumerate(chunks):
+                chunk.metadata.update({
+                    'chunk_id': i,
+                    'chunk_length': len(chunk.page_content),
+                    'content_type': 'markdown'
+                })
+            
+            logger.info(f"Creati {len(chunks)} chunks Markdown da {len(documents)} documenti")
             return chunks
             
         except Exception as e:
-            logger.error(f"Errore nel processamento dei documenti: {str(e)}")
+            logger.error(f"Errore nel processamento dei documenti Markdown: {str(e)}")
             raise
     
     def create_vector_store(self, chunks: List[Document]) -> FAISS:
-        """Crea un vector store dai chunks"""
+        """Crea un vector store dai chunks Markdown"""
         try:
             if not self.embeddings:
                 raise ValueError("Embeddings non inizializzati")
+            
+            logger.info(f"Creando vector store da {len(chunks)} chunks Markdown")
             self.vector_store = FAISS.from_documents(chunks, self.embeddings)
-            logger.info(f"Creato vector store con {len(chunks)} chunks")
+            logger.info(f"Vector store creato con {len(chunks)} chunks Markdown")
             return self.vector_store
             
         except Exception as e:
@@ -99,7 +255,7 @@ class DocumentProcessor:
             raise
     
     def create_vector_store_batch(self, chunks: List[Document], progress_callback=None) -> FAISS:
-        """Crea un vector store processando i chunks in batch per evitare rate limits"""
+        """Crea un vector store processando i chunks Markdown in batch"""
         try:
             if not self.embeddings:
                 raise ValueError("Embeddings non inizializzati")
@@ -111,7 +267,7 @@ class DocumentProcessor:
             if len(chunks) <= self.config.BATCH_SIZE:
                 return self.create_vector_store(chunks)
             
-            # logger.info(f"Processamento batch di {len(chunks)} chunks (batch size: {self.config.BATCH_SIZE})")
+            logger.info(f"Processamento batch di {len(chunks)} chunks Markdown (batch size: {self.config.BATCH_SIZE})")
             
             # Dividi i chunks in batch
             batches = [chunks[i:i + self.config.BATCH_SIZE] 
@@ -122,7 +278,7 @@ class DocumentProcessor:
             # Processa il primo batch per creare il vector store base
             first_batch = batches[0]
             if progress_callback:
-                progress_callback('Caricamento...')
+                progress_callback('Creando embeddings dal contenuto Markdown...')
             
             vector_store = self._process_batch_with_retry(first_batch, batch_num=1, total_batches=len(batches))
             
@@ -141,7 +297,7 @@ class DocumentProcessor:
                 logger.info(f"Combinato batch {i}/{len(batches)}")
             
             self.vector_store = vector_store
-            logger.info(f"Vector store finale creato con {len(chunks)} chunks totali")
+            logger.info(f"Vector store finale creato con {len(chunks)} chunks Markdown totali")
             return self.vector_store
             
         except Exception as e:
@@ -172,13 +328,100 @@ class DocumentProcessor:
         
         raise Exception(f"Impossibile processare batch {batch_num} dopo {self.config.MAX_RETRIES} tentativi")
     
+    def process_multiple_files_markdown(self, file_paths: List[str], split_by_pages: bool = False, progress_callback=None) -> FAISS:
+        """Processa multipli file PDF convertendoli in Markdown"""
+        # Calcola hash dei file
+        files_hash = self._get_files_hash(file_paths)
+        files_hash += "_markdown"  # Distingui dalla cache normale
+        
+        # Controlla se esiste già un vector store in cache
+        if self._vector_store_exists(files_hash):
+            if progress_callback:
+                progress_callback("🔍 Embeddings Markdown trovati in cache, caricamento...")
+            
+            logger.info(f"Caricamento vector store Markdown dalla cache (hash: {files_hash})")
+            
+            try:
+                vector_store = self._load_cached_vector_store(files_hash)
+                
+                if progress_callback:
+                    metadata = self._load_vector_store_metadata(files_hash)
+                    chunks_count = metadata.get('chunks_count', 'N/A')
+                    progress_callback(f"✅ Embeddings Markdown caricati dalla cache! {chunks_count} chunks pronti")
+                
+                return vector_store
+                
+            except Exception as e:
+                logger.warning(f"Errore nel caricamento dalla cache: {e}. Procedo con conversione...")
+                if progress_callback:
+                    progress_callback("⚠️ Errore cache, riconversione in Markdown...")
+        
+        # Se non esiste in cache, processa normalmente
+        all_chunks = []
+        total_files = len(file_paths)
+        
+        # Fase 1: Conversione PDF -> Markdown e chunking
+        if progress_callback:
+            progress_callback("📄 Conversione PDF -> Markdown in corso...")
+        
+        for i, file_path in enumerate(file_paths):
+            try:
+                if progress_callback:
+                    progress_callback(f"Convertendo {i+1}/{total_files}: {os.path.basename(file_path)}")
+                
+                # Carica PDF come Markdown
+                if split_by_pages:
+                    documents = self.load_pdf_as_markdown_pages(file_path)
+                else:
+                    documents = self.load_pdf_as_markdown(file_path)
+                
+                # Processa i documenti in chunks
+                chunks = self.process_documents(documents)
+                all_chunks.extend(chunks)
+                
+                logger.info(f"File {i+1}/{total_files} convertito: {len(chunks)} chunks da {os.path.basename(file_path)}")
+                
+            except Exception as e:
+                logger.error(f"Errore nella conversione di {file_path}: {str(e)}")
+                if progress_callback:
+                    progress_callback(f"⚠️ Errore nel file {os.path.basename(file_path)}: {str(e)}")
+                continue
+        
+        if not all_chunks:
+            raise ValueError("Nessun documento convertito con successo")
+        
+        logger.info(f"Totale chunks Markdown generati: {len(all_chunks)} da {total_files} file")
+        
+        # Fase 2: Creazione vector store con batch processing
+        if progress_callback:
+            progress_callback(f"💾 Creazione embeddings da {len(all_chunks)} chunks Markdown...")
+        
+        vector_store = self.create_vector_store_batch(all_chunks, progress_callback)
+        
+        # Fase 3: Salvataggio nella cache
+        if progress_callback:
+            progress_callback("💾 Salvataggio embeddings Markdown in cache...")
+        
+        try:
+            self._save_vector_store_to_cache(files_hash, file_paths, len(all_chunks))
+            
+            if progress_callback:
+                progress_callback("✅ Embeddings Markdown salvati in cache!")
+            
+        except Exception as e:
+            logger.error(f"Errore nel salvataggio cache: {e}")
+            if progress_callback:
+                progress_callback(f"⚠️ Errore nel salvataggio cache: {e}")
+        
+        return vector_store
+    
+    # Metodi di cache riutilizzati dalla classe originale
     def _get_files_hash(self, file_paths: List[str]) -> str:
         """Calcola un hash basato sui file e le loro modifiche"""
         hash_data = []
         
         for file_path in file_paths:
             try:
-                # Ottieni informazioni sul file
                 file_stat = os.stat(file_path)
                 file_info = {
                     'path': file_path,
@@ -191,7 +434,6 @@ class DocumentProcessor:
                 logger.warning(f"Impossibile ottenere stat per {file_path}: {e}")
                 continue
         
-        # Aggiungi configurazione del chunking
         config_data = {
             'chunk_size': self.config.CHUNK_SIZE,
             'chunk_overlap': self.config.CHUNK_OVERLAP,
@@ -199,7 +441,6 @@ class DocumentProcessor:
         }
         hash_data.append(config_data)
         
-        # Calcola hash MD5
         hash_string = json.dumps(hash_data, sort_keys=True)
         return hashlib.md5(hash_string.encode()).hexdigest()
     
@@ -216,6 +457,7 @@ class DocumentProcessor:
             'file_paths': file_paths,
             'chunks_count': chunks_count,
             'created_at': time.time(),
+            'conversion_method': 'markdown',
             'config': {
                 'chunk_size': self.config.CHUNK_SIZE,
                 'chunk_overlap': self.config.CHUNK_OVERLAP,
@@ -227,7 +469,7 @@ class DocumentProcessor:
         with open(metadata_path, 'w', encoding='utf-8') as f:
             json.dump(metadata, f, indent=2, ensure_ascii=False)
         
-        logger.info(f"Metadati salvati: {metadata_path}")
+        logger.info(f"Metadati Markdown salvati: {metadata_path}")
     
     def _load_vector_store_metadata(self, files_hash: str) -> Dict[str, Any]:
         """Carica i metadati del vector store"""
@@ -256,17 +498,15 @@ class DocumentProcessor:
             if not self.embeddings:
                 raise ValueError("Embeddings non inizializzati")
             
-            # Carica il vector store
             self.vector_store = FAISS.load_local(
                 vector_store_path, 
                 self.embeddings,
                 allow_dangerous_deserialization=True
             )
             
-            # Carica i metadati
             metadata = self._load_vector_store_metadata(files_hash)
             
-            logger.info(f"Vector store caricato dalla cache: {vector_store_path}")
+            logger.info(f"Vector store Markdown caricato dalla cache: {vector_store_path}")
             logger.info(f"Chunks: {metadata.get('chunks_count', 'N/A')}, Files: {len(metadata.get('file_paths', []))}")
             
             return self.vector_store
@@ -284,13 +524,9 @@ class DocumentProcessor:
         vector_store_path = self._get_vector_store_path(files_hash)
         
         try:
-            # Salva il vector store
             self.vector_store.save_local(vector_store_path)
-            
-            # Salva i metadati
             self._save_vector_store_metadata(files_hash, file_paths, chunks_count)
-            
-            logger.info(f"Vector store salvato nella cache: {vector_store_path}")
+            logger.info(f"Vector store Markdown salvato nella cache: {vector_store_path}")
             
         except Exception as e:
             logger.error(f"Errore nel salvataggio del vector store: {str(e)}")
@@ -306,7 +542,7 @@ class DocumentProcessor:
         try:
             if not self.embeddings:
                 raise ValueError("Embeddings non inizializzati")
-            self.vector_store = FAISS.load_local(path, self.embeddings)
+            self.vector_store = FAISS.load_local(path, self.embeddings, allow_dangerous_deserialization=True)
             logger.info(f"Vector store caricato da: {path}")
             return self.vector_store
             
@@ -314,107 +550,8 @@ class DocumentProcessor:
             logger.error(f"Errore nel caricamento del vector store: {str(e)}")
             raise
     
-    def process_multiple_files(self, file_paths: List[str]) -> FAISS:
-        """Processa multipli file PDF"""
-        all_chunks = []
-        
-        for file_path in file_paths:
-            try:
-                documents = self.load_pdf(file_path)
-                chunks = self.process_documents(documents)
-                all_chunks.extend(chunks)
-                
-            except Exception as e:
-                logger.error(f"Errore nel processamento di {file_path}: {str(e)}")
-                continue
-        
-        if all_chunks:
-            return self.create_vector_store(all_chunks)
-        else:
-            raise ValueError("Nessun documento processato con successo")
-    
-    def process_multiple_files_batch(self, file_paths: List[str], progress_callback=None) -> FAISS:
-        """Processa multipli file PDF usando processamento batch per evitare rate limits"""
-        # Calcola hash dei file
-        files_hash = self._get_files_hash(file_paths)
-        
-        # Controlla se esiste già un vector store in cache
-        if self._vector_store_exists(files_hash):
-            if progress_callback:
-                progress_callback("🔍 Embeddings trovati in cache, caricamento in corso...")
-            
-            logger.info(f"Caricamento vector store dalla cache (hash: {files_hash})")
-            
-            try:
-                vector_store = self._load_cached_vector_store(files_hash)
-                
-                if progress_callback:
-                    metadata = self._load_vector_store_metadata(files_hash)
-                    chunks_count = metadata.get('chunks_count', 'N/A')
-                    progress_callback(f"✅ Embeddings caricati dalla cache! {chunks_count} chunks pronti")
-                
-                return vector_store
-                
-            except Exception as e:
-                logger.warning(f"Errore nel caricamento dalla cache: {e}. Procedo con il calcolo...")
-                if progress_callback:
-                    progress_callback("⚠️ Errore nel caricamento cache, ricalcolo embeddings...")
-        
-        # Se non esiste in cache, processa normalmente
-        all_chunks = []
-        total_files = len(file_paths)
-        
-        # Fase 1: Caricamento e chunking dei file
-        if progress_callback:
-            progress_callback("📄 Caricamento e divisione in chunks dei documenti...")
-        
-        for i, file_path in enumerate(file_paths):
-            try:
-                if progress_callback:
-                    progress_callback(f"Caricando file {i+1}/{total_files}: {os.path.basename(file_path)}")
-                
-                documents = self.load_pdf(file_path)
-                chunks = self.process_documents(documents)
-                all_chunks.extend(chunks)
-                
-                logger.info(f"File {i+1}/{total_files} processato: {len(chunks)} chunks da {os.path.basename(file_path)}")
-                
-            except Exception as e:
-                logger.error(f"Errore nel processamento di {file_path}: {str(e)}")
-                if progress_callback:
-                    progress_callback(f"⚠️ Errore nel file {os.path.basename(file_path)}: {str(e)}")
-                continue
-        
-        if not all_chunks:
-            raise ValueError("Nessun documento processato con successo")
-        
-        logger.info(f"Totale chunks generati: {len(all_chunks)} da {total_files} file")
-        
-        # Fase 2: Creazione vector store con batch processing
-        if progress_callback:
-            progress_callback(f"💾 Creazione embeddings per {len(all_chunks)} chunks...")
-        
-        vector_store = self.create_vector_store_batch(all_chunks, progress_callback)
-        
-        # Fase 3: Salvataggio nella cache
-        if progress_callback:
-            progress_callback("💾 Salvataggio embeddings in cache...")
-        
-        try:
-            self._save_vector_store_to_cache(files_hash, file_paths, len(all_chunks))
-            
-            if progress_callback:
-                progress_callback("✅ Embeddings salvati in cache per utilizzi futuri!")
-            
-        except Exception as e:
-            logger.error(f"Errore nel salvataggio cache: {e}")
-            if progress_callback:
-                progress_callback(f"⚠️ Errore nel salvataggio cache: {e}")
-        
-        return vector_store
-    
     def extract_document_info(self, documents: List[Document]) -> List[Dict[str, Any]]:
-        """Estrae informazioni strutturate dai documenti"""
+        """Estrae informazioni strutturate dai documenti Markdown"""
         doc_info = []
         
         for doc in documents:
@@ -422,6 +559,9 @@ class DocumentProcessor:
                 'source': doc.metadata.get('source', 'Unknown'),
                 'page': doc.metadata.get('page', 0),
                 'content_length': len(doc.page_content),
+                'content_type': doc.metadata.get('content_type', 'markdown'),
+                'conversion_method': doc.metadata.get('conversion_method', 'unknown'),
+                'markdown_path': doc.metadata.get('markdown_path', ''),
                 'content_preview': doc.page_content[:200] + "..." if len(doc.page_content) > 200 else doc.page_content
             }
             doc_info.append(info)
