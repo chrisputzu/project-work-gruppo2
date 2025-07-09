@@ -19192,3 +19192,51 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-07-09 14:24:52,766 - src.chat_manager - INFO - Caricata sessione 20250709_114634
 2025-07-09 14:24:52,768 - src.chat_manager - INFO - Caricata sessione 20250709_142325
 2025-07-09 14:25:30,428 - httpx - INFO - HTTP Request: POST https://pr-giorno6-rag-resource.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2025-07-09 15:29:29,693 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-09 15:29:29,694 - src.utils - INFO - Directory data creata/verificata
+2025-07-09 15:29:29,694 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-09 15:29:29,695 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-09 15:29:29,696 - src.utils - INFO - Directory exports creata/verificata
+2025-07-09 15:29:29,697 - src.utils - INFO - Directory logs creata/verificata
+2025-07-09 15:30:21,603 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-09 15:30:21,605 - src.utils - INFO - Directory data creata/verificata
+2025-07-09 15:30:21,605 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-09 15:30:21,607 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-09 15:30:21,607 - src.utils - INFO - Directory exports creata/verificata
+2025-07-09 15:30:21,607 - src.utils - INFO - Directory logs creata/verificata
+2025-07-09 15:30:49,860 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-09 15:30:49,861 - src.utils - INFO - Directory data creata/verificata
+2025-07-09 15:30:49,862 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-09 15:30:49,863 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-09 15:30:49,864 - src.utils - INFO - Directory exports creata/verificata
+2025-07-09 15:30:49,864 - src.utils - INFO - Directory logs creata/verificata
+2025-07-09 15:30:49,865 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-09 15:30:54,576 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-09 15:30:55,331 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-09 15:30:56,047 - src.chat_manager - INFO - Caricata sessione 20250709_091647
+2025-07-09 15:30:56,049 - src.chat_manager - INFO - Caricata sessione 20250709_104504
+2025-07-09 15:30:56,050 - src.chat_manager - INFO - Caricata sessione 20250709_105300
+2025-07-09 15:30:56,051 - src.chat_manager - INFO - Caricata sessione 20250709_110943
+2025-07-09 15:30:56,052 - src.chat_manager - INFO - Caricata sessione 20250709_112413
+2025-07-09 15:30:56,053 - src.chat_manager - INFO - Caricata sessione 20250709_112707
+2025-07-09 15:30:56,055 - src.chat_manager - INFO - Caricata sessione 20250709_114634
+2025-07-09 15:30:56,056 - src.chat_manager - INFO - Caricata sessione 20250709_142325
+2025-07-09 15:31:21,674 - git.cmd - INFO - Ignored error after process had died: OSError(9, 'The handle is invalid', None, 6, None)
+2025-07-09 15:31:21,676 - git.cmd - INFO - Ignored error after process had died: OSError(9, 'The handle is invalid', None, 6, None)
+2025-07-09 15:32:49,317 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-09 15:32:49,319 - src.utils - INFO - Directory data creata/verificata
+2025-07-09 15:32:49,319 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-09 15:32:49,320 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-09 15:32:49,320 - src.utils - INFO - Directory exports creata/verificata
+2025-07-09 15:32:49,321 - src.utils - INFO - Directory logs creata/verificata
+2025-07-09 15:32:49,321 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-09 15:32:50,996 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-09 15:32:51,971 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-09 15:32:52,916 - src.chat_manager - INFO - Caricata sessione 20250709_091647
+2025-07-09 15:32:52,918 - src.chat_manager - INFO - Caricata sessione 20250709_104504
+2025-07-09 15:32:52,919 - src.chat_manager - INFO - Caricata sessione 20250709_105300
+2025-07-09 15:32:52,920 - src.chat_manager - INFO - Caricata sessione 20250709_110943
+2025-07-09 15:32:52,923 - src.chat_manager - INFO - Caricata sessione 20250709_112413
+2025-07-09 15:32:52,924 - src.chat_manager - INFO - Caricata sessione 20250709_112707
+2025-07-09 15:32:52,926 - src.chat_manager - INFO - Caricata sessione 20250709_114634
+2025-07-09 15:32:52,927 - src.chat_manager - INFO - Caricata sessione 20250709_142325
