@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 from dotenv import load_dotenv
 
 # Carica variabili d'ambiente
@@ -7,12 +8,12 @@ load_dotenv()
 class Config:
     """Configurazione del sistema"""
     # Azure OpenAI
-    AZURE_ENDPOINT = os.environ.get("AZURE_ENDPOINT")
-    AZURE_API_KEY = os.environ.get("AZURE_API_KEY")
+    AZURE_ENDPOINT = st.secrets["AZURE_ENDPOINT"]
+    AZURE_API_KEY = st.secrets["AZURE_API_KEY"]
     
     # Azure OpenAI Embeddings (dedicato)
-    AZURE_EMBEDDING_ENDPOINT = os.environ.get("AZURE_ENDPOINT_EMB")
-    AZURE_EMBEDDING_API_KEY = os.environ.get("AZURE_API_KEY_EMB")
+    AZURE_EMBEDDING_ENDPOINT = st.secrets["AZURE_ENDPOINT_EMB"]
+    AZURE_EMBEDDING_API_KEY = st.secrets["AZURE_API_KEY_EMB"]
     
     # Configurazione Azure
     AZURE_API_VERSION = "2024-02-01"
