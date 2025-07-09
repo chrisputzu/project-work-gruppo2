@@ -19240,3 +19240,20 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-07-09 15:32:52,924 - src.chat_manager - INFO - Caricata sessione 20250709_112707
 2025-07-09 15:32:52,926 - src.chat_manager - INFO - Caricata sessione 20250709_114634
 2025-07-09 15:32:52,927 - src.chat_manager - INFO - Caricata sessione 20250709_142325
+2025-07-09 15:48:49,445 - src.utils - INFO - Logging configurato nella directory logs/
+2025-07-09 15:48:49,448 - src.utils - INFO - Directory data creata/verificata
+2025-07-09 15:48:49,449 - src.utils - INFO - Directory vector_store creata/verificata
+2025-07-09 15:48:49,449 - src.utils - INFO - Directory uploads creata/verificata
+2025-07-09 15:48:49,450 - src.utils - INFO - Directory exports creata/verificata
+2025-07-09 15:48:49,450 - src.utils - INFO - Directory logs creata/verificata
+2025-07-09 15:48:49,451 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-09 15:48:54,677 - src.document_processor - INFO - Usando Azure OpenAI Embeddings dedicato
+2025-07-09 15:48:55,408 - src.rag_system - INFO - Inizializzando Azure OpenAI Chat
+2025-07-09 15:48:56,116 - src.chat_manager - INFO - Caricata sessione 20250709_091647
+2025-07-09 15:48:56,118 - src.chat_manager - INFO - Caricata sessione 20250709_104504
+2025-07-09 15:48:56,120 - src.chat_manager - INFO - Caricata sessione 20250709_105300
+2025-07-09 15:48:56,121 - src.chat_manager - INFO - Caricata sessione 20250709_110943
+2025-07-09 15:48:56,123 - src.chat_manager - INFO - Caricata sessione 20250709_112413
+2025-07-09 15:48:56,124 - src.chat_manager - INFO - Caricata sessione 20250709_112707
+2025-07-09 15:48:56,125 - src.chat_manager - INFO - Caricata sessione 20250709_114634
+2025-07-09 15:48:56,126 - src.chat_manager - INFO - Caricata sessione 20250709_142325

@@ -1,0 +1,5 @@
+tesseract-ocr
+libreoffice
+poppler-utils
+pandoc
+libmagic1 
