@@ -1,0 +1,21 @@
+{
+  "processed_files": {
+    "5b7771c023cdd1b73de1c9da1cec52f37a898430c3d3608f8bdab6ad02bf23f3": {
+      "path": "uploads\\20250709_142316_2019 - DGR 2531_2019.pdf",
+      "filename": "20250709_142316_2019 - DGR 2531_2019.pdf",
+      "chunks_count": 61,
+      "processed_at": 1752063798.586612
+    }
+  },
+  "filename_index": {
+    "20250709_142316_2019 - DGR 2531_2019.pdf": "5b7771c023cdd1b73de1c9da1cec52f37a898430c3d3608f8bdab6ad02bf23f3"
+  },
+  "last_updated": 1752063805.7443402,
+  "total_files": 1,
+  "total_chunks": 61,
+  "config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 50
+  }
+}

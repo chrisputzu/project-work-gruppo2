@@ -1,0 +1,59 @@
+{
+  "session_id": "20250709_110943",
+  "messages": [
+    {
+      "role": "user",
+      "content": "come posso riqualificare immobili della criminalità organizzata ? ",
+      "timestamp": "2025-07-09T11:13:29.581894"
+    },
+    {
+      "role": "assistant",
+      "content": "### Risposta\n\nL'informazione richiesta **non è presente nei documenti caricati**. Il bando fornito si concentra su interventi di riqualificazione energetica e sostenibilità per edifici di proprietà pubblica, finanziati tramite il PR FESR 2021-2027. Non fa menzione **specifica** di immobili confiscati alla criminalità organizzata o di procedure particolari per questi casi.\n\nSe hai altre domande o necessiti di ulteriori chiarimenti sui requisiti o sugli interventi ammissibili descritti nel bando, puoi chiedere! 😊",
+      "timestamp": "2025-07-09T11:13:37.570986",
+      "sources": [
+        {
+          "source": "20250709_111215_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": "Gli interventi avranno inoltre l’obiettivo di migliorare la qualità e la sostenibilità dell’edificio\nstesso al fine di mitigare gli impatti dovuti alla crisi climatica e incrementare la resilienza e\nl..."
+        },
+        {
+          "source": "20250709_111215_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": "- legale rappresentante: firma olografa e copia del documento d’identità valido\n\n- delegato/a: firma digitale\n\nA conclusione della suddetta procedura il sistema informatico rilascerà in automatico il\n..."
+        },
+        {
+          "source": "20250709_111215_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": ". Questi elementi<br>potranno essere valorizzati attraverso criteri specifici di valutazione,<br>dettagliati nell’apposito allegato al bando.<br>Sono esclusi interventi che comportino:<br>• <br>sole o..."
+        },
+        {
+          "source": "20250709_111215_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": "Gli edifici oggetto degli interventi dovranno essere certificabili ai sensi della normativa sulla\ncertificazione energetica degli edifici sia nelle condizioni ante operam che post operam. In\nparticola..."
+        },
+        {
+          "source": "20250709_111215_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": "Acquisto e Installazione di sistemi e dispositivi per il monitoraggio e/o gestione e/o\ncontrollo dei consumi energetici e/o della produzione di impianti a fonti\n\nrinnovabili;\n\n    Opere di de-impermea..."
+        },
+        {
+          "source": "20250709_111215_Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": "### **1. FINALITA’ E OBIETTIVI**\n\nPromuovere la riqualificazione energetica profonda e il miglioramento della sostenibilità e\ndella resilienza agli effetti dei cambiamenti climatici di interi fabbrica..."
+        }
+      ]
+    }
+  ],
+  "created_at": "2025-07-09T11:09:43.193918",
+  "last_updated": "2025-07-09T11:13:37.571002",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 3,
+    "documents": [
+      "20250709_110911_2019 - DGR 2531_2019.pdf",
+      "20250709_110911_All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+      "20250709_110911_Allegato 1 Bando LS.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "session_id": "20250709_091647",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Chi sono i beneficiari ammissibili?",
+      "timestamp": "2025-07-09T09:17:09.936491"
+    },
+    {
+      "role": "assistant",
+      "content": "### Beneficiari ammissibili\n\nSecondo il bando fornito, i **beneficiari ammissibili** sono i seguenti:\n\n1. **Enti locali**:\n   - Comuni, province e città metropolitane destinatari, ai sensi dell’art. 48, comma 3, lett. c), del D.Lgs. n. 159/2011, di beni immobili confiscati alla criminalità organizzata.\n\n2. **Soggetti pubblici o privati**:\n   - Coloro ai quali gli enti locali di cui al punto 1 abbiano concesso in uso tali beni per fini sociali e/o istituzionali.\n\nFonte: **Sezione 2. Soggetti beneficiari** del documento.\n\nSe hai bisogno di ulteriori dettagli o chiarimenti su un aspetto specifico, fammi sapere! 😊",
+      "timestamp": "2025-07-09T09:17:17.200788",
+      "sources": [
+        {
+          "source": "20250709_091637_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "Nazionale per l'amministrazione e la destinazione dei Beni Sequestrati e Confiscati alla\n\n\ncriminalità organizzata (ANBSC).\n\n\n**2.** **Soggetti beneficiari**\n\n\n1. Beneficiari del contributo regionale ..."
+        },
+        {
+          "source": "20250709_091637_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "316/2019, a partire da quanto pubblicato su RNA, e attestando di non\n\n\nrientrare nelle specifiche esclusioni di cui all’art. 1 di ciascuno dei\n\n\nRegolamenti stessi. Per le attestazioni, gli stessi sog..."
+        },
+        {
+          "source": "20250709_091637_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "fino al 50% del costo complessivo previsto per l’intervento di riutilizzo\ndel bene e, comunque, fino all’importo massimo di € 150.000,00;\n\n fino al 90% del costo complessivo previsto per l’intervento ..."
+        },
+        {
+          "source": "20250709_091637_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "**DATO ATTO** che, per gli enti locali e per i soggetti concessionari dei beni confiscati\nalla criminalità organizzata, di cui all’art. 23, comma 1, lett. a), della l.r. n. 17/2015,\nche utilizzano il ..."
+        },
+        {
+          "source": "20250709_091637_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "nel limite massimo di € 150.000,00.\n\n\n7. Regione eroga, in via prioritaria, i contributi per il riadattamento di beni immobili da\n\n\nadibire alla protezione di vittime della violenza di genere nonché, ..."
+        },
+        {
+          "source": "20250709_091637_2019 - DGR 2531_2019.pdf",
+          "page": 0,
+          "content_preview": "fino a € 20.000,00: contributo erogabile al 100%;\n\n     oltre € 20.000,00 e fino a € 100.000,00: contributo massimo erogabile €\n20.000,00 +70% della quota eccedente la prima soglia;\n\n     oltre € 100...."
+        }
+      ]
+    }
+  ],
+  "created_at": "2025-07-09T09:16:47.248672",
+  "last_updated": "2025-07-09T09:17:17.200797",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 1,
+    "documents": [
+      "20250709_091637_2019 - DGR 2531_2019.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}

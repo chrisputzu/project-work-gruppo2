@@ -337,7 +337,7 @@ class EnhancedDocumentProcessor:
         # Controlla se esiste già un vector store in cache
         if self._vector_store_exists(files_hash):
             if progress_callback:
-                progress_callback("Embeddings Markdown trovati in cache, caricamento...")
+                progress_callback("🔍 Embeddings Markdown trovati in cache, caricamento...")
             
             logger.info(f"Caricamento vector store Markdown dalla cache (hash: {files_hash})")
             
@@ -347,14 +347,14 @@ class EnhancedDocumentProcessor:
                 if progress_callback:
                     metadata = self._load_vector_store_metadata(files_hash)
                     chunks_count = metadata.get('chunks_count', 'N/A')
-                    progress_callback(f"Embeddings Markdown caricati dalla cache! {chunks_count} chunks pronti")
+                    progress_callback(f"✅ Embeddings Markdown caricati dalla cache! {chunks_count} chunks pronti")
                 
                 return vector_store
                 
             except Exception as e:
                 logger.warning(f"Errore nel caricamento dalla cache: {e}. Procedo con conversione...")
                 if progress_callback:
-                    progress_callback("Errore cache, riconversione in Markdown...")
+                    progress_callback("⚠️ Errore cache, riconversione in Markdown...")
         
         # Se non esiste in cache, processa normalmente
         all_chunks = []
@@ -384,7 +384,7 @@ class EnhancedDocumentProcessor:
             except Exception as e:
                 logger.error(f"Errore nella conversione di {file_path}: {str(e)}")
                 if progress_callback:
-                    progress_callback(f"Errore nel file {os.path.basename(file_path)}: {str(e)}")
+                    progress_callback(f"⚠️ Errore nel file {os.path.basename(file_path)}: {str(e)}")
                 continue
         
         if not all_chunks:
@@ -452,7 +452,7 @@ class EnhancedDocumentProcessor:
                 filename_index = global_metadata.get('filename_index', {})
                 
                 if progress_callback:
-                    progress_callback(f"Vector store globale trovato con {len(processed_files)} file")
+                    progress_callback(f"🔍 Vector store globale trovato con {len(processed_files)} file")
                 logger.info(f"Vector store globale trovato con {len(processed_files)} file")
             except Exception as e:
                 logger.error(f"Errore nel caricamento dei metadati globali: {str(e)}")
@@ -463,7 +463,7 @@ class EnhancedDocumentProcessor:
             processed_files = {}
             filename_index = {}
             if progress_callback:
-                progress_callback("Creazione nuovo vector store globale")
+                progress_callback("🆕 Creazione nuovo vector store globale")
             logger.info("Creazione nuovo vector store globale")
         
         # Filtra i file già processati
@@ -502,12 +502,12 @@ class EnhancedDocumentProcessor:
         
         # Informa l'utente
         if skipped_files and progress_callback:
-            progress_callback(f"Saltati {len(skipped_files)} file già vettorizzati: {', '.join(skipped_files[:3])}" + 
+            progress_callback(f"⏩ Saltati {len(skipped_files)} file già vettorizzati: {', '.join(skipped_files[:3])}" + 
                             (f" e altri {len(skipped_files)-3}..." if len(skipped_files) > 3 else ""))
         
         if not new_files:
             if progress_callback:
-                progress_callback("Tutti i file sono già stati vettorizzati!")
+                progress_callback("✅ Tutti i file sono già stati vettorizzati!")
             logger.info("Tutti i file sono già stati vettorizzati")
             
             # Carica il vector store esistente
@@ -528,7 +528,7 @@ class EnhancedDocumentProcessor:
         
         # Informa su quanti file nuovi verranno processati
         if progress_callback:
-            progress_callback(f"Processamento di {len(new_files)} nuovi file...")
+            progress_callback(f"🔄 Processamento di {len(new_files)} nuovi file...")
         logger.info(f"Processamento di {len(new_files)} nuovi file")
         
         # Processa i nuovi file
@@ -565,14 +565,14 @@ class EnhancedDocumentProcessor:
             except Exception as e:
                 logger.error(f"Errore nella conversione di {file_path}: {str(e)}")
                 if progress_callback:
-                    progress_callback(f"Errore nel file {os.path.basename(file_path)}: {str(e)}")
+                    progress_callback(f"⚠️ Errore nel file {os.path.basename(file_path)}: {str(e)}")
                 continue
         
         if not all_chunks:
             if not global_vs_exists:
                 raise ValueError("Nessun documento convertito con successo e nessun vector store esistente")
             elif progress_callback:
-                progress_callback("Nessun nuovo documento convertito con successo, uso vector store esistente")
+                progress_callback("⚠️ Nessun nuovo documento convertito con successo, uso vector store esistente")
             
             # Carica il vector store esistente
             try:
@@ -615,7 +615,7 @@ class EnhancedDocumentProcessor:
             except Exception as e:
                 logger.error(f"Errore nell'aggiornamento del vector store globale: {str(e)}")
                 if progress_callback:
-                    progress_callback(f"Errore nell'aggiornamento, creazione nuovo vector store...")
+                    progress_callback(f"⚠️ Errore nell'aggiornamento, creazione nuovo vector store...")
                 
                 # Se c'è un errore, crea un nuovo vector store
                 vector_store = self.create_vector_store_batch(all_chunks, progress_callback)
@@ -661,7 +661,7 @@ class EnhancedDocumentProcessor:
                 json.dump(global_metadata, f, indent=2, ensure_ascii=False)
             
             if progress_callback:
-                progress_callback(f"Vector store globale aggiornato con {len(processed_files)} file totali!")
+                progress_callback(f"✅ Vector store globale aggiornato con {len(processed_files)} file totali!")
             
             logger.info(f"Vector store globale salvato: {global_vs_path}")
             logger.info(f"Totale file: {len(processed_files)}, Totale chunks: {global_metadata['total_chunks']}")
@@ -669,7 +669,7 @@ class EnhancedDocumentProcessor:
         except Exception as e:
             logger.error(f"Errore nel salvataggio del vector store globale: {str(e)}")
             if progress_callback:
-                progress_callback(f"Errore nel salvataggio: {str(e)}")
+                progress_callback(f"⚠️ Errore nel salvataggio: {str(e)}")
         
         self.vector_store = vector_store
         return vector_store

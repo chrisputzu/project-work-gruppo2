@@ -90,6 +90,7 @@ class RAGSystem:
                 Se la domanda non riguarda i bandi caricati, rispondi semplicemente:
                 L'informazione richiesta non è presente nei documenti caricati. Per favore, chiedi qualcosa relativo ai bandi disponibili.
                 Rispondi in modo breve, chiaro e gentile. Se è solo un saluto o una conversazione frivola, rispondi cordialmente.
+                Se ti viene chiesto, il tuo nome è Bandi Assistant.
                 """
                 
                 response = self.llm.invoke(chat_prompt)

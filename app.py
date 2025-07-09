@@ -1,6 +1,8 @@
 import streamlit as st
 import os
 import pandas as pd
+import json
+import time
 from typing import List, Dict, Any
 import logging
 from pathlib import Path
@@ -21,7 +23,7 @@ from src.utils import (
 # Configurazione della pagina
 st.set_page_config(
     page_title="Bandi Assistant",
-    page_icon="logo/logo_lombardIA.png",
+    page_icon="logo/logo.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -77,7 +79,7 @@ class BandiRAGApp:
     def render_sidebar(self):
         """Renderizza la sidebar con le opzioni di navigazione"""
         # Logo in sidebar centrato usando le colonne di Streamlit
-        logo_path = Path("logo/logo_lombardIA.png")
+        logo_path = Path("logo/logo.png")
         if logo_path.exists():
             col1, col2 = st.sidebar.columns([1, 3])
             with col1:
@@ -210,11 +212,20 @@ class BandiRAGApp:
         """Pagina per il caricamento dei documenti con opzioni Markdown"""
         st.title("📁 Gestione Documenti")
         
-        st.markdown("""
-        Carica i documenti PDF dei bandi pubblici della Regione Lombardia. 
-        """)
-        
-        
+        # Opzioni avanzate in expander
+        with st.expander("⚙️ Opzioni Avanzate"):
+            st.checkbox(
+                "Usa conversione Markdown",
+                value=True,
+                help="Migliora la qualità della conversione con supporto Markdown",
+                key="use_markdown_conversion"
+            )
+            st.checkbox(
+                "Dividi per pagine",
+                value=False,
+                help="Divide il documento per pagine per migliore contestualizzazione",
+                key="split_by_pages"
+            )
         
         # Sezione per processare la cartella data
         st.markdown("### 📄 Elabora Documenti")
@@ -344,19 +355,19 @@ class BandiRAGApp:
             status_text.text("Processando documenti...")
             progress_bar.progress(0.25)
             
-            if st.session_state.use_markdown_conversion:
-                # Usa conversione Markdown
-                self.vector_store = self.document_processor.process_multiple_files_markdown(
-                    file_paths,
-                    split_by_pages=st.session_state.split_by_pages,
-                    progress_callback=update_progress
-                )
+            # Utilizza il nuovo metodo per caricare o creare il vector store
+            self.vector_store, loaded_from_cache = self.load_or_create_vector_store(
+                file_paths,
+                use_markdown=st.session_state.use_markdown_conversion,
+                split_by_pages=st.session_state.split_by_pages,
+                progress_callback=update_progress
+            )
+            
+            # Messaggio differente se caricato dalla cache o creato nuovo
+            if loaded_from_cache:
+                status_text.text("✅ Vector store caricato dalla cache!")
             else:
-                # Usa processamento standard
-                self.vector_store = self.document_processor.process_multiple_files_batch(
-                    file_paths,
-                    progress_callback=update_progress
-                )
+                status_text.text("✅ Nuovo vector store creato e salvato in cache!")
             
             progress_bar.progress(0.75)
             
@@ -431,19 +442,19 @@ class BandiRAGApp:
             status_text.text("Processando documenti...")
             progress_bar.progress(0.25)
             
-            if st.session_state.use_markdown_conversion:
-                # Usa conversione Markdown
-                self.vector_store = self.document_processor.process_multiple_files_markdown(
-                    file_paths,
-                    split_by_pages=st.session_state.split_by_pages,
-                    progress_callback=update_progress
-                )
+            # Utilizza il nuovo metodo per caricare o creare il vector store
+            self.vector_store, loaded_from_cache = self.load_or_create_vector_store(
+                file_paths,
+                use_markdown=st.session_state.use_markdown_conversion,
+                split_by_pages=st.session_state.split_by_pages,
+                progress_callback=update_progress
+            )
+            
+            # Messaggio differente se caricato dalla cache o creato nuovo
+            if loaded_from_cache:
+                status_text.text("✅ Vector store caricato dalla cache!")
             else:
-                # Usa processamento standard
-                self.vector_store = self.document_processor.process_multiple_files_batch(
-                    file_paths, 
-                    progress_callback=update_progress
-                )
+                status_text.text("✅ Nuovo vector store creato e salvato in cache!")
             
             progress_bar.progress(0.75)
             
@@ -968,6 +979,57 @@ class BandiRAGApp:
                     
                 except Exception as e:
                     st.error(f"❌ Errore nella generazione del documento: {str(e)}")
+    
+    def load_or_create_vector_store(self, file_paths, use_markdown=True, split_by_pages=False, progress_callback=None):
+        """Carica o aggiorna il vector store globale incrementale utilizzando il nuovo metodo process_and_add_files"""
+        try:
+            if progress_callback:
+                progress_callback("🔍 Verificando vector store globale e nuovi file...")
+            
+            logger.info(f"Processando {len(file_paths)} file con vector store incrementale")
+            
+            # Usa il nuovo metodo che gestisce automaticamente il vector store incrementale
+            vector_store = self.document_processor.process_and_add_files(
+                file_paths,
+                split_by_pages=split_by_pages,
+                progress_callback=progress_callback
+            )
+            
+            # Determina se i file erano già processati o se ne sono stati aggiunti di nuovi
+            # Verifichiamo se sono stati aggiunti nuovi file controllando i metadati del vector store
+            vector_store_dir = Path(self.config.VECTOR_STORE_DIR)
+            global_meta_path = vector_store_dir / "global_metadata.json"
+            
+            if global_meta_path.exists():
+                try:
+                    with open(global_meta_path, 'r', encoding='utf-8') as f:
+                        metadata = json.load(f)
+                    
+                    # Se ci sono meno file nei metadati che in file_paths, allora sono stati aggiunti nuovi file
+                    files_count = metadata.get('total_files', 0)
+                    chunks_count = metadata.get('total_chunks', 0)
+                    
+                    if progress_callback:
+                        progress_callback(f"✅ Vector store globale pronto con {files_count} file e {chunks_count} chunks!")
+                    
+                    # Verifichiamo il timestamp dell'ultimo aggiornamento
+                    last_updated = metadata.get('last_updated', 0)
+                    current_time = time.time()
+                    
+                    # Se l'ultimo aggiornamento è avvenuto meno di 5 secondi fa, consideriamo che siano stati aggiunti nuovi file
+                    loaded_from_cache = (current_time - last_updated) > 5
+                    
+                    return vector_store, loaded_from_cache
+                    
+                except Exception as e:
+                    logger.warning(f"Errore nella lettura dei metadati: {e}")
+                    return vector_store, False
+            
+            return vector_store, False
+            
+        except Exception as e:
+            logger.error(f"Errore nel caricamento/creazione del vector store: {str(e)}")
+            raise
     
     def run(self):
         """Esegue l'applicazione principale"""

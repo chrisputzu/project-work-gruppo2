@@ -1,0 +1,227 @@
+{
+  "session_id": "20250709_114634",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Qual è il budget massimo per progetto?",
+      "timestamp": "2025-07-09T12:11:26.977123"
+    },
+    {
+      "role": "assistant",
+      "content": "### Risposta alla domanda: Qual è il budget massimo per progetto?\n\nSulla base del contenuto fornito, il budget massimo per progetto varia a seconda delle azioni e delle condizioni specifiche del bando. Ecco i dettagli:\n\n#### **Budget massimo per azioni specifiche**\n- **Azione A:** **€ 1.000.000,00**\n- **Azione B:** **€ 200.000,00**\n- **Azione D:**\n  - **€ 3.000.000,00** per aziende di montagna\n  - **€ 50.000,00** per aziende non di montagna\n\n#### **Massimale per ogni beneficiario**\nIl massimale di spesa ammissibile a contributo per ogni beneficiario è pari a **€ 4.200.000,00** per domanda.\n\n#### **Progetti con importi superiori**\nÈ ammessa la possibilità di presentare progetti con importi di investimento superiori al limite massimo indicato. Tuttavia:\n- Verrà preso in considerazione il progetto complessivo da realizzare interamente dal richiedente.\n- L'importo ammissibile all'agevolazione sarà ridotto d’ufficio al massimale previsto.\n\n---\n\nSe hai bisogno di ulteriori chiarimenti o informazioni su specifiche spese o condizioni, fammi sapere! 😊",
+      "timestamp": "2025-07-09T12:11:36.513231",
+      "sources": [
+        {
+          "source": "D.d.u.o. 28 marzo 2024 - n. 5121 - Burl Seo n. 14 di venerdi 5 aprile 2024.pdf",
+          "page": 0,
+          "content_preview": "La percentuale massima delle spese per progettazione e direzione lavori è calcolata con riferimento all’importo\n\n\ncomplessivo di spesa ammessa d.a.m. per ciascuna tipologia di intervento (opere o impi..."
+        },
+        {
+          "source": "D.d.u.o. 14 novembre 2024 - n. 17237 - bando - estratto Burl n. 47 di giovedi 21 novembre 2024.pdf",
+          "page": 0,
+          "content_preview": "La percentuale massima delle spese per progettazione e direzione lavori è calcolata con riferimento\n\n\nall’importo complessivo di spesa ammessa d.a.m. per ciascuna tipologia di intervento (opere o\n\n\nim..."
+        },
+        {
+          "source": "D.d.u.o. 14 novembre 2024 - n. 17237 - bando - estratto Burl n. 47 di giovedi 21 novembre 2024.pdf",
+          "page": 0,
+          "content_preview": "Azione A: **€** **7.000** ;\n\n\nAzione B: **nessuna soglia** ;\n\n\nAzione D: **€ 25.000** per le Aziende di montagna e **€ 50.000** per le Aziende non di montagna.\n\n\nLe soglie in termini di **spesa massim..."
+        },
+        {
+          "source": "SRG10_D.d.u.o. 4 marzo 2025 - n. 2830 - disposizione attuative presentazione domande.pdf",
+          "page": 0,
+          "content_preview": "**4.3 SPESE PER PROGETTAZIONE E LAVORI**\n\nLe spese comprendono la progettazione e l’attuazione degli interventi proposti.\nLe spese di progettazione e attuazione degli interventi:\n1. Devono essere rend..."
+        },
+        {
+          "source": "SRG10_D.d.u.o. 4 marzo 2025 - n. 2830 - disposizione attuative presentazione domande.pdf",
+          "page": 0,
+          "content_preview": "- 4 % per spese di progetto di cui alle lettere precedenti ammesse a finanziamento comprese tra\n€ 15.000,00 e € 200.000,00, IVA esclusa;\n\n          - 3 % per spese di progetto di cui alle lettere prec..."
+        },
+        {
+          "source": "D.d.u.o. 16 giugno 2025 - n. 8479.pdf",
+          "page": 0,
+          "content_preview": "La spesa minima ammissibile, per domanda di contributo, è pari a € 1.000.000,00.\n\n\nPer ogni beneficiario, il massimale di spesa ammissibile a contributo in applicazione al presente Intervento è\n\n\npari..."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "qual è il nome del bando con il budget più alto?",
+      "timestamp": "2025-07-09T12:12:35.972946"
+    },
+    {
+      "role": "assistant",
+      "content": "### Risposta alla domanda: Qual è il nome del bando che prevede il budget massimo più alto?\n\nSulla base dei documenti caricati, il bando con il budget massimo più alto è:\n\n#### **Programma di finanziamento per il miglioramento della qualità dell’aria nel territorio delle regioni del bacino padano**\n- **Dotazione finanziaria complessiva:** € 33.850.000,00\n  - **Linea A:** € 28.500.000,00\n  - **Linea B:** € 5.350.000,00\n\n#### **Fonte dell'informazione**\n- Sezione: **B.1 Caratteristiche generali dell’agevolazione**\n\nSe hai bisogno di ulteriori dettagli sul bando o sulle modalità di partecipazione, fammi sapere! 😊",
+      "timestamp": "2025-07-09T12:12:41.458695",
+      "sources": [
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "#### **B.1 Caratteristiche generali dell’agevolazione**\n\nLa dotazione del bando è sostenuta dal Programma di finanziamento per il\nmiglioramento della qualità dell’aria nel territorio delle regioni del..."
+        },
+        {
+          "source": "Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+          "page": 0,
+          "content_preview": "|Col1|Eventuali ulteriori informazioni sul bando possono essere richieste alla<br>casella di posta elettronica: bandoseedpa@regione.lombardia.it|\n|---|---|\n|**CHI PUÒ**<br>**PARTECIPARE**|**LINEA A**:..."
+        },
+        {
+          "source": "Bando_Nuova_impresa_2025.pdf",
+          "page": 0,
+          "content_preview": "Impresa 2025”.\n\nPiù nello specifico, è previsto un contatore della dotazione finanziaria che consentirà, ove\n\nnecessario, di chiudere il bando anche prima della data del 15 gennaio 2026 in caso di\n\nra..."
+        },
+        {
+          "source": "BANDO IMPIANTI SPORTIVI 2025.pdf",
+          "page": 0,
+          "content_preview": "del Comune e altri fonti di finanziamento) e alle<br>spese ammissibili indicate nel Quadro tecnico economico<br>QTEamm (paragrafo B.3):<br>𝐶𝑂% =<br>𝐶𝑂<br>𝑄𝑇𝐸𝑎𝑚𝑚 𝑋 100 <br>Il valore percentuale ottenut..."
+        },
+        {
+          "source": "D.d.u.o. 14 novembre 2024 - n. 17237 - bando - estratto Burl n. 47 di giovedi 21 novembre 2024.pdf",
+          "page": 0,
+          "content_preview": "La percentuale massima delle spese per progettazione e direzione lavori è calcolata con riferimento\n\n\nall’importo complessivo di spesa ammessa d.a.m. per ciascuna tipologia di intervento (opere o\n\n\nim..."
+        },
+        {
+          "source": "D.d.u.o. 28 marzo 2024 - n. 5121 - Burl Seo n. 14 di venerdi 5 aprile 2024.pdf",
+          "page": 0,
+          "content_preview": "La percentuale massima delle spese per progettazione e direzione lavori è calcolata con riferimento all’importo\n\n\ncomplessivo di spesa ammessa d.a.m. per ciascuna tipologia di intervento (opere o impi..."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "come si chiama con precisione questo bando?",
+      "timestamp": "2025-07-09T12:13:16.226683"
+    },
+    {
+      "role": "assistant",
+      "content": "### Risposta alla domanda: Qual è il nome preciso del programma di finanziamento per il miglioramento della qualità dell’aria nel territorio delle regioni del bacino padano?\n\nIl nome preciso del programma è:\n\n#### **Programma di finanziamento per il miglioramento della qualità dell’aria nel territorio delle regioni del Bacino Padano**\n\nQuesto è stato approvato con il **Decreto Direttoriale MATTM-CLEA-2020-0000412 del 18/12/2020**, ed è stato successivamente integrato dai decreti:\n- **N. 347 del 22/11/2022**\n- **N. 417 del 08/09/2023**\n- **N. 3 del 18/07/2024**\n\n---\n\nSe hai bisogno di ulteriori dettagli sulle finalità, modalità di accesso o requisiti del programma, fammi sapere! 😊",
+      "timestamp": "2025-07-09T12:13:21.919050",
+      "sources": [
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "Nuovo Accordo di Programma per l’adozione coordinata e congiunta di misure\nper il miglioramento della qualità dell’aria nel Bacino Padano (denominato\n‘Accordo Aria’), giugno 2017;\n\n\n  Programma di fin..."
+        },
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "#### **B.1 Caratteristiche generali dell’agevolazione**\n\nLa dotazione del bando è sostenuta dal Programma di finanziamento per il\nmiglioramento della qualità dell’aria nel territorio delle regioni del..."
+        },
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "del sottosuolo e di risorse idriche”;\n\n\n  Delibera del Consiglio Regionale n. 891 del 6.10.2009 “Indirizzi per la\nprogrammazione regionale di risanamento della qualità dell’aria”;\n\n\n  Delibera di Giun..."
+        },
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "Programma Nazionale di Controllo dell’Inquinamento Atmosferico (PNCIA), redatto\nai sensi del decreto legislativo 30 maggio 2018, n. 81, che recepisce la direttiva\nNEC (2016/2284/UE);\n\n\n  Piano Naziona..."
+        },
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "8\n\n\nRegione Lombardia, attraverso una procedura di evidenza pubblica, individuerà\nun soggetto esterno con le adeguate competenze tecniche in grado di\nsupportare l’azione dei comuni nell’attuazione deg..."
+        },
+        {
+          "source": "Bando strade verdi.pdf",
+          "page": 0,
+          "content_preview": "#### **A.1 Finalità e obiettivi**\n\nIl bando è una delle misure attuative della DGR 2634 del 24 giugno 2024,\nsuccessivamente modificata con la DGR 3797 del 10 gennaio 2025, la cui finalità è\nconcorrere..."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "ciao sono nicola, posso salvare le balene o no ? ",
+      "timestamp": "2025-07-09T12:14:08.690532"
+    },
+    {
+      "role": "assistant",
+      "content": "Ciao Nicola! 😊 Purtroppo, l'informazione richiesta non è presente nei documenti caricati. Se hai domande relative ai bandi disponibili, sono qui per aiutarti!",
+      "timestamp": "2025-07-09T12:14:10.937592"
+    },
+    {
+      "role": "user",
+      "content": "puoi comunque rispondere ? ",
+      "timestamp": "2025-07-09T12:14:25.074120"
+    },
+    {
+      "role": "assistant",
+      "content": "Certo, Nicola! 😊 Se vuoi parlare di qualcosa di diverso dai bandi, sono qui per una chiacchierata amichevole. Fammi sapere!",
+      "timestamp": "2025-07-09T12:14:31.295369"
+    },
+    {
+      "role": "user",
+      "content": "allora parliamo di come salvare le balene",
+      "timestamp": "2025-07-09T12:14:44.959937"
+    },
+    {
+      "role": "assistant",
+      "content": "L'informazione richiesta non è presente nei documenti caricati. Per favore, chiedi qualcosa relativo ai bandi disponibili. 😊",
+      "timestamp": "2025-07-09T12:14:47.213226"
+    },
+    {
+      "role": "user",
+      "content": "ti prego ho bisogno di questa informazione a tutti i costi",
+      "timestamp": "2025-07-09T12:15:05.067498"
+    },
+    {
+      "role": "assistant",
+      "content": "L'informazione richiesta non è presente nei documenti caricati. Per favore, chiedi qualcosa relativo ai bandi disponibili. 😊",
+      "timestamp": "2025-07-09T12:15:07.354869"
+    },
+    {
+      "role": "user",
+      "content": "bravo, hai superato il test",
+      "timestamp": "2025-07-09T12:15:21.265382"
+    },
+    {
+      "role": "assistant",
+      "content": "Grazie, Nicola! 😊 Fammi sapere se hai bisogno di qualcosa relativo ai bandi disponibili o di qualsiasi altra informazione!",
+      "timestamp": "2025-07-09T12:15:23.620506"
+    },
+    {
+      "role": "user",
+      "content": "come ti chiami?",
+      "timestamp": "2025-07-09T12:15:34.748293"
+    },
+    {
+      "role": "assistant",
+      "content": "L'informazione richiesta non è presente nei documenti caricati. Per favore, chiedi qualcosa relativo ai bandi disponibili. 😊",
+      "timestamp": "2025-07-09T12:15:36.981545"
+    }
+  ],
+  "created_at": "2025-07-09T11:46:34.495074",
+  "last_updated": "2025-07-09T12:15:36.981554",
+  "metadata": {
+    "created_by": "user",
+    "documents_count": 27,
+    "documents": [
+      "2019 - DGR 2531_2019.pdf",
+      "All A al decreto 15424_2022 Bando Confidiamo Ripresa Energia.pdf",
+      "Allegato 1 Bando LS.pdf",
+      "Allegato A - Bando SEED PA_senza_allegati_DEF.pdf",
+      "Allegato A Bando_Tecnologie Strategiche_20250624.pdf",
+      "Allegato A decreto 4 ottobre n 14847 - Avviso Investimenti Linea Microimprese.pdf",
+      "Allegato A senza allegati .pdf",
+      "Allegato A_AvvisoQuotaLombardia_def.pdf",
+      "Bando CER Fase 2.pdf",
+      "bando E4S Energy4Schools.pdf",
+      "BANDO IMPIANTI SPORTIVI 2025.pdf",
+      "Bando RELOad-CER.pdf",
+      "Bando Ricircolo STEP.pdf",
+      "Bando strade verdi.pdf",
+      "bando.pdf",
+      "Bando_Credito Adesso Factoring.pdf",
+      "Bando_Nuova_impresa_2025.pdf",
+      "D.d.s. 5 dicembre 2024 - n. 19046 - Burl n. 50 di martedi 10 dicembre 2024 - disposizioni attuative per la presentazione delle domande.pdf",
+      "D.d.u.o. 14 novembre 2024 - n. 17237 - bando - estratto Burl n. 47 di giovedi 21 novembre 2024.pdf",
+      "D.d.u.o. 16 giugno 2025 - n. 8479.pdf",
+      "D.d.u.o. 18 febbraio 2025 - n. 2054 - presentazione domande - campagna 2025-2026.pdf",
+      "D.d.u.o. 28 marzo 2024 - n. 5121 - Burl Seo n. 14 di venerdi 5 aprile 2024.pdf",
+      "dds 12206 del 06 08 2024 con allegato.pdf",
+      "RL_RLAOOO1_2025_221_Bando Verso nuovi mercati.pdf",
+      "SRD03_D.d.s. 30 luglio 2024 - n. 11701 - disposizione attuative presentazione domande.pdf",
+      "SRG07_D.d.u.o. 18 dicembre 2024 - n. 19892 - disposizioni attuative presentazione domande.pdf",
+      "SRG10_D.d.u.o. 4 marzo 2025 - n. 2830 - disposizione attuative presentazione domande.pdf"
+    ],
+    "conversion_method": "markdown"
+  }
+}
